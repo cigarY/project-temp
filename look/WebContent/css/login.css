@@ -1,0 +1,67 @@
+.content{
+	height: 550px;
+	width: 100%;
+	background: url("../images/bg4.jpg");
+}
+.content_show{
+	width: 1120px;
+	height: inherit;
+	margin:0px auto;
+}
+.login_box{
+	width: 350px;
+	height: 350px;
+	float: right;
+	margin-top: 100px;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+.login_box_show{
+	width: 280px;
+	height: 260px;
+	margin: 0px auto;
+}
+.login_box_show>p{
+	margin-top: 40px;
+	font-size: 20px;
+}
+.login_box_show>p>span{
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 15px;
+	color: #ff0000;
+}
+.name{
+	margin-top: 30px;
+	height: 40px;
+	width: inherit;
+}
+.name>input,.pwd>input{
+	width: 265px;
+	height: 40px;
+	font-size: 14px;
+	padding-left: 10px;
+	outline: none;
+}
+.pwd,.tijiao,.reg{
+	margin-top: 25px;
+	height: 40px;
+	width: inherit;
+}
+.tijiao>button{
+	width: inherit;
+	height: 40px;
+	background-color: #499adf;
+	outline: none;
+	border:none;
+	font-size: 16px;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 5px; 
+}
+.reg>a{
+	display: block;
+	float: right;
+	color: #999999;
+	font-size: 15px;
+}

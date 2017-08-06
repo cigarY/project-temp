@@ -1,0 +1,96 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	background-color: #499afd;
+}
+.head{
+	height: 90px;
+	width: 100%;
+	margin:0px auto;
+	text-align: center;
+	color: #ffffff;
+}
+.head_p{
+	font-size: 42px;
+	padding-top:20px;
+}
+.content{
+	height: 470px;
+	width: 100%
+}
+.content_show{
+	width: 1120px;
+	height: inherit;
+	margin:0px auto;
+}
+.login_box{
+	width: 350px;
+	height: 320px;
+	margin: 50px auto;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+.login_box_show{
+	width: 280px;
+	height: 260px;
+	padding-top:5px;
+	margin:0px auto;
+}
+.login_box_show>p{
+	margin-top: 40px;
+	font-size: 20px;
+}
+.login_box_show>p>span{
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 15px;
+	color: #ff0000;
+}
+.name{
+	margin-top: 30px;
+	height: 40px;
+	width: inherit;
+}
+.name>input,.pwd>input{
+	width: 265px;
+	height: 40px;
+	font-size: 14px;
+	padding-left: 10px;
+	outline: none;
+}
+.pwd,.tijiao,.reg{
+	margin-top: 25px;
+	height: 40px;
+	width: inherit;
+}
+.tijiao>button{
+	width: inherit;
+	height: 40px;
+	background-color: #499adf;
+	outline: none;
+	border:none;
+	font-size: 16px;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 5px; 
+}
+.reg>a{
+	display: block;
+	float: right;
+	color: #999999;
+	font-size: 15px;
+}
+
+.foot{
+	height: 80px;
+	width: 100%;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+	color: #ffffff;
+}
+.foot>p{
+	padding-top: 25px; 
+}

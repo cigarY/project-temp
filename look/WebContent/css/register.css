@@ -1,0 +1,82 @@
+.content{
+	height: 450px;
+	width: 400px;
+	margin:50px auto;
+}
+.msg{
+	height: 35px;
+	width: inherit;
+	text-align: center;
+	color: #ff0000;
+	font-size: 18px;
+}
+.content>ul{
+	height: inherit;
+	width: inherit;
+}
+.content>ul>li{
+	height: 55px;
+	width: inherit;
+}
+.point_msg{
+	height: inherit;
+	width: 100px;
+	float: left;
+}
+.point_msg>span{
+	display: inline-block;
+	float: right;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.input_box,.code_box{
+	height: inherit;
+	width: 290px;
+	float: right;
+}
+.input_box>input{
+	height: 18px;
+	width: 225px;
+	padding: 10px;
+	font-size: 15px;
+}
+.code_box>input{
+	height: 18px;
+	width: 80px;
+	padding: 10px;
+	float:left;
+	font-size: 15px;
+}
+.code_box>img{
+	height: 30px;
+	width: 80px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.sex1,.sex2{
+	height: 20px;
+	width: 40px;
+	margin-top:10px;
+	margin-left: 40px;
+}
+.radio_box>span{
+	display: inline-block;
+	font-size: 15px;
+}
+.zhuce{
+	text-align: center;
+}
+.zhuce>input{
+	width: 200px;
+	height: 40px;
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #499afd;
+	outline: none;
+	border-radius: 5px; 
+	border: none;
+	cursor: pointer;
+}
+.zhuce>span>a{
+	color: #499afd;
+}
