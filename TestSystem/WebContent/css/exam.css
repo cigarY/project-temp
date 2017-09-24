@@ -1,0 +1,223 @@
+
+/*整个页面*/
+#examPage{
+    width: 100%;
+    height: 1900px;
+}
+
+/*内容部分*/
+#content{
+    width: 100%;
+    height: 1500px;
+}
+
+/*共有样式*/
+/*内容边框*/
+.test1_text,.test4_text{
+    width: 1120px;
+    height: 350px;
+    margin-top: 50px;
+    border: 1px solid lightgray;
+}
+.search{
+    height: 40px;
+    width: 900px;
+    margin: 30px auto;
+}
+.search_text{
+    height: 35px;
+    width: 810px;
+    padding-left: 15px;
+    border: 2px solid #499afd;
+    float: left;
+    font-size: 15px;
+}
+.search_btn{
+    height: 39px;
+    width: 70px;
+    background-color: #499afd;
+    color: #FFFFFF;
+    float: left;
+    border: none;
+    font-size: 15px;
+}
+
+
+/*科目一*/
+#test1{
+    width: 100%;
+    height: 350px;
+}
+/*科目一内容显示部分*/
+.test1_show{
+    width: 1120px;
+    height: 350px;
+    margin: 0px auto;
+}
+.test_title{
+    width: inherit;
+    height: 100px;
+}
+.t_p1{
+    font-size: 20px;
+    color: #000000;
+    margin-left: 600px;
+    margin-top: 10px;
+}
+.t_p2{
+    font-size: 32px;
+    color: #499afd;
+    margin-left:40%;
+    margin-top: 10px;
+}
+.test_msg{
+    width: inherit;
+    height: 80px;
+}
+.test_msg>h3{
+    margin-left: 150px;
+}
+.t_p3{
+    font-size: 16px;
+    margin-left: 220px;
+    margin-top: 15px;
+}
+.test_con{
+    height: 150px;
+    width: inherit;
+}
+.test_con>ul{
+    height: inherit;
+    width: inherit;
+}
+.test_con>ul>li{
+    height: inherit;
+    width: 180px;
+    margin-left: 6px;
+    float: left;
+}
+.test_con>ul>li>a{
+    display: block;
+    height: 120px;
+    width: 150px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+@keyframes c_pic {
+    10%{
+        transform: scale(1.1,1.1);
+    }
+    50%{
+        transform: scale(1.5,1.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+.test_con>ul>li>a:hover img{
+    animation: c_pic 1s infinite linear ;
+}
+.con_name{
+    color: #000000;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.con_msg{
+    color: #808080;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/*科目四*/
+#test4{
+    width: 100%;
+    height: 400px;
+}
+/*科目一内容显示部分*/
+.test4_show{
+    width: 1120px;
+    height: 400px;
+    margin: 0px auto;
+}
+
+/*内容下面的讲解*/
+#testMsg{
+    width: 100%;
+    height: 550px;
+}
+.testMsg_show{
+    width: 1120px;
+    height: 550px;
+    margin: 0px auto;
+}
+/*三个小模块*/
+.skills_show,.analyse_show,.video_show{
+    width: 330px;
+    height: 490px;
+    margin: 20px auto;
+}
+/*图片显示区域*/
+.show_img{
+    width: 330px;
+    height: 200px;
+}
+.show_img>a>img{
+    width: 330px;
+    height: 200px;
+}
+/*文字显示区域*/
+.show_text{
+    width: 330px;
+    height: 270px;
+    margin-top: 20px;
+}
+.show_title{
+    height: 30px;
+    width: inherit;
+    font-size: 21px;
+}
+.show_text>ul{
+    width: inherit;
+    height: 240px;
+}
+
+.show_text>ul>li{
+    height: 25px;
+    font-size: 15px;
+    width: inherit;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.show_text>ul>li,.show_text>ul>li>a{
+    color: #696969;
+}
+.show_text>ul>li>a:hover{
+    border-bottom: 1px solid #000000;
+}
+
+/*考试技巧*/
+.test_skills{
+    width: 365px;
+    height: 530px;
+    border: 1px solid lightgray;
+    float: left;
+}
+/*试题分析*/
+.test_analyse{
+    width: 365px;
+    height: 530px;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+    float: left;
+}
+/*学车视频*/
+.test_video{
+    width: 365px;
+    height: 530px;
+    border: 1px solid lightgray;
+    float: right;
+}
