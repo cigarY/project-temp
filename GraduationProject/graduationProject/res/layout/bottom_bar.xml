@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/PercentRelativeLayout_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.example.customTool.ImageButtonText
+        android:id="@+id/bottom_pre"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="0dp"
+        app:layout_heightPercent="100%"
+        app:layout_widthPercent="25%"
+        android:background="@drawable/pre_selector" />
+
+    <com.example.customTool.ImageButtonText
+        android:id="@+id/bottom_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        app:layout_heightPercent="100%"
+        app:layout_marginLeftPercent="25%"
+        app:layout_widthPercent="25%"
+        android:background="@drawable/list_selector" />
+
+    <com.example.customTool.ImageButtonText
+        android:id="@+id/bottom_uploadAndsubmit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        app:layout_heightPercent="100%"
+        app:layout_marginLeftPercent="50%"
+        app:layout_widthPercent="25%"
+        android:background="@drawable/upload_selector" />
+
+    <com.example.customTool.ImageButtonText
+        android:id="@+id/bottom_next"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        app:layout_heightPercent="100%"
+        app:layout_marginLeftPercent="75%"
+        app:layout_widthPercent="25%"
+        android:background="@drawable/next_selector" />
+
+    <View
+        android:id="@+id/bot_view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/view" />
+
+</android.support.percent.PercentRelativeLayout>

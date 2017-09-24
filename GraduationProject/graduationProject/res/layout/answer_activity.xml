@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/PercentRelativeLayout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="100%"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="84%"
+        app:layout_marginTopPercent="8%"
+        app:layout_widthPercent="100%" >
+        
+        <android.support.percent.PercentLinearLayout 
+            xmlns:android="http://schemas.android.com/apk/res/android"
+    		xmlns:app="http://schemas.android.com/apk/res-auto"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical">
+    		
+            <ImageView
+                android:id="@+id/questionType_imageview" 
+                android:layout_width="0dp"
+            	android:layout_height="0dp"
+            	app:layout_heightPercent="1.7%"
+            	app:layout_widthPercent="6.9%"
+            	app:layout_marginLeftPercent="4.2%"
+            	app:layout_marginTopPercent="1%"
+            	android:src="@drawable/answer_multiselec"
+                />
+    		
+            <!--            	 
+            app:layout_heightPercent="10.6%"
+            	app:layout_widthPercent="91.7%" -->
+            <TextView
+                android:id="@+id/question_textview"
+                android:layout_width="wrap_content"
+            	android:layout_height="match_parent"
+            	app:layout_marginLeftPercent="4.2%"
+            	app:layout_marginRightPercent="4.2%"
+            	app:layout_marginTopPercent="1%"
+            	android:text="1.班主任既通过对集体的管理去间接影响个人，又通过对个人的直接管理去影响集体，从而把对集体和个人的管理结合起来，这样的班级管理方式是____班主任既通过对集体的管理去间接影响个人，又通过对个人的直接管理去影响集体，从而把对集体和个人的管理结合起来，这样的班级管理方式是1.班主任既通过对集体的管理去间接影响个人，又通过对个人的直接管理去影响集体，从而把对集体和个人的管理结合起来，这样的班级管理方式是____班主任既通过对集体的管理去间接影响个人，又通过对个人的直接管理去影响集体，从而把对集体和个人的管理结合起来，这样的班级管理方式是"
+            	app:layout_textSizePercent="2.5%"
+                />
+            
+            <RadioGroup
+        		android:id="@+id/radioGroup"
+       	 		android:layout_width="0dp"
+            	android:layout_height="0dp"
+            	app:layout_heightPercent="41%"
+            	app:layout_widthPercent="91.7%"
+        		app:layout_marginLeftPercent="4.2%"
+            	app:layout_marginTopPercent="1%" >
+            	
+                <RadioButton
+        			android:id="@+id/radioA"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			style="@style/radionbutton_a"
+        			android:tag="A"
+        			android:text="RadioButton" />
+                
+                <RadioButton
+        			android:id="@+id/radioB"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			style="@style/radionbutton_b"
+        			android:tag="B"
+        			android:text="RadioButton" />
+                
+                <RadioButton
+        			android:id="@+id/radioC"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			style="@style/radionbutton_c"
+        			android:tag="C"
+        			android:text="RadioButton" />
+                
+                <RadioButton
+        			android:id="@+id/radioD"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			style="@style/radionbutton_d"
+        			android:tag="D"
+        			android:text="RadioButton" />
+
+    		</RadioGroup>
+    		
+            <android.support.percent.PercentRelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+    			xmlns:app="http://schemas.android.com/apk/res-auto"
+    			android:id="@+id/main_answer"
+    			android:layout_width="0dp"
+    			android:layout_height="0dp"
+    			app:layout_heightPercent="8%"
+            	app:layout_widthPercent="91.7%"
+        		app:layout_marginLeftPercent="4.2%"
+            	app:layout_marginTopPercent="1%"
+    			android:orientation="horizontal">
+                
+                <View
+        			android:id="@+id/answer_view1"
+        			android:layout_width="wrap_content"
+        			android:layout_height="1dp"
+        			android:layout_alignParentTop="true"
+        			android:layout_alignParentLeft="true"
+        			android:background="@color/view" />
+ 
+                <TextView
+                    android:id="@+id/answer_user" 
+                    android:layout_width="0dp"
+            		android:layout_height="0dp"
+            		app:layout_heightPercent="50%"
+            		app:layout_widthPercent="40%"
+            		android:layout_alignParentLeft="true"
+            		app:layout_marginTopPercent="25%"
+            		app:layout_marginLeftPercent="5%"
+            		app:layout_textSizePercent="29%"
+            		android:gravity="center"
+            		android:textColor="#ff6b6b"
+            		android:text="你的答案：B"/>
+
+                <View
+        			android:id="@+id/answer_view3"
+        			android:layout_width="1dp"
+        			android:layout_height="wrap_content"
+        			android:layout_centerHorizontal="true"
+        			android:layout_centerVertical="true"
+        			android:background="@color/view" />
+                 
+                <TextView
+                    android:id="@+id/answer_system" 
+                    android:layout_width="0dp"
+            		android:layout_height="0dp"
+            		app:layout_heightPercent="50%"
+            		app:layout_widthPercent="40%"
+            		android:layout_alignParentRight="true"
+            		app:layout_marginTopPercent="25%"
+            		app:layout_marginRightPercent="5%"
+            		app:layout_textSizePercent="29%"
+            		android:gravity="center"
+            		android:textColor="#00ff3c"
+            		android:text="正确的答案：B"/>
+                
+                <View
+        			android:id="@+id/answer_view2"
+        			android:layout_width="wrap_content"
+        			android:layout_height="1dp"
+        			android:layout_alignParentBottom="true"
+        			android:layout_alignParentLeft="true"
+        			android:background="@color/view" />
+                
+            </android.support.percent.PercentRelativeLayout>
+            
+            <android.support.percent.PercentRelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+    			xmlns:app="http://schemas.android.com/apk/res-auto"
+    			android:id="@+id/main_analysis"
+    			android:layout_width="0dp"
+    			android:layout_height="0dp"
+    			app:layout_heightPercent="50%"
+            	app:layout_widthPercent="91.7%"
+        		app:layout_marginLeftPercent="4.2%"
+            	app:layout_marginTopPercent="1%"
+    			android:orientation="horizontal" >
+                
+                
+                <View
+        			android:id="@+id/analysis_view1"
+        			android:layout_width="0dp"
+    				android:layout_height="0dp"
+    				app:layout_heightPercent="0.4%"
+            		app:layout_widthPercent="40%"
+        			android:layout_alignParentLeft="true"
+        			app:layout_marginTopPercent="4%"
+        			android:background="@color/view" />
+                
+                <View
+        			android:id="@+id/analysis_view2"
+        			android:layout_width="0dp"
+    				android:layout_height="0dp"
+    				app:layout_heightPercent="0.4%"
+            		app:layout_widthPercent="40%"
+        			android:layout_alignParentRight="true"
+        			app:layout_marginTopPercent="4%"
+        			android:background="@color/view" />
+                
+                <TextView 
+                    android:id="@+id/analysis_tv"
+                    android:layout_width="0dp"
+    				android:layout_height="0dp"
+    				app:layout_heightPercent="8%"
+            		app:layout_widthPercent="20%"
+            		android:layout_centerHorizontal="true"
+
+            		android:gravity="center"
+            		app:layout_textSizePercent="5%"
+            		android:text="解    析"
+                    />
+                
+                <TextView 
+                    android:id="@+id/analysis_textview"
+                    android:layout_width="wrap_content"
+            		android:layout_height="match_parent"
+            		app:layout_marginTopPercent="9%"
+            		app:layout_textSizePercent="5%"
+            		android:text="sjhdfjkahdfjkahkjdfhjakhdfjkhakjdfhkjahdfkjahkdjfhakjdhfkjahdfkhasdkfhkshdfkahdsfkahdkjfhaklsjhfkashfkahsfdkahskdfhakjhsdfka"/>
+                
+            </android.support.percent.PercentRelativeLayout>
+            
+        </android.support.percent.PercentLinearLayout>
+            
+
+    </ScrollView>
+
+    <include
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="100%"
+        layout="@layout/bottom_bar" />
+    
+    <android.support.percent.PercentFrameLayout
+        android:id="@+id/floatlayout"
+        android:layout_width="0dp"
+    	android:layout_height="0dp"
+    	app:layout_heightPercent="7.6%"
+        app:layout_widthPercent="13.4%"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:layout_marginBottomPercent="10%"
+        app:layout_marginRightPercent="4.2%"
+        >
+        
+        <CheckBox
+
+            android:id="@+id/pattern_button"
+            android:layout_width="0dp"
+    		android:layout_height="0dp"
+    		app:layout_heightPercent="100%"
+        	app:layout_widthPercent="100%"
+        	style="@style/patternButton"
+
+            />
+        
+    </android.support.percent.PercentFrameLayout>
+
+</android.support.percent.PercentRelativeLayout>

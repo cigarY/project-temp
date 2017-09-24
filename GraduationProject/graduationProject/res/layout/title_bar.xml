@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/PercentRelativeLayout_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageButton
+        android:id="@+id/title_return"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        app:layout_heightPercent="72.5%"
+        app:layout_marginLeftPercent="4.2%"
+        app:layout_marginTopPercent="16.25%"
+        app:layout_widthPercent="10.3%"
+        android:background="@drawable/title_return" />
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="72.5%"
+        app:layout_marginLeftPercent="25%"
+        app:layout_marginTopPercent="16.25%"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <View
+        android:id="@+id/title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/view" />
+
+    <CheckBox
+        android:id="@+id/title_checkBox_collect"
+		style="@style/myCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+       	android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        app:layout_heightPercent="72.5%"
+        app:layout_marginTopPercent="16.25%"
+        app:layout_widthPercent="10.3%" />
+
+</android.support.percent.PercentRelativeLayout>

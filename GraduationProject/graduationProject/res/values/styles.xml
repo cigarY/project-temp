@@ -1,0 +1,65 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <!-- 自定义checkbox内部按钮样式 -->
+    <style name="myCheckBox">
+        <item name="android:button">@drawable/collect_selector</item>
+    </style>
+    
+    <style name="patternButton">
+        <item name="android:button">@drawable/patternselector</item>
+    </style>
+    
+    <!-- 自定义radiobutton样式 -->
+    <style  name="radionbutton_a">
+       <item name="android:button">@null</item>    
+       <item name="android:background">@null</item>  
+       <item name="android:drawableLeft">@drawable/radiobtn_a</item>  
+       <item name="android:drawablePadding">10dp</item> 
+    </style>
+    
+    <style  name="radionbutton_b">
+       <item name="android:button">@null</item>  
+       <item name="android:background">@null</item>  
+       <item name="android:drawableLeft">@drawable/radiobtn_b</item>  
+       <item name="android:drawablePadding">10dp</item>
+    </style>
+    
+    <style  name="radionbutton_c">
+       <item name="android:button">@null</item>  
+       <item name="android:background">@null</item>  
+       <item name="android:drawableLeft">@drawable/radiobtn_c</item>  
+       <item name="android:drawablePadding">10dp</item>
+    </style>
+    
+    <style  name="radionbutton_d">
+       <item name="android:button">@null</item>   
+       <item name="android:background">@null</item>  
+       <item name="android:drawableLeft">@drawable/radiobtn_d</item>  
+       <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <!--自定义对话框样式  -->
+    <style name="dialog_custom" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    
+</resources>
