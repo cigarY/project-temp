@@ -11,10 +11,10 @@ public class UserServiceImpl implements IUserService{
 
 	@Override
 	public int login(User user) {
-		IUserDao dao = new UserDaoImpl(); //new UserDaoImpl();  // 数据访问�?
+		IUserDao dao = new UserDaoImpl(); //new UserDaoImpl();  // 数据访问�?
 		User userindb;
 		try {
-			userindb = dao.getUserByName(user.getName());
+			userindb = dao.getUserByName(user.getUsername());
 			if (userindb == null) {
 				return CODE_USER_NOT_EXISTS;
 			}

@@ -54,14 +54,14 @@ public class RegisterServlet extends HttpServlet {
 		
 		String codeInSession = (String) request.getSession().getAttribute("code");
 
-		//�?验验证码是否正确
+		//�?验验证码是否正确
 		if (!codeInSession.equalsIgnoreCase(code)) {
-			request.setAttribute("msg", "验证码错�?");
+			request.setAttribute("msg", "验证码错�?");
 			request.getRequestDispatcher("register.jsp").forward(request, response);
 			return;
 		}
 		
-		//�?查密码是否正�?
+		//�?查密码是否正�?
 		if(!password.equals(besurepwd)){
 			request.setAttribute("msg", "密码不正确！");
 			request.getRequestDispatcher("register.jsp").forward(request, response);
@@ -69,17 +69,17 @@ public class RegisterServlet extends HttpServlet {
 		}
 		
 		
-		User user = new User(name, sex, email, password);
+		User user = new User(name,password,email,sex);
 		IUserService userservice = new UserServiceImpl();
 		try {
 			boolean result = userservice.add(user);
 			if(!result){
-				request.setAttribute("msg", "注册失败，稍后重�?");
+				request.setAttribute("msg", "注册失败，稍后重试?");
 				request.getRequestDispatcher("register.jsp").forward(request, response);
 				return;
 			}
 			out.append("<div style="+"height: 30px; width: 300px;font-size:22px;margin:80px auto;"+">");
-			out.append("注册成功�?<a href="+"login.jsp"+">");
+			out.append("注册成功！<a href="+"login.jsp"+">");
 			out.append("点击进入登录页面");
 			out.append("</a></div>");
 			out.close();

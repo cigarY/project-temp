@@ -12,10 +12,9 @@ public class UserDaoImpl implements IUserDao{
 	@Override
 	public boolean add(User user) throws Exception {
 		DBHelper dbhelper = DBHelper.getDbHelper();
-		String sql = "insert into s_msg(sname,sage,ssex,simg,ssign,slocate,semail,sztime,tid,spwd)"
-				+ "values(?,?,?,?,?,?,?,?,?,?)";
-		int result = dbhelper.executeUpdate(sql,user.getName(),user.getAge(),user.getSex(),user.getImg(),
-				user.getSign(),user.getLocate(),user.getEmail(),user.getTime(),user.getTid(),user.getPassword());
+		String sql = "insert into u_msg(username,password,sex,email)"
+				+ "values(?,?,?,?)";
+		int result = dbhelper.executeUpdate(sql,user.getUsername(),user.getPassword(),user.getSex(),user.getEmail());
 		return (result == 1);
 	}
 
@@ -49,10 +48,10 @@ public class UserDaoImpl implements IUserDao{
 	@Override
 	public User getUserByName(String name) throws Exception {
 		DBHelper dbHelper = DBHelper.getDbHelper();
-		String sql = "select * from s_msg where sname=?";
+		String sql = "select * from u_msg where username=?";
 		ResultSet rs = dbHelper.executeQuery(sql, name);
 		if (rs.next()) {
-			String password = rs.getString("spwd");
+			String password = rs.getString("password");
 			User user = new User(name, password);
 			return user;
 		}

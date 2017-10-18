@@ -34,6 +34,7 @@ public class DBHelper {
 	public static DBHelper getDbHelper() {
 		if (dbHelper == null) {
 			dbHelper = new DBHelper();
+			System.out.println("Connect successful!");
 		}
 		return dbHelper;
 	}
