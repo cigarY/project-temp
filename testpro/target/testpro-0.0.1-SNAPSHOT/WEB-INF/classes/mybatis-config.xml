@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "mybatis-3-config.dtd" >
+<configuration>  
+  
+    <!-- 实体类,简称 -设置别名 -->  
+    <typeAliases>  
+        <typeAlias alias="User" type="com.tpro.look.model.User" /> 
+        <typeAlias alias="Admin" type="com.tpro.look.model.Admin" />
+        <typeAlias alias="Record" type="com.tpro.look.model.Record" />
+        <typeAlias alias="SubjectQ1" type="com.tpro.look.model.SubjectQ1" />
+        <typeAlias alias="SubjectQ4" type="com.tpro.look.model.SubjectQ4" /> 
+    </typeAliases>  
+    <!-- 实体接口映射资源 -->  
+    <!--  
+        说明：如果xxMapper.xml配置文件放在和xxMapper.java统一目录下，mappers也可以省略，因为org.mybatis.spring.mapper.MapperFactoryBean默认会去查找与xxMapper.java相同目录和名称的xxMapper.xml  
+    -->  
+    <mappers>  
+        <mapper resource="com/tpro/look/dao/mapper/UserMapper.xml" />
+        <mapper resource="com/tpro/look/dao/mapper/AdminMapper.xml" />
+        <mapper resource="com/tpro/look/dao/mapper/RecordMapper.xml" />
+        <mapper resource="com/tpro/look/dao/mapper/SubjectQ1Mapper.xml" />
+        <mapper resource="com/tpro/look/dao/mapper/SubjectQ4Mapper.xml" />  
+    </mappers>  
+  
+</configuration> 

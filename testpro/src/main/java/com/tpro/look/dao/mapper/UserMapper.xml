@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tpro.look.dao.IUserDao">
+	<resultMap id="BaseResultMap" type="com.tpro.look.model.User">
+		<id column="uid" jdbcType="INTEGER" property="uid" />
+		<result column="username" jdbcType="VARCHAR" property="username" />
+		<result column="password" jdbcType="VARCHAR" property="password" />
+		<result column="sex" jdbcType="VARCHAR" property="sex" />
+		<result column="email" jdbcType="VARCHAR" property="email" />
+		<result column="log_time" jdbcType="DATE" property="logTime" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		uid, username, password, sex, email, log_time
+	</sql>
+	<select id="findAll" resultType="User">
+		select
+		<include refid="Base_Column_List" />
+		from u_msg
+	</select>
+	<select id="findById" parameterType="java.lang.Integer"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from u_msg
+		where uid = #{uid,jdbcType=INTEGER}
+	</select>
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from u_msg
+		where uid = #{uid,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="com.tpro.look.model.User">
+		insert into u_msg (uid, username, password,
+		sex, email, log_time)
+		values (#{uid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{logTime,jdbcType=DATE})
+	</insert>
+
+	<update id="update" parameterType="com.tpro.look.model.User">
+		update u_msg
+		set username = #{username,jdbcType=VARCHAR},
+		password = #{password,jdbcType=VARCHAR},
+		sex = #{sex,jdbcType=VARCHAR},
+		email = #{email,jdbcType=VARCHAR},
+		log_time = #{logTime,jdbcType=DATE}
+		where uid = #{uid,jdbcType=INTEGER}
+	</update>
+</mapper>
