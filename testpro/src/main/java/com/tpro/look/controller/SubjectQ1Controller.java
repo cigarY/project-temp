@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tpro.look.model.SubjectQ1;
 import com.tpro.look.service.ISubjectQ1Service;
@@ -56,12 +58,15 @@ public class SubjectQ1Controller {
 		return "/subjectlist";
 	}
 	
-	@RequestMapping("/getkeywordsubjects")
-	public String getKeyWordsSubject(HttpServletRequest request, Model model,String key) {
+	@RequestMapping(value="/getkeywordsubjects",method=RequestMethod.POST)
+	public String getKeyWordsSubject(HttpServletRequest request, Model model, @RequestParam("keyWords") String keyWords) {
 		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("keywords", keyWords);
 		map.put("start", 0);
-		map.put("pagesize", 15);
-		List<SubjectQ1> subjectslist = subjectQ1Service.findListByKeyWords(map, key);
+		map.put("pagesize", 15);		
+		List<SubjectQ1> subjectslist = subjectQ1Service.findListByKeyWords(map);
+		request.setAttribute("keywords", keyWords);
+		model.addAttribute("keywords", keyWords);
 		request.setAttribute("subjects", subjectslist);
 		model.addAttribute("subjects", subjectslist);
 		return "/subjectlist";

@@ -50,8 +50,8 @@ public class SubjectQ1ServiceImpl implements ISubjectQ1Service {
 	}
 
 	@Override
-	public List<SubjectQ1> findListByKeyWords(Map<String, Object> map, String keyWords) {
-		return subjectQ1dao.findListByKeyWords(map, keyWords);
+	public List<SubjectQ1> findListByKeyWords(Map<String, Object> map) {
+		return subjectQ1dao.findListByKeyWords(map);
 	}
 
 }

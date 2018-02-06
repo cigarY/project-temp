@@ -35,7 +35,7 @@
 		select
 		<include refid="Base_Column_List" />
 		from examination_question1
-		where question like "%"#{keyWords}"%"
+		where question like "%"#{keywords}"%"
 		limit #{start},#{pagesize}
 	</select>
 	<select id="getPageCount" resultType="java.lang.Integer">

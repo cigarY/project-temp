@@ -12,5 +12,5 @@ public interface ISubjectQ1Dao{
     SubjectQ1 findById(int id);    
     List<SubjectQ1> findAll(Map<String,Object> map);
     int getPageCount();
-    List<SubjectQ1> findListByKeyWords(Map<String,Object> map,String keyWords);
+    List<SubjectQ1> findListByKeyWords(Map<String,Object> map);
 }
