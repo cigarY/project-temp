@@ -9,8 +9,7 @@ public interface IUserDao {
 	void insert(User user);    
     boolean update(User user);    
     boolean delete(int id);    
-    User findById(int id);    
-    List<User> findAll(); 
+    User findById(int id);     
     List<User> findAll(Map<String,Object> map);
     int getPageCount();
     List<User> findListByKeyWords(Map<String,Object> map);

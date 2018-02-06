@@ -1,6 +1,7 @@
 package com.tpro.look.service.impl;
 
-import java.util.List;  
+import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;  
   
@@ -27,18 +28,10 @@ public class UserServiceImpl implements IUserService {
         return userDao.delete(id);  
     }  
     /**  
-     * 查询User的全部数据  
-     */  
-    public List<User> findAll() {  
-        List<User> findAllList = userDao.findAll();  
-        return findAllList;  
-    }  
-    /**  
      * 根据 id 查询 对应数据  
      */  
     public User findById(int id) {  
-        User user = userDao.findById(id);  
-        return user;  
+       return userDao.findById(id);  
     }  
     /**  
      * 新增数据  
@@ -52,5 +45,17 @@ public class UserServiceImpl implements IUserService {
     public boolean update(User user) {  
         return userDao.update(user);  
     }
+	@Override
+	public List<User> findAll(Map<String, Object> map) {
+		return userDao.findAll(map);
+	}
+	@Override
+	public int getPageCount() {
+		return userDao.getPageCount();
+	}
+	@Override
+	public List<User> findListByKeyWords(Map<String, Object> map) {
+		return userDao.findListByKeyWords(map);
+	}
 	  
 }  

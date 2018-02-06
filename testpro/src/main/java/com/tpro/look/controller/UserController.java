@@ -28,7 +28,7 @@ public class UserController {
      */  
     @RequestMapping("/getAllUser")  
     public String getAllUser(HttpServletRequest request,Model model){  
-        List<User> user = userService.findAll();  
+        List<User> user = userService.findAll(null);  
         model.addAttribute("userList", user);  
         request.setAttribute("userList", user);  
         return "/allUser";  
