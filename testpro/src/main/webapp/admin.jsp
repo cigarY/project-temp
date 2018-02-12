@@ -35,12 +35,11 @@
 			<div class="content_show">
 				<div class="content_left">
 					<ul>
-						<a href="#"><li>首页</li></a>
+						<a href="<%=basePath%>admin.jsp"><li>首页</li></a>
 						<a href="<%=basePath%>subject1/getallsubjects?pageNo=${1}" target="myIframe"><li>查看题库1</li></a>
-						<a href="subjectlist"><li>查看题库4</li></a>
-						<a href="#"><li>用户信息</li></a>
-						<a href="#"><li>管理员信息</li></a>
-						<a href="#"><li>个人中心</li></a>
+						<a href="<%=basePath%>subject4/getallsubjects?pageNo=${1}" target="myIframe"><li>查看题库4</li></a>
+						<a href="<%=basePath%>user/getallusers?pageNo=${1}" target="myIframe"><li>用户信息</li></a>
+						<a href="#" target="myIframe"><li>管理员信息</li></a>
 					</ul>
 				</div>
 				<div class="content_right">

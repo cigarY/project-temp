@@ -42,7 +42,7 @@
 						<td style="height: 30px; width: 100px"><a
 							href="<%=basePath%>subject1/getsubject?id=${subject.id}"
 							target="myIframe">编辑</a> <a
-							href="javascript:del('${subject.id }')">删除</a></td>
+							href="<%=basePath%>subject1/delsubject?id=${subject.id}">删除</a></td>
 						<td>${subject.id }</td>
 						<td>${subject.question }</td>
 						<td>${subject.answer }</td>

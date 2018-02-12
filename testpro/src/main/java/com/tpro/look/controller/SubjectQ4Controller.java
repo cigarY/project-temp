@@ -16,20 +16,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.tpro.look.model.SubjectQ1;
-import com.tpro.look.service.ISubjectQ1Service;
+import com.tpro.look.model.SubjectQ4;
+import com.tpro.look.service.ISubjectQ4Service;
 
 @Controller
-@RequestMapping("/subject1")
-public class SubjectQ1Controller {
+@RequestMapping("/subject4")
+public class SubjectQ4Controller {
 
 	@Autowired
-	private ISubjectQ1Service subjectQ1Service;
+	private ISubjectQ4Service subjectQ4Service;
 
 	@RequestMapping("/getallsubjects")
 	public String getAllSubject(HttpServletRequest request, Model model,int pageNo) {
 		Map<String, Object> map = new HashMap<String, Object>();		
-		int pageCount = subjectQ1Service.getPageCount();
+		int pageCount = subjectQ4Service.getPageCount();
 		int endPage = 0;
 		if(pageCount%15 == 0) {
 			endPage = pageCount/15;
@@ -53,10 +53,10 @@ public class SubjectQ1Controller {
 		model.addAttribute("endPage", endPage);
 		map.put("start", start);
 		map.put("pagesize", pagesize);
-		List<SubjectQ1> subjectslist = subjectQ1Service.findAll(map);
+		List<SubjectQ4> subjectslist = subjectQ4Service.findAll(map);
 		request.setAttribute("subjects", subjectslist);
 		model.addAttribute("subjects", subjectslist);
-		return "/subjectlist";
+		return "/subjectlist2";
 	}
 	
 	@RequestMapping(value="/getkeywordsubjects",method=RequestMethod.POST)
@@ -65,32 +65,32 @@ public class SubjectQ1Controller {
 		map.put("keywords", keyWords);
 		map.put("start", 0);
 		map.put("pagesize", 15);		
-		List<SubjectQ1> subjectslist = subjectQ1Service.findListByKeyWords(map);
+		List<SubjectQ4> subjectslist = subjectQ4Service.findListByKeyWords(map);
 		request.setAttribute("keywords", keyWords);
 		model.addAttribute("keywords", keyWords);
 		request.setAttribute("subjects", subjectslist);
 		model.addAttribute("subjects", subjectslist);
-		return "/subjectlist";
+		return "/subjectlist2";
 	}
 
 	@RequestMapping("/toaddsubject")
 	public String toAddSubject() {
-		return "/subjectadd";
+		return "/subjectadd2";
 	}
 
 	@RequestMapping("/addsubject")
-	public String addSubject(SubjectQ1 subjectQ1, Model model) {
-		subjectQ1Service.insert(subjectQ1);
-		return "redirect:/subject1/getallsubjects";
+	public String addSubject(SubjectQ4 subjectQ4, Model model) {
+		subjectQ4Service.insert(subjectQ4);
+		return "redirect:/subject4/getallsubjects";
 	}
 
 	@RequestMapping("/editsubject")
-	public String updateSubject(SubjectQ1 subjectQ1, Model model, HttpServletRequest request) {
-		if (subjectQ1Service.update(subjectQ1)) {
-			subjectQ1 = subjectQ1Service.findById(subjectQ1.getId());
-			request.setAttribute("subject1", subjectQ1);
-			model.addAttribute("subject1", subjectQ1);
-			return "redirect:/subject1/getallsubjects";
+	public String updateSubject(SubjectQ4 subjectQ4, Model model, HttpServletRequest request) {
+		if (subjectQ4Service.update(subjectQ4)) {
+			subjectQ4 = subjectQ4Service.findById(subjectQ4.getId());
+			request.setAttribute("subject4", subjectQ4);
+			model.addAttribute("subject4", subjectQ4);
+			return "redirect:/subject4/getallsubjects";
 		} else {
 			return "/error";
 		}
@@ -98,15 +98,15 @@ public class SubjectQ1Controller {
 
 	@RequestMapping("/getsubject")
 	public String getSubject(int id, Model model, HttpServletRequest request) {
-		request.setAttribute("subject1", subjectQ1Service.findById(id));
-		model.addAttribute("subject1", subjectQ1Service.findById(id));
-		return "/subjectedit";
+		request.setAttribute("subject4", subjectQ4Service.findById(id));
+		model.addAttribute("subject4", subjectQ4Service.findById(id));
+		return "/subjectedit2";
 	}
 
 	@RequestMapping("/delsubject")
 	public void delSubject(int id, HttpServletRequest request, HttpServletResponse response) {
 		String result = "{\"result\":\"error\"}";
-		if (subjectQ1Service.delete(id)) {
+		if (subjectQ4Service.delete(id)) {
 			result = "{\"result\":\"success\"}";
 		}
 		response.setContentType("application/json");

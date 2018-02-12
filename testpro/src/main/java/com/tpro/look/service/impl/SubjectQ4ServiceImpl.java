@@ -3,12 +3,20 @@ package com.tpro.look.service.impl;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.tpro.look.dao.ISubjectQ4Dao;
 import com.tpro.look.model.SubjectQ4;
 import com.tpro.look.service.ISubjectQ4Service;
 
+@Service  
+@Transactional
 public class SubjectQ4ServiceImpl implements ISubjectQ4Service {
 
+	@Resource
 	ISubjectQ4Dao subjectDao;
 	
 	@Override

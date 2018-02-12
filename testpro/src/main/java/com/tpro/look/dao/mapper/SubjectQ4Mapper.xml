@@ -23,7 +23,8 @@
 		select
 		<include refid="Base_Column_List" />
 		from examination_question4
-		limit #{start},#{pagesize}
+		order by id ASC
+		limit #{start},#{pagesize}		
 	</select>
 	<select id="findById" parameterType="java.lang.Integer"
 		resultMap="BaseResultMap">
