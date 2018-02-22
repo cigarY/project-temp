@@ -18,8 +18,9 @@
 	<center>
 		<h3>题目列表</h3>
 		<form action="<%=basePath%>subject1/getkeywordsubjects" method="post">
-			<input type="text" name="keyWords" /> &nbsp;<input type="submit" value="查询" />&nbsp;<a
-				href="<%=basePath%>subject1/toaddsubject" target="myIframe">添加题目</a>
+			<input type="text" name="keyWords" /> &nbsp;<input type="submit" value="查询" />
+			&nbsp;
+			<a href="<%=basePath%>subject1/toaddsubject" target="myIframe">添加题目</a>
 		</form>
 		<table border="1" cellpadding="0" cellspacing="0" align="center"
 			width="940px">

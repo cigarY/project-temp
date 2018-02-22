@@ -38,8 +38,7 @@
 		<include refid="Base_Column_List" />
 		from examination_question1
 		where question like "%"#{keywords}"%"
-		limit
-		#{start},#{pagesize}
+		order by id ASC
 	</select>
 	<select id="getPageCount" resultType="java.lang.Integer">
 		select count(*) from

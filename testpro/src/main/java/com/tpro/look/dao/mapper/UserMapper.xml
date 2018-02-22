@@ -30,8 +30,8 @@
 		select
 		<include refid="Base_Column_List" />
 		from u_msg
-		where question like "%"#{keywords}"%"
-		limit #{start},#{pagesize}
+		where username like "%"#{keywords}"%"
+		order by uid ASC
 	</select>
 	<select id="getPageCount" resultType="java.lang.Integer">
 		select count(*) from u_msg

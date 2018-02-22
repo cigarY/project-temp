@@ -62,9 +62,7 @@ public class SubjectQ1Controller {
 	@RequestMapping(value="/getkeywordsubjects",method=RequestMethod.POST)
 	public String getKeyWordsSubject(HttpServletRequest request, Model model, @RequestParam("keyWords") String keyWords) {
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("keywords", keyWords);
-		map.put("start", 0);
-		map.put("pagesize", 15);		
+		map.put("keywords", keyWords);		
 		List<SubjectQ1> subjectslist = subjectQ1Service.findListByKeyWords(map);
 		request.setAttribute("keywords", keyWords);
 		model.addAttribute("keywords", keyWords);

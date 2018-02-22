@@ -1,4 +1,4 @@
-package com.tpro.look.controller;
+   package com.tpro.look.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -62,9 +62,7 @@ public class UserController {
 	@RequestMapping(value="/getkeywordusers",method=RequestMethod.POST)
 	public String getKeyWordsSubject(HttpServletRequest request, Model model, @RequestParam("keyWords") String keyWords) {
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("keywords", keyWords);
-		map.put("start", 0);
-		map.put("pagesize", 15);		
+		map.put("keywords", keyWords);	
 		List<User> userslist = userService.findListByKeyWords(map);
 		request.setAttribute("keywords", keyWords);
 		model.addAttribute("keywords", keyWords);
