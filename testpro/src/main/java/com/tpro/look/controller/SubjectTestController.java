@@ -25,11 +25,19 @@ public class SubjectTestController {
 	@Autowired
 	private ISubjectQ4Service subjectQ4Service;
 
-	int testNum = 0;// 需要生成的题目数
-	int subjectcount = 0;// 题库中题目总数
-	int[] testArr = null;// 题目数组
-	int index = 0;// 数组下标
+	int testNum = 0;// 需要生成的总题数
+	int testchooseNum = 0;// 需要生成的单选题目数
+	int testdchooseNum = 0;// 需要生成的多选题目数
+	int testjudgeNum = 0;// 需要生成的判断题目数
+	
+	//数组里面存放题目的id号
+	int[] testArr = null;//分类合成后的数组
+	int[] testchooseArr = null;// 单选题目数组
+	int[] testdchooseArr = null;// 多选题目数组
+	int[] testjudgeArr = null;// 判断题目数组
+	
 	Random random = new Random();
+	int index = 0;// 数组下标	
 	int r = random.nextInt(100) + 1;// 生成随机考号
 
 	int errorNum = 0;// 错题数
@@ -49,16 +57,23 @@ public class SubjectTestController {
 	 */
 	@RequestMapping("/getsubjecttest")
 	public String getSubjectTest(HttpServletRequest request, int subjectnum) {
-		if (subjectnum == 1) {
+		index = 0;
+		r = random.nextInt(100) + 1;// 生成随机考号
+		if (subjectnum == 1) {			
 			testNum = 100;
-			subjectcount = subjectQ1Service.getPageCount();
-			testArr = getNumArr(testNum, subjectcount);
-			SubjectQ1 subjectQ1 = subjectQ1Service.findById(testArr[0]);
+			testjudgeNum = 40;
+			testchooseNum = 60;
+			//单选题题目列表
+			List<SubjectQ1> chooselist = subjectQ1Service.findListOnlyItem3();
+			//判断题题目列表
+			List<SubjectQ1> judgelist = subjectQ1Service.findListWithoutItem3();			
+			testjudgeArr = getNumArr1(testjudgeNum, judgelist);
+			testchooseArr = getNumArr1(testchooseNum, chooselist);
+			testArr = connectArr1(testjudgeArr,testchooseArr);
+			SubjectQ1 subjectQ1 = subjectQ1Service.findById(testjudgeArr[0]);
 			request.setAttribute("subject", subjectQ1);
 		} else if (subjectnum == 4) {
-			testNum = 50;
-			subjectcount = subjectQ4Service.getPageCount();
-			testArr = getNumArr(testNum, subjectcount);
+			testNum = 50;			
 			SubjectQ4 subjectQ4 = subjectQ4Service.findById(testArr[0]);
 			request.setAttribute("subject", subjectQ4);
 		} else {
@@ -70,6 +85,7 @@ public class SubjectTestController {
 		request.setAttribute("testNum", testNum);
 		return "/examtest";
 	}
+	
 
 	/**
 	 * 处理用户提交的数据
@@ -154,8 +170,28 @@ public class SubjectTestController {
 		return "/examtest";
 	}
 	
+	/**
+	 * 用户交卷处理
+	 * @param request
+	 * @param submit_i
+	 * @return
+	 */
 	@RequestMapping("/submitsubjectexam")
 	public String submitSubjectExam(HttpServletRequest request) {
+		// 通过用户选择的科目计算用户的得分
+		if (testNum == 100) {
+			score = rightNum * 1;
+		} else {
+			score = rightNum * 2;
+		}
+		request.setAttribute("msg", "您的得分："+score);
+		
+		// 清空答题信息记录
+		index = 1;
+		rightNum = 0;
+		errorNum = 0;
+		countAnswer = 0;
+		choselist.clear();
 		return "/msg";
 	}
 
@@ -165,25 +201,47 @@ public class SubjectTestController {
 	 * @param countNum
 	 *            需要生成的题目个数
 	 * @param sum
-	 *            题库中所有题目数
+	 *            要生成的题目
 	 * @return 题目编号列表
 	 */
-	private int[] getNumArr(int countNum, int sum) {
-		Set<Integer> set = new HashSet<Integer>();
+	private int[] getNumArr1(int countNum, List<SubjectQ1> sumlist) {
+		Set<SubjectQ1> set = new HashSet<SubjectQ1>();
 		int[] array = new int[countNum];
 		int num = 0;
-		for (; true;) {
-			num = random.nextInt(sum) + 1;
-			set.add(num);
+		while(true) {
+			num = random.nextInt(sumlist.size()) + 1;
+			set.add(sumlist.get(num));
 			if (set.size() >= countNum) {
 				break;
 			}
 		}
 		int i = 0;
-		for (int a : set) {
-			array[i] = a;
+		for (SubjectQ1 a : set) {
+			array[i] = a.getId();
 			i++;
 		}
 		return array;
+	}
+	
+	/**
+	 * 将分类选出的题库整合到一个新的数组
+	 * @param Arr1
+	 * @param Arr2
+	 * @return
+	 */
+	private int[] connectArr1(int[] Arr1, int[] Arr2) {
+		int[] tempArr = new int[Arr1.length+Arr2.length];
+		int i=0;
+		if(i<tempArr.length) {
+			for(int m:Arr1) {
+				tempArr[i] = m;
+				i++; 
+			}
+			for(int n:Arr2) {
+				tempArr[i]=n;
+				i++;
+			}
+		}
+		return tempArr;
 	}
 }

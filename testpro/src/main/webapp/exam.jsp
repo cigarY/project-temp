@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+	
 <!DOCTYPE html>
 <html>
 <head lang="en">
 <meta charset="UTF-8">
 <title>LOOK理论考试练习</title>
 <link rel="stylesheet" type="text/css" href="css/head_foot.css">
-<link href="css/exam.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/exams.css">
 </head>
 <body>
 
@@ -52,12 +53,12 @@
 											<p class="con_name">顺序练习</p>
 											<p class="con_msg">按照顺序练习做题</p>
 									</a></li>
-									<li><a href="#"> <img src="imgs/w_02.png" />
+									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}"> <img src="imgs/w_02.png" />
 											<p class="con_name">随机练习</p>
 											<p class="con_msg">所有法规一个不漏</p>
 									</a></li>
-									<li><a href="exam?testNum=1"> <img src="imgs/w_03.png" />											<p class="con_name">全真模拟</p>
-											<p class="con_msg">真是还原考题难度</p>
+									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}"> <img src="imgs/w_03.png" />											<p class="con_name">全真模拟</p>
+											<p class="con_msg">真题还原考题难度</p>
 									</a></li>
 									<li><a href="#"> <img src="imgs/w_04.png" />
 											<p class="con_name">专项练习</p>
@@ -95,11 +96,11 @@
 											<p class="con_name">顺序练习</p>
 											<p class="con_msg">按照顺序练习做题</p>
 									</a></li>
-									<li><a href="#"> <img src="imgs/w_02.png" />
+									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}"> <img src="imgs/w_02.png" />
 											<p class="con_name">随机练习</p>
 											<p class="con_msg">所有法规一个不漏</p>
 									</a></li>
-									<li><a href="exam?testNum=4"> <img src="imgs/w_03.png" />
+									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}"> <img src="imgs/w_03.png" />
 											<p class="con_name">全真模拟</p>
 											<p class="con_msg">真题还原考题难度</p>
 									</a></li>

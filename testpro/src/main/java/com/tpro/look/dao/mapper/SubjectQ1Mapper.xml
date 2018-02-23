@@ -44,6 +44,18 @@
 		select count(*) from
 		examination_question1
 	</select>
+	<select id="findListWithoutItem3" resultType="SubjectQ1">
+		select
+		<include refid="Base_Column_List" />
+		from examination_question1 
+		where item3=" "
+	</select>
+	<select id="findListOnlyItem3" resultType="SubjectQ1">
+		select
+		<include refid="Base_Column_List" />
+		from examination_question1
+		where item3!=" "
+	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from
 		examination_question1

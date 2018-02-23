@@ -13,4 +13,6 @@ public interface ISubjectQ1Service {
     List<SubjectQ1> findAll(Map<String,Object> map);
     int getPageCount();
     List<SubjectQ1> findListByKeyWords(Map<String,Object> map);
+    List<SubjectQ1> findListWithoutItem3();
+    List<SubjectQ1> findListOnlyItem3();
 }

@@ -54,4 +54,14 @@ public class SubjectQ1ServiceImpl implements ISubjectQ1Service {
 		return subjectQ1dao.findListByKeyWords(map);
 	}
 
+	@Override
+	public List<SubjectQ1> findListWithoutItem3() {
+		return subjectQ1dao.findListWithoutItem3();
+	}
+
+	@Override
+	public List<SubjectQ1> findListOnlyItem3() {
+		return subjectQ1dao.findListOnlyItem3();
+	}
+
 }

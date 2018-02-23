@@ -2,13 +2,13 @@
 /*整个页面*/
 #examPage{
     width: 100%;
-    height: 1900px;
+    /*height: 1900px;*/
 }
 
 /*内容部分*/
 #content{
     width: 100%;
-    height: 1500px;
+    /*height: 1500px;*/
 }
 
 /*共有样式*/
@@ -92,15 +92,14 @@
 }
 .test_con>ul>li{
     height: inherit;
-    width: 200px;
-    margin-left: 6px;
+    width: 210px;
+    margin-left: 11px;
     float: left;
-    background-color:red;
 }
 .test_con>ul>li>a{
     display: block;
-    height: 120px;
-    width: 200px;
+    height: inherit;
+    width: inherit;
     margin: 25px auto;
     text-align: center;
 }
@@ -200,4 +199,25 @@
     border-bottom: 1px solid #000000;
 }
 
-
+/*考试技巧*/
+.test_skills{
+    width: 365px;
+    height: 530px;
+    border: 1px solid lightgray;
+    float: left;
+}
+/*试题分析*/
+.test_analyse{
+    width: 365px;
+    height: 530px;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+    float: left;
+}
+/*学车视频*/
+.test_video{
+    width: 365px;
+    height: 530px;
+    border: 1px solid lightgray;
+    float: right;
+}

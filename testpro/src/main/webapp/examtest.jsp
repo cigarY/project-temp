@@ -94,7 +94,7 @@
 					<div class="submit_answer">					
 						<a href="<%=basePath%>subjecttest/dealsubjectexam?control_i=${index-1 }&answer_i=${0}"><button class="prev">上一题</button></a>
 						<a href="<%=basePath%>subjecttest/dealsubjectexam?control_i=${index+1 }&answer_i=${0}"><button class="next">下一题</button></a>
-						<a href="exam_submit?submit_i=${200 }"><button class="hand_test" type="button">交卷</button></a>
+						<a href="<%=basePath%>subjecttest/submitsubjectexam"><button class="hand_test" type="button">交卷</button></a>
 					</div>
 				</div>
 				<div class="test_answer">
