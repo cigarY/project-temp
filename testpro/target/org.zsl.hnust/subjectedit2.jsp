@@ -1,8 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/edit.css">
@@ -12,7 +18,7 @@
 		<div class="ehead">
 			<h3>编辑题目</h3>
 		</div>
-		<form action="subjectedit2" method="post" target="myIframe" enctype="multipart/form-data">
+		<form action="<%=basePath%>subject1/editsubject" method="post" target="myIframe" enctype="multipart/form-data">
 			<input type="hidden" name="id" value="${subjectinfo.id }">
 		<div class="econtent">
 			<ul>
@@ -52,8 +58,7 @@
 					<div class="tleft"><p>图片：</p></div>
 					<div class="tright"><input type="file" name="url" value="${subjectinfo.url }"></div>
 				</li>
-				<input type="hidden" name="wrongnumber" value="0">
-			    <li>
+				<li>
 			    	<input style="width: inherit;height: inherit;background-color: #499adf;color: #ffffff;border:none;" type="submit" value="确认提交">
 			    </li>
 			    

@@ -13,4 +13,8 @@ public interface ISubjectQ4Dao {
     List<SubjectQ4> findAll(Map<String,Object> map);
     int getPageCount();
     List<SubjectQ4> findListByKeyWords(Map<String,Object> map);
+    List<SubjectQ4> findListWithoutItem3();
+    List<SubjectQ4> findListChoose();
+    List<SubjectQ4> findListDChoose();
+    void updateWrongNum(int wrongnumber,int id);
 }

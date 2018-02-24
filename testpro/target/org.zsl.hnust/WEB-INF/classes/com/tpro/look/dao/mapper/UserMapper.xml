@@ -10,12 +10,14 @@
 		<result column="log_time" jdbcType="DATE" property="logTime" />
 	</resultMap>
 	<sql id="Base_Column_List">
-		uid, username, password, sex, email, log_time
+		uid, username, sex, email, log_time
 	</sql>
 	<select id="findAll" resultType="User">
 		select
 		<include refid="Base_Column_List" />
 		from u_msg
+		order by uid ASC
+        limit #{start},#{pagesize}         
 	</select>
 	<select id="findById" parameterType="java.lang.Integer"
 		resultMap="BaseResultMap">
@@ -23,6 +25,16 @@
 		<include refid="Base_Column_List" />
 		from u_msg
 		where uid = #{uid,jdbcType=INTEGER}
+	</select>
+	<select id="findListByKeyWords" resultType="User">
+		select
+		<include refid="Base_Column_List" />
+		from u_msg
+		where username like "%"#{keywords}"%"
+		order by uid ASC
+	</select>
+	<select id="getPageCount" resultType="java.lang.Integer">
+		select count(*) from u_msg
 	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from u_msg

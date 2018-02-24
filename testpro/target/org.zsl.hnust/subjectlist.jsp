@@ -17,10 +17,10 @@
 <body>
 	<center>
 		<h3>题目列表</h3>
-		<form action="subjectlist" method="post">
-			<input type="text" name="key" value="${key }" /> <input
-				type="submit" value="查询" />&nbsp;<a
-				href="<%=basePath%>subject1/toaddsubject" target="myIframe">添加题目</a>
+		<form action="<%=basePath%>subject1/getkeywordsubjects" method="post">
+			<input type="text" name="keyWords" /> &nbsp;<input type="submit" value="查询" />
+			&nbsp;
+			<a href="<%=basePath%>subject1/toaddsubject" target="myIframe">添加题目</a>
 		</form>
 		<table border="1" cellpadding="0" cellspacing="0" align="center"
 			width="940px">
@@ -40,10 +40,10 @@
 			<c:if test="${!empty subjects }">
 				<c:forEach items="${subjects }" var="subject">
 					<tr>
-						<td style="height: 30px; width: 100px">
-						<a href="<%=basePath%>subject1/getsubject?id=${subject.id}" target="myIframe">编辑</a>
-						<a href="javascript:del('${subject.id }')">删除</a>
-						</td>
+						<td style="height: 30px; width: 100px"><a
+							href="<%=basePath%>subject1/getsubject?id=${subject.id}"
+							target="myIframe">编辑</a> <a
+							href="<%=basePath%>subject1/delsubject?id=${subject.id}">删除</a></td>
 						<td>${subject.id }</td>
 						<td>${subject.question }</td>
 						<td>${subject.answer }</td>
@@ -58,10 +58,12 @@
 				</c:forEach>
 			</c:if>
 			<tr>
-				<td colspan="11" align="center"><a href="?pageNo=1">首页</a> <a
-					href="?pageNo=${param.pageNo>1?param.pageNo-1:1 }">上一页</a> <a
-					href="?pageNo=${param.pageNo<pageCount?param.pageNo+1:pageCount }">下一页</a>
-					<a href="?pageNo=${pageCount }">末页</a></td>
+				<td colspan="11" align="center"><a
+					href="<%=basePath%>subject1/getallsubjects?pageNo=${1}">首页</a> <a
+					href="<%=basePath%>subject1/getallsubjects?pageNo=${pageNo-1}">上一页</a>
+					<a href="<%=basePath%>subject1/getallsubjects?pageNo=${pageNo+1}">下一页</a>
+					<a href="<%=basePath%>subject1/getallsubjects?pageNo=${endPage}">末页</a></td>
+
 			</tr>
 		</table>
 	</center>

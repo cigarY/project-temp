@@ -70,10 +70,20 @@ public class SubjectTestController {
 			testjudgeArr = getNumArr1(testjudgeNum, judgelist);
 			testchooseArr = getNumArr1(testchooseNum, chooselist);
 			testArr = connectArr1(testjudgeArr,testchooseArr);
-			SubjectQ1 subjectQ1 = subjectQ1Service.findById(testjudgeArr[0]);
+			SubjectQ1 subjectQ1 = subjectQ1Service.findById(testArr[0]);
 			request.setAttribute("subject", subjectQ1);
 		} else if (subjectnum == 4) {
-			testNum = 50;			
+			testNum = 50;
+			testjudgeNum = 20;
+			testchooseNum = 20;
+			testdchooseNum = 10;
+			List<SubjectQ4> chooselist = subjectQ4Service.findListChoose();
+			List<SubjectQ4> dchooselist = subjectQ4Service.findListDChoose();
+			List<SubjectQ4> judgelist = subjectQ4Service.findListWithoutItem3();
+			testjudgeArr = getNumArr2(testjudgeNum, judgelist);
+			testchooseArr = getNumArr2(testchooseNum, chooselist);
+			testdchooseArr = getNumArr2(testdchooseNum, dchooselist);
+			testArr = connectArr2(testjudgeArr, testchooseArr, testdchooseArr);
 			SubjectQ4 subjectQ4 = subjectQ4Service.findById(testArr[0]);
 			request.setAttribute("subject", subjectQ4);
 		} else {
@@ -86,7 +96,6 @@ public class SubjectTestController {
 		return "/examtest";
 	}
 	
-
 	/**
 	 * 处理用户提交的数据
 	 * 
@@ -97,7 +106,9 @@ public class SubjectTestController {
 	 */
 	@RequestMapping("/dealsubjectexam")
 	public String dealSubjectExam(HttpServletRequest request, int control_i, String answer_i) {
-		index = control_i;		
+		index = control_i;	
+		int wrongnumber = 0;
+		int wrongid = 0;
 		if (index < 1) {
 			index = 0;
 		} else if(index >= testNum) {
@@ -118,6 +129,10 @@ public class SubjectTestController {
 				} else {
 					errorNum++;
 					isTrue = "F";
+					//统计错题数目，写入数据库用于难题练习
+					wrongnumber = subjectQ1.getWrongnumber()+1;
+					wrongid = subjectQ1.getId();
+					subjectQ1Service.updateWrongNum(wrongnumber, wrongid);
 				}
 			}
 		} else if (testNum == 50) {
@@ -133,6 +148,10 @@ public class SubjectTestController {
 				} else {
 					errorNum++;
 					isTrue = "F";
+					//统计错题数目，写入数据库用于难题练习
+					wrongnumber = subjectQ4.getWrongnumber()+1;
+					wrongid = subjectQ4.getId();
+					subjectQ4Service.updateWrongNum(wrongnumber, wrongid);
 				}
 			}
 		} else {
@@ -223,6 +242,27 @@ public class SubjectTestController {
 		return array;
 	}
 	
+	private int[] getNumArr2(int countNum, List<SubjectQ4> sumlist) {
+		Set<SubjectQ4> set = new HashSet<SubjectQ4>();
+		int[] array = new int[countNum];
+		int num = 0;
+		while(true) {
+			num = random.nextInt(sumlist.size()) + 1;
+			set.add(sumlist.get(num));
+			if (set.size() >= countNum) {
+				break;
+			}
+		}
+		int i = 0;
+		for (SubjectQ4 a : set) {
+			array[i] = a.getId();
+			i++;
+		}
+		return array;
+	}
+
+
+	
 	/**
 	 * 将分类选出的题库整合到一个新的数组
 	 * @param Arr1
@@ -239,6 +279,25 @@ public class SubjectTestController {
 			}
 			for(int n:Arr2) {
 				tempArr[i]=n;
+				i++;
+			}
+		}
+		return tempArr;
+	}
+	private int[] connectArr2(int[] Arr1, int[] Arr2,int[] Arr3) {
+		int[] tempArr = new int[Arr1.length+Arr2.length+Arr3.length];
+		int i=0;
+		if(i<tempArr.length) {
+			for(int m:Arr1) {
+				tempArr[i] = m;
+				i++;
+			}
+			for(int n:Arr2) {
+				tempArr[i] = n;
+				i++;
+			}
+			for(int n:Arr3) {
+				tempArr[i] = n;
 				i++;
 			}
 		}

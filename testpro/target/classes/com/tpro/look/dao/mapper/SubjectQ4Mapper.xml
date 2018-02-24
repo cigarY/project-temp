@@ -45,6 +45,24 @@
 		select count(*) from
 		examination_question4
 	</select>
+	<select id="findListWithoutItem3" resultType="SubjectQ4">
+		select
+		<include refid="Base_Column_List"/>
+		from examination_question4
+		where item3=" "
+	</select>
+	<select id="findListChoose" resultType="SubjectQ4">
+		select
+		<include refid="Base_Column_List"/>
+		from examination_question4
+		where item3!=" " and answer&lt;5
+	</select>
+	<select id="findListDChoose" resultType="SubjectQ4">
+		select
+		<include refid="Base_Column_List"/>
+		from examination_question4
+		where answer>4
+	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from
 		examination_question4
@@ -83,5 +101,10 @@
 		wrongnumber = #{wrongnumber,jdbcType=INTEGER}
 		where iid =
 		#{iid,jdbcType=INTEGER}
+	</update>
+	<update id="updateWrongNum" parameterType="java.lang.Integer">
+		update examination_question4
+		set wrongnumber = #{0}
+		where id = #{1}
 	</update>
 </mapper>

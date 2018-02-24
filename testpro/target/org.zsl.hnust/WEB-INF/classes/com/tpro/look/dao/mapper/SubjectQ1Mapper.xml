@@ -15,13 +15,16 @@
 		<result column="wrongnumber" jdbcType="INTEGER" property="wrongnumber" />
 	</resultMap>
 	<sql id="Base_Column_List">
-		iid, id, question, answer, item1, item2, item3, item4, explains, url,
+		iid, id, question, answer, item1, item2, item3, item4,
+		explains, url,
 		wrongnumber
 	</sql>
 	<select id="findAll" resultType="SubjectQ1">
 		select
 		<include refid="Base_Column_List" />
 		from examination_question1
+		order by id ASC
+		limit #{start},#{pagesize}		
 	</select>
 	<select id="findById" parameterType="java.lang.Integer"
 		resultMap="BaseResultMap">
@@ -30,19 +33,48 @@
 		from examination_question1
 		where iid = #{iid,jdbcType=INTEGER}
 	</select>
+	<select id="findListByKeyWords" resultType="SubjectQ1">
+		select
+		<include refid="Base_Column_List" />
+		from examination_question1
+		where question like "%"#{keywords}"%"
+		order by id ASC
+	</select>
+	<select id="getPageCount" resultType="java.lang.Integer">
+		select count(*) from
+		examination_question1
+	</select>
+	<select id="findListWithoutItem3" resultType="SubjectQ1">
+		select
+		<include refid="Base_Column_List" />
+		from examination_question1 
+		where item3=" "
+	</select>
+	<select id="findListOnlyItem3" resultType="SubjectQ1">
+		select
+		<include refid="Base_Column_List" />
+		from examination_question1
+		where item3!=" "
+	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
-		delete from examination_question1
+		delete from
+		examination_question1
 		where iid = #{iid,jdbcType=INTEGER}
 	</delete>
 	<insert id="insert" parameterType="com.tpro.look.model.SubjectQ1">
-		insert into examination_question1 (iid, id, question,
+		insert into
+		examination_question1 (iid, id, question,
 		answer, item1, item2,
-		item3, item4, explains,
+		item3,
+		item4, explains,
 		url, wrongnumber)
-		values (#{iid,jdbcType=INTEGER}, #{id,jdbcType=INTEGER},
+		values (#{iid,jdbcType=INTEGER},
+		#{id,jdbcType=INTEGER},
 		#{question,jdbcType=VARCHAR},
-		#{answer,jdbcType=VARCHAR}, #{item1,jdbcType=VARCHAR}, #{item2,jdbcType=VARCHAR},
-		#{item3,jdbcType=VARCHAR}, #{item4,jdbcType=VARCHAR},
+		#{answer,jdbcType=VARCHAR}, #{item1,jdbcType=VARCHAR},
+		#{item2,jdbcType=VARCHAR},
+		#{item3,jdbcType=VARCHAR},
+		#{item4,jdbcType=VARCHAR},
 		#{explains,jdbcType=VARCHAR},
 		#{url,jdbcType=VARCHAR}, #{wrongnumber,jdbcType=INTEGER})
 	</insert>
@@ -50,7 +82,8 @@
 	<update id="update" parameterType="com.tpro.look.model.SubjectQ1">
 		update examination_question1
 		set id = #{id,jdbcType=INTEGER},
-		question = #{question,jdbcType=VARCHAR},
+		question =
+		#{question,jdbcType=VARCHAR},
 		answer = #{answer,jdbcType=VARCHAR},
 		item1 = #{item1,jdbcType=VARCHAR},
 		item2 = #{item2,jdbcType=VARCHAR},
@@ -59,7 +92,8 @@
 		explains = #{explains,jdbcType=VARCHAR},
 		url = #{url,jdbcType=VARCHAR},
 		wrongnumber = #{wrongnumber,jdbcType=INTEGER}
-		where iid = #{iid,jdbcType=INTEGER}
+		where iid =
+		#{iid,jdbcType=INTEGER}
 	</update>
 
 </mapper>

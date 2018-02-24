@@ -95,5 +95,9 @@
 		where iid =
 		#{iid,jdbcType=INTEGER}
 	</update>
-
+	<update id="updateWrongNum" parameterType="java.lang.Integer">
+		update examination_question1
+		set wrongnumber = #{0}
+		where id = #{1}
+	</update>
 </mapper>

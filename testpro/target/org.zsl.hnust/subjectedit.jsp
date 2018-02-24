@@ -96,7 +96,6 @@
 							<input type="file" name="url" value="${subject.url }">
 						</div>
 					</li>
-					<input type="hidden" name="wrongnumber" value="0">
 					<li><input
 						style="width: inherit; height: inherit; background-color: #499adf; color: #ffffff; border: none;"
 						type="submit" value="确认提交"></li>

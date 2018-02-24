@@ -64,4 +64,9 @@ public class SubjectQ1ServiceImpl implements ISubjectQ1Service {
 		return subjectQ1dao.findListOnlyItem3();
 	}
 
+	@Override
+	public void updateWrongNum(int wrongnumber, int id) {
+		subjectQ1dao.updateWrongNum(wrongnumber, id);
+	}
+
 }

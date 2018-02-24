@@ -54,4 +54,24 @@ public class SubjectQ4ServiceImpl implements ISubjectQ4Service {
 		return subjectDao.findListByKeyWords(map);
 	}
 
+	@Override
+	public List<SubjectQ4> findListWithoutItem3() {
+		return subjectDao.findListWithoutItem3();
+	}
+
+	@Override
+	public List<SubjectQ4> findListChoose() {
+		return subjectDao.findListChoose();
+	}
+
+	@Override
+	public List<SubjectQ4> findListDChoose() {
+		return subjectDao.findListDChoose();
+	}
+
+	@Override
+	public void updateWrongNum(int wrongnumber, int id) {
+		subjectDao.updateWrongNum(wrongnumber, id);
+	}
+
 }
