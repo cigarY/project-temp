@@ -27,8 +27,9 @@ public class SubjectPracticeController {
 	int testNum = 0;// 需要生成的总题数
 	String isTrue = null;// 当前题目是否正确,T表示正确，F表示错误
 	Random random = new Random();
-	int index = 0;
-	int[] subjectArr = null;
+	int index = 0;// 数组下标
+	int[] subjectArr = null;// 生成题目的数组
+	int subjectId = 0;// 科目编号
 
 	/**
 	 * 生成对应题目
@@ -41,7 +42,8 @@ public class SubjectPracticeController {
 	@RequestMapping("/getpractice")
 	public String getSubjectPractice(HttpServletRequest request, int subjectnum, int dealId) {
 		index = 0;
-		if (subjectnum == 1) {
+		subjectId = subjectnum;
+		if (subjectId == 1) {
 			testNum = subjectQ1Service.getPageCount();
 			List<SubjectQ1> subjectQ1slist = subjectQ1Service.getHardTop100();
 			// 难度
@@ -55,7 +57,7 @@ public class SubjectPracticeController {
 			}
 			SubjectQ1 subjectQ1 = subjectQ1Service.findById(subjectArr[0]);
 			request.setAttribute("subject", subjectQ1);
-		} else if (subjectnum == 4) {
+		} else if (subjectId == 4) {
 			testNum = subjectQ4Service.getPageCount();
 			List<SubjectQ4> subjectQ4slist = subjectQ4Service.getHardTop100();
 			if (dealId == 5) {
@@ -96,25 +98,30 @@ public class SubjectPracticeController {
 			index = testNum - 1;
 		}
 		int tid = subjectArr[index];
-		if (testNum == 100) {
+		if (subjectId == 1) {
 			SubjectQ1 subjectQ1 = subjectQ1Service.findById(tid);
 			request.setAttribute("subject", subjectQ1);
 			// 用户提交的答案判断
 			if (answer_i.equals(subjectQ1.getAnswer())) {
 				isTrue = "T";
-			} else {
+			} else if(answer_i.equals("0")||null == answer_i){
+				isTrue = "N";
+			}else {
 				isTrue = "F";
 				// 统计错题数目，写入数据库用于难题练习
 				wrongnumber = subjectQ1.getWrongnumber() + 1;
 				wrongid = subjectQ1.getId();
 				subjectQ1Service.updateWrongNum(wrongnumber, wrongid);
 			}
-		} else if (testNum == 50) {
+	
+		} else if (subjectId == 4) {
 			SubjectQ4 subjectQ4 = subjectQ4Service.findById(tid);
 			request.setAttribute("subject", subjectQ4);
 			// 用户提交的答案判断
 			if (answer_i.equals(subjectQ4.getAnswer())) {
 				isTrue = "T";
+			}else if(answer_i.equals("0")||null == answer_i){
+				isTrue = "N";
 			} else {
 				isTrue = "F";
 				// 统计错题数目，写入数据库用于难题练习

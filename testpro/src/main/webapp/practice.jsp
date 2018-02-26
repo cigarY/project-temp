@@ -81,7 +81,7 @@
 		var isShow4 = document.getElementById("itemdisplay4");
 		var showmsg = document.getElementById("is_right");
 		var seturl = document.getElementById("geturl").value;
-		var showaswer = document.getElementById("get_answer").value;
+		var showanswer = document.getElementById("get_answer").value;
 		var trueanswer = document.getElementById("true_answer");
 		
 		if(setItem == ""){
@@ -95,15 +95,6 @@
 			document.getElementById("s_img").style.display = "none";
 		}
 		
-		if(showaswer == "1"){
-			trueanswer.innerText = "正确答案为：A";
-		}else if(showaswer == "2"){
-			trueanswer.innerText = "正确答案为：B";
-		}else if(showaswer == "3"){
-			trueanswer.innerText = "正确答案为：C";
-		}else{
-			trueanswer.innerText = "正确答案为：D";
-		}
 		
 		var isTrue = document.getElementById("li_show").value;
 		var which_li = document.getElementById("li_choose").value;
@@ -115,6 +106,15 @@
 		}else if(isTrue == "F"){
 			showmsg.innerText = "错误";
 			showmsg.style.color = "#ff0000";
+			if(showanswer == "1"){
+				trueanswer.innerText = "正确答案为：A";
+			}else if(showanswer == "2"){
+				trueanswer.innerText = "正确答案为：B";
+			}else if(showanswer == "3"){
+				trueanswer.innerText = "正确答案为：C";
+			}else if(showanswer == "4"){
+				trueanswer.innerText = "正确答案为：D";
+			}
 		}
 		
 	}
