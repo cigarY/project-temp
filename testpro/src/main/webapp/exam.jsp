@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type"  content="text/html;Chartset=UTF-8" />
 <title>LOOK理论考试练习</title>
 <link rel="stylesheet" type="text/css" href="css/head_foot.css">
 <link rel="stylesheet" type="text/css" href="css/exams.css">
@@ -49,22 +49,23 @@
 							</div>
 							<div class="test_con">
 								<ul>
-									<li><a href="#"> <img src="imgs/w_01.png" />
+									<li><a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${1}&dealId=${1}"> <img src="imgs/w_01.png" />
 											<p class="con_name">顺序练习</p>
 											<p class="con_msg">按照顺序练习做题</p>
 									</a></li>
-									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}"> <img src="imgs/w_02.png" />
+									<li><a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${1}&dealId=${2}"> <img src="imgs/w_02.png" />
 											<p class="con_name">随机练习</p>
 											<p class="con_msg">所有法规一个不漏</p>
 									</a></li>
-									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}"> <img src="imgs/w_03.png" />											<p class="con_name">全真模拟</p>
+									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}"> <img src="imgs/w_03.png" />											
+											<p class="con_name">全真模拟</p>
 											<p class="con_msg">真题还原考题难度</p>
 									</a></li>
 									<li><a href="#"> <img src="imgs/w_04.png" />
 											<p class="con_name">专项练习</p>
 											<p class="con_msg">分门别类重点突破</p>
 									</a></li>
-									<li><a href="#"> <img src="imgs/w_05.png" />
+									<li><a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${1}&dealId=${5}"> <img src="imgs/w_05.png" />
 											<p class="con_name">难题攻克</p>
 											<p class="con_msg">准确把握考试难点</p>
 									</a></li>
@@ -92,11 +93,11 @@
 							</div>
 							<div class="test_con">
 								<ul>
-									<li><a href="#"> <img src="imgs/w_01.png" />
+									<li><a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${4}&dealId=${1}"> <img src="imgs/w_01.png" />
 											<p class="con_name">顺序练习</p>
 											<p class="con_msg">按照顺序练习做题</p>
 									</a></li>
-									<li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}"> <img src="imgs/w_02.png" />
+									<li><a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${4}&dealId=${2}"> <img src="imgs/w_02.png" />
 											<p class="con_name">随机练习</p>
 											<p class="con_msg">所有法规一个不漏</p>
 									</a></li>
@@ -108,7 +109,7 @@
 											<p class="con_name">专项练习</p>
 											<p class="con_msg">分门别类重点突破</p>
 									</a></li>
-									<li><a href="#"> <img src="imgs/w_05.png" />
+									<li><a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${4}&dealId=${5}"> <img src="imgs/w_05.png" />
 											<p class="con_name">难题攻克</p>
 											<p class="con_msg">准确把握考试难点</p>
 									</a></li>

@@ -56,11 +56,19 @@
 		from examination_question1
 		where item3!=" "
 	</select>
+	<select id="getHardTop100" resultType="SubjectQ1">
+		select
+		<include refid="Base_Column_List" />
+		from examination_question1
+		order by wrongnumber desc
+		limit 0,100
+	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from
 		examination_question1
 		where iid = #{iid,jdbcType=INTEGER}
 	</delete>
+	
 	<insert id="insert" parameterType="com.tpro.look.model.SubjectQ1">
 		insert into
 		examination_question1 (iid, id, question,

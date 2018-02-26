@@ -63,6 +63,13 @@
 		from examination_question4
 		where answer>4
 	</select>
+	<select id="getHardTop100" resultType="SubjectQ4">
+		select
+		<include refid="Base_Column_List" />
+		from examination_question4
+		order by wrongnumber desc
+		limit 0,100
+	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from
 		examination_question4

@@ -74,4 +74,9 @@ public class SubjectQ4ServiceImpl implements ISubjectQ4Service {
 		subjectDao.updateWrongNum(wrongnumber, id);
 	}
 
+	@Override
+	public List<SubjectQ4> getHardTop100() {
+		return subjectDao.getHardTop100();
+	}
+
 }

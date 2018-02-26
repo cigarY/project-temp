@@ -16,4 +16,5 @@ public interface ISubjectQ1Service {
     List<SubjectQ1> findListWithoutItem3();
     List<SubjectQ1> findListOnlyItem3();
     void updateWrongNum(int wrongnumber,int id);
+    List<SubjectQ1> getHardTop100();
 }

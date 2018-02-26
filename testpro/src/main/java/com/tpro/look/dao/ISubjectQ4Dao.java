@@ -17,4 +17,5 @@ public interface ISubjectQ4Dao {
     List<SubjectQ4> findListChoose();
     List<SubjectQ4> findListDChoose();
     void updateWrongNum(int wrongnumber,int id);
+    List<SubjectQ4> getHardTop100();
 }
