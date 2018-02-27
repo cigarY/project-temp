@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOOK圈——测试练习</title>
+	<link rel="stylesheet" type="text/css" href="css/head_foot.css">
+	<link rel="stylesheet" type="text/css" href="css/practice.css">
+</head>
+<body>
+	<!--头部-->
+        <div id="head">
+
+            <!--导航部分-->
+            <div id="headnav">
+
+                <!--导航部分显示内容区域-->
+                <div class="headnav_show">
+                    <!--logo-->
+                    <div class="logo">
+                        <img src="imgs/logo.png"/>
+                    </div>
+
+                    <!--导航条-->
+                    <div class="navbar">
+                        <ul>
+                            <li><a href="index.jsp" style="color: #499afd">首页</a></li>
+                            <li><a href="exam?testNum=1">科目一</a></li>
+                            <li><a href="exam?testNum=4">科目四</a></li>
+                            <li><a href="#">个人中心</a></li>
+                            <li><a href="#">在线咨询</a></li>
+                        </ul>
+                    </div>
+
+                    <!--登录注册-->
+                    <div class="login">
+                        <a href="login.jsp"><button class="btn1" type="button">登录</button></a>
+                        <a href="register.jsp"><button class="btn2" type="button">注册</button></a>
+                    </div>
+
+
+                    <!-- <div class="clear">${user.username }</div> -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contains">
+        	<div class="contains_show">
+        		<div class="contains_top">
+        			<div class="contains_top_l">
+        				<div class="text_question">
+							<i>${index+1}.</i>
+							<p class="question">${subject.question }</p>
+						</div>
+						<p>A、${subject.item1 }</p>
+						<p>B、${subject.item2 }</p>
+						<p id="itemdisplay1">C、${subject.item3 }</p>
+						<p id="itemdisplay2">D、${subject.item4 }</p>
+        			</div>
+        			<div class="contains_top_r">
+        				<div class="text_content_rshow">
+							<img src="http://images.juheapi.com/jztk/c1c2subject1/9.jpg"> <span><a href="${subject.url }" target="_blank" id="s_img">查看大图</a></span>
+						</div>
+        			</div>
+        		</div>
+        		<div class="contains_buttom">
+        			<div class="right_answer">
+        				<p>答案：<span>正确</span>  正确答案为:${subject.answer}</p>
+        			</div>
+        			<div class="text_content_choose">
+						<span>请选择：</span>
+						<button class="choose" type="button">A</button>
+						<button class="choose" type="button">B</button>
+						<button class="choose" type="button" id="itemdisplay3">C</button>
+						<button class="choose" type="button" id="itemdisplay4">D</button>
+					</div>
+        		</div>
+        		<div class="test_information">
+        			<div class="information_l">
+        				<details>
+							<summary>点击查看解析</summary>
+							<p>${subject.explain }</p>
+						</details>
+        			</div>
+        			<div class="submit_answer">					
+						<a href="exam_test?control_i=${index-1 }&answer_i=${0}"><button class="prev">上一题</button></a>
+						<a href="exam_test?control_i=${index+1 }&answer_i=${0}"><button class="next">下一题</button></a>
+					</div>
+        		</div>
+        		
+        	</div>
+        </div>
+
+        <div class="foot">
+            <div class="foot_show">
+                <p>&nbsp;</p>
+                <p class="p1"><a href="#">移动开放平台 | 服务协议 | 权利声明 | 版本更新 | 帮助中心 | 版权投诉</a></p>
+                <p class="p2"><a href="#">@2017 All Copyright Reserved By class3 yangxuejia</a></p>
+            </div>
+        </div>
+</body>
+</html>
