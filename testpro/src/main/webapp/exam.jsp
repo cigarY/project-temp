@@ -61,7 +61,7 @@
 											<p class="con_name">全真模拟</p>
 											<p class="con_msg">真题还原考题难度</p>
 									</a></li>
-									<li><a href="#"> <img src="imgs/w_04.png" />
+									<li><a href="<%=basePath%>subjectspecial/getcategory?subjectnum=${1}"> <img src="imgs/w_04.png" />
 											<p class="con_name">专项练习</p>
 											<p class="con_msg">分门别类重点突破</p>
 									</a></li>
@@ -105,7 +105,7 @@
 											<p class="con_name">全真模拟</p>
 											<p class="con_msg">真题还原考题难度</p>
 									</a></li>
-									<li><a href="#"> <img src="imgs/w_04.png" />
+									<li><a href="<%=basePath%>subjectspecial/getcategory?subjectnum=${4}"> <img src="imgs/w_04.png" />
 											<p class="con_name">专项练习</p>
 											<p class="con_msg">分门别类重点突破</p>
 									</a></li>

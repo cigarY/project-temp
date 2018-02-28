@@ -1,0 +1,37 @@
+.contains{
+	width: 100%;
+}
+.contains_show{
+	width: 1120px;
+	height: 450px;
+	margin: 0px auto;
+}
+.title{
+	width: inherit;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+	margin-top: 30px;
+}
+.category1,.category2,.category3{
+	width: inherit;
+	height: 100px;
+	margin-top: 20px;
+	border: 1px solid #499afd;  
+}
+.title_c{
+	width: inherit;
+	height: 50px;
+	line-height: 50px;
+	color: #499afd;
+	font-size: 20px;
+	padding-left: 20px;
+}
+.detail{
+	width: inherit;
+	height: 50px;
+	line-height: 50px;
+	color: #909090;
+	padding-left: 35px;
+}

@@ -45,8 +45,9 @@
 	width: 300px;
 }
 .text_content_rshow>img{
-	height: 230px;
-	width: inherit;
+	height: 200px;
+	width: 260px;
+	padding-top: 30px;
 }
 .text_content_rshow>span{
 	display: block;
