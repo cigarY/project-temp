@@ -206,7 +206,7 @@ public class SubjectTestController {
 		request.setAttribute("msg", "您的得分："+score);
 		
 		// 清空答题信息记录
-		index = 1;
+		index = 0;
 		rightNum = 0;
 		errorNum = 0;
 		countAnswer = 0;

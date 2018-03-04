@@ -44,28 +44,28 @@ public class SubjectPracticeController {
 		index = 0;
 		subjectId = subjectnum;
 		if (subjectId == 1) {
-			testNum = subjectQ1Service.getPageCount();
-			List<SubjectQ1> subjectQ1slist = subjectQ1Service.getHardTop100();
 			// 难度
 			if (dealId == 5) {
-				for (int i = 0; i < subjectQ1slist.size(); i++) {
-					SubjectQ1 subjectQ1 = subjectQ1slist.get(i);
-					subjectArr[i] = subjectQ1.getId();
+				List<SubjectQ1> subjectQ1slist = subjectQ1Service.getHardTop100();
+				testNum = subjectQ1slist.size();
+				for (int i = 0; i < testNum; i++) {
+					subjectArr[i] = subjectQ1slist.get(i).getId();
 				}
 			} else {
+				testNum = subjectQ1Service.getPageCount();
 				subjectArr = getSubjectArr(testNum, dealId);
 			}
 			SubjectQ1 subjectQ1 = subjectQ1Service.findById(subjectArr[0]);
 			request.setAttribute("subject", subjectQ1);
 		} else if (subjectId == 4) {
-			testNum = subjectQ4Service.getPageCount();
-			List<SubjectQ4> subjectQ4slist = subjectQ4Service.getHardTop100();
 			if (dealId == 5) {
+				List<SubjectQ4> subjectQ4slist = subjectQ4Service.getHardTop100();
+				testNum = subjectQ4slist.size();
 				for (int i = 0; i < subjectQ4slist.size(); i++) {
-					SubjectQ4 subjectQ4 = subjectQ4slist.get(i);
-					subjectArr[i] = subjectQ4.getId();
+					subjectArr[i] = subjectQ4slist.get(i).getId();
 				}
 			} else {
+				testNum = subjectQ4Service.getPageCount();
 				subjectArr = getSubjectArr(testNum, dealId);
 			}
 			SubjectQ4 subjectQ4 = subjectQ4Service.findById(subjectArr[0]);
@@ -104,23 +104,23 @@ public class SubjectPracticeController {
 			// 用户提交的答案判断
 			if (answer_i.equals(subjectQ1.getAnswer())) {
 				isTrue = "T";
-			} else if(answer_i.equals("0")||null == answer_i){
+			} else if (answer_i.equals("0") || null == answer_i) {
 				isTrue = "N";
-			}else {
+			} else {
 				isTrue = "F";
 				// 统计错题数目，写入数据库用于难题练习
 				wrongnumber = subjectQ1.getWrongnumber() + 1;
 				wrongid = subjectQ1.getId();
 				subjectQ1Service.updateWrongNum(wrongnumber, wrongid);
 			}
-	
+
 		} else if (subjectId == 4) {
 			SubjectQ4 subjectQ4 = subjectQ4Service.findById(tid);
 			request.setAttribute("subject", subjectQ4);
 			// 用户提交的答案判断
 			if (answer_i.equals(subjectQ4.getAnswer())) {
 				isTrue = "T";
-			}else if(answer_i.equals("0")||null == answer_i){
+			} else if (answer_i.equals("0") || null == answer_i) {
 				isTrue = "N";
 			} else {
 				isTrue = "F";

@@ -3,8 +3,8 @@
 }
 .contains_show{
 	width: 1120px;
-	height: 450px;
 	margin: 0px auto;
+	height: 400px;
 }
 .title{
 	width: inherit;
@@ -24,9 +24,11 @@
 	width: inherit;
 	height: 50px;
 	line-height: 50px;
+	padding-left: 20px;
+}
+.title_c>a{
 	color: #499afd;
 	font-size: 20px;
-	padding-left: 20px;
 }
 .detail{
 	width: inherit;
