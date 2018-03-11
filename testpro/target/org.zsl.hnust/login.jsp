@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="css/head_foot.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
-<body>
-	<%@ include file="head.jsp"%>
-		
-		<form action="userlogin" method="post">
+<body>	
+		<form action="<%=basePath%>user/dologin" method="post">
         <div class="content">
         	<div class="content_show">
 				<div class="login_box">
@@ -26,7 +29,5 @@
         	</div>
         </div>
         </form>
-
-	<%@ include file="foot.jsp"%>
 </body>
 </html>

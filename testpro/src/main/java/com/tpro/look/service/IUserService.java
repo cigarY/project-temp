@@ -13,4 +13,5 @@ public interface IUserService {
     List<User> findAll(Map<String,Object> map);
     int getPageCount();
     List<User> findListByKeyWords(Map<String,Object> map);
+    User findByName(String name);
 }

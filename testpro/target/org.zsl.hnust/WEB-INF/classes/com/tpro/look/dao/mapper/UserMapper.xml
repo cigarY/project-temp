@@ -36,6 +36,18 @@
 	<select id="getPageCount" resultType="java.lang.Integer">
 		select count(*) from u_msg
 	</select>
+	<select id="findByName" resultType="User">
+		select
+		<include refid="Base_Column_List" />
+		from u_msg
+		where username = #{name};
+	</select>
+	<select id="findNameAndPsd" parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from u_msg
+		where username = #{0} and password = #{1};
+	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from u_msg
 		where uid = #{uid,jdbcType=INTEGER}

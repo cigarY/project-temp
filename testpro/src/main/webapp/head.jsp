@@ -38,8 +38,8 @@
 
                     <!--登录注册-->
                     <div class="login">
-                        <a href="login.jsp"><button class="btn1" type="button">登录</button></a>
-                        <a href="register.jsp"><button class="btn2" type="button">注册</button></a>
+                        <a href="<%=basePath%>login.jsp"><button class="btn1" type="button">登录</button></a>
+                        <a href="<%=basePath%>register.jsp"><button class="btn2" type="button">注册</button></a>
                     </div>
 
 

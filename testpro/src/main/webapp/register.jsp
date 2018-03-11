@@ -22,22 +22,9 @@
                         <img src="imgs/logo.png"/>
                     </div>
 
-                    <!--导航条-->
-                    <div class="navbar">
-                        <ul>
-                            <li><a href="#" style="color: #499afd">首页</a></li>
-                            <li><a href="#">科目一</a></li>
-                            <li><a href="exam.html">科目四</a></li>
-                            <li><a href="#">个人中心</a></li>
-                            <li><a href="#">在线咨询</a></li>
-                        </ul>
-                    </div>
-
-                    <!--登录注册-->
-                    <div class="login">
-                        <button class="btn1" type="button">登录</button>
-                        <button class="btn2" type="button">注册</button>
-                    </div>
+                   <div class="register_title">
+                   		欢迎免费注册!
+                   	</div>
 
 
                     <div class="clear"></div>
@@ -47,7 +34,7 @@
         </div>
 
 
-		<form action="" method="">
+		<form action="" method="post">
 		
 		<div class="content">
 			<ul>

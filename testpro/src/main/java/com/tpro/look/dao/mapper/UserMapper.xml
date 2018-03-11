@@ -36,14 +36,19 @@
 	<select id="getPageCount" resultType="java.lang.Integer">
 		select count(*) from u_msg
 	</select>
+	<select id="findByName" resultType="User">
+		select *
+		from u_msg
+		where username = #{name};
+	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from u_msg
 		where uid = #{uid,jdbcType=INTEGER}
 	</delete>
 	<insert id="insert" parameterType="com.tpro.look.model.User">
-		insert into u_msg (uid, username, password,
+		insert into u_msg (username, password,
 		sex, email, log_time)
-		values (#{uid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR},
+		values #{username,jdbcType=VARCHAR},
 		#{password,jdbcType=VARCHAR},
 		#{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{logTime,jdbcType=DATE})
 	</insert>

@@ -71,7 +71,7 @@
                             <h1 data-animation="animated flipInX">基础知识理论考试</h1>
                             <p data-animation="animated lightSpeedIn">2017年驾驶员理论考试最新学习资料</p>
                             <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">点击查看</a>
-                            <a href="#" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">我要练题</a>
+                            <a href="<%=basePath%>exam.jsp" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">我要练题</a>
                         </div>
                     </div>
                     <!-- End of Slide -->
@@ -124,7 +124,7 @@
                     <!--内容-->
                     <div class="exam_content">
                         <div class="exam_1">
-                            <a href="exam?testNum=1">
+                            <a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}&dealId=${1}" target="_blank"">
                                 <img src="imgs/lc_02.png">
                                 <p class="exam_num">科目一</p>
                                 <p class="exam_des">驾驶员理论考试</p>
@@ -132,13 +132,13 @@
                         </div>
                         <div class="exam_text">
                             <div class="exam_text_1">
-                                <a href="exam?testNum=1">
+                                <a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${1}&dealId=${2}" target="_blank">
                                     <p class="exam_text_p1">科目一</p>
                                     <p class="exam_text_p2">根据公安部123号令，学员需要了解机动车基本知识，掌握道路交通安全法律、法规及道路交通信号的规定。</p>
                                 </a>
                             </div>
                             <div class="exam_text_4">
-                                <a href="exam?testNum=4">
+                                <a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${4}&dealId=${2}" target="_blank">
                                     <p class="exam_text_p1">科目四</p>
                                     <p class="exam_text_p2">学员需要掌握安全文明驾驶知识，具备对车辆综合控制能力；熟练掌握一般道路和夜间驾驶方法。</p>
                                 </a>
@@ -146,7 +146,7 @@
                         </div>
                         
                         <div class="exam_4">
-                            <a href="exam?testNum=4">
+                            <a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${4}&dealId=${1}" target="_blank">
                                 <img src="imgs/lc_05.png">
                                 <p class="exam_num">科目四</p>
                                 <p class="exam_des">安全文明驾驶常识考试</p>

@@ -29,17 +29,17 @@
                     <div class="navbar">
                         <ul>
                             <li><a href="<%=basePath%>index.jsp" style="color: #499afd">首页</a></li>
-                            <li><a href="<%=basePath%>exam.jsp">在线测试</a></li>
-                            <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}">科目一</a></li>
-                            <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}">科目四</a></li>
+                            <li><a href="<%=basePath%>exam.jsp" target="_blank">在线测试</a></li>
+                            <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}" target="_blank">科目一</a></li>
+                            <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}" target="_blank">科目四</a></li>
                             <li><a href="#">个人中心</a></li>              
                         </ul>
                     </div>
 
                     <!--登录注册-->
                     <div class="login">
-                        <a href="login.jsp"><button class="btn1" type="button">登录</button></a>
-                        <a href="register.jsp"><button class="btn2" type="button">注册</button></a>
+                        <a href="<%=basePath%>login.jsp"><button class="btn1" type="button">登录</button></a>
+                        <a href="<%=basePath%>register.jsp"><button class="btn2" type="button">注册</button></a>
                     </div>
 
 

@@ -11,9 +11,12 @@ E:\JavaWork\testpro\src\main\java\com\tpro\look\controller\UserController.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\dao\ISubjectQ4Dao.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\service\IUserService.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\dao\IUserDao.java
+E:\JavaWork\testpro\src\main\java\com\tpro\look\controller\LoginRegisterController.java
+E:\JavaWork\testpro\src\main\java\com\tpro\look\controller\SubjectPracticeController.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\model\Record.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\service\impl\UserServiceImpl.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\service\ISubjectQ1Service.java
+E:\JavaWork\testpro\src\main\java\com\tpro\look\controller\SubjectSpecialController.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\model\Admin.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\model\User.java
 E:\JavaWork\testpro\src\main\java\com\tpro\look\service\impl\SubjectQ4ServiceImpl.java
