@@ -130,7 +130,7 @@
                     <div class="exam_content">
                         <div class="exam_1">
                             <a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}&dealId=${1}" target="_blank"">
-                                <img src="imgs/lc_02.png">
+                                <img src="<%=basePath%>imgs/lc_02.png">
                                 <p class="exam_num">科目一</p>
                                 <p class="exam_des">驾驶员理论考试</p>
                             </a>
@@ -152,7 +152,7 @@
                         
                         <div class="exam_4">
                             <a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${4}&dealId=${1}" target="_blank">
-                                <img src="imgs/lc_05.png">
+                                <img src="<%=basePath%>imgs/lc_05.png">
                                 <p class="exam_num">科目四</p>
                                 <p class="exam_des">安全文明驾驶常识考试</p>
                             </a>
@@ -175,16 +175,16 @@
 
     </div>
 </body>
-<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.touchSwipe.min.js"></script>
-<script src="js/bootstrap-touch-slider.js"></script>
+<script src="<%=basePath1%>js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="<%=basePath1%>js/bootstrap.min.js"></script>
+<script src="<%=basePath1%>js/jquery.touchSwipe.min.js"></script>
+<script src="<%=basePath1%>js/bootstrap-touch-slider.js"></script>
 <script type="text/javascript">
     $('#bootstrap-touch-slider').bsTouchSlider();
 </script>
-<script src="js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.indexSlidePattern.js"></script>
-<script language="javascript">
+<script src="<%=basePath1%>js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<%=basePath1%>js/jquery.indexSlidePattern.js"></script>
+<script type="text/javascript">
     $(document).ready(function(e){
         var opt	=	{
             "speed"	:	"normal"		,	//变换速度,三速度可选 slow,normal,fast;

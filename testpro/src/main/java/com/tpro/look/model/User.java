@@ -3,19 +3,31 @@ package com.tpro.look.model;
 import java.util.Date;
 
 public class User {
-    private Integer uid;
+	public Integer uid;
 
-    private String username;
+    public String username;
 
-    private String password;
+    public String password;
 
-    private String sex;
+    public String sex;
 
-    private String email;
+    public String email;
 
-    private Date logTime;
+    public Date logTime;
+    
+    public User() {
+		super();
+	}
 
-    public Integer getUid() {
+	public User(String username, String password, String sex, String email) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.sex = sex;
+		this.email = email;
+	}
+
+	public Integer getUid() {
         return uid;
     }
 

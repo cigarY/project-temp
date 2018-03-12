@@ -52,5 +52,9 @@ public class UserServiceImpl implements IUserService {
 	public User findByName(String name) {
 		return userDao.findByName(name);
 	}
+	@Override
+	public boolean updateTime(User user) {
+		return userDao.updateTime(user);
+	}
 	  
 }  

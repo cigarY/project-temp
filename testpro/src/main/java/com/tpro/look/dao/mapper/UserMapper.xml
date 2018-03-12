@@ -47,10 +47,10 @@
 	</delete>
 	<insert id="insert" parameterType="com.tpro.look.model.User">
 		insert into u_msg (username, password,
-		sex, email, log_time)
-		values #{username,jdbcType=VARCHAR},
+		sex, email)
+		values (#{username,jdbcType=VARCHAR},
 		#{password,jdbcType=VARCHAR},
-		#{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{logTime,jdbcType=DATE})
+		#{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR})
 	</insert>
 
 	<update id="update" parameterType="com.tpro.look.model.User">
@@ -61,5 +61,10 @@
 		email = #{email,jdbcType=VARCHAR},
 		log_time = #{logTime,jdbcType=DATE}
 		where uid = #{uid,jdbcType=INTEGER}
+	</update>
+	<update id="updateTime" parameterType="com.tpro.look.model.User">
+		update u_msg
+		set log_time = #{logTime,jdbcType=DATE}
+		where username = #{username,jdbcType=VARCHAR}
 	</update>
 </mapper>

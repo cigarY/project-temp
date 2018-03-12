@@ -14,4 +14,5 @@ public interface IUserService {
     int getPageCount();
     List<User> findListByKeyWords(Map<String,Object> map);
     User findByName(String name);
+    boolean updateTime(User user);
 }

@@ -14,4 +14,5 @@ public interface IUserDao {
     List<User> findAll(Map<String,Object> map);
     int getPageCount();
     List<User> findListByKeyWords(Map<String,Object> map);
+    boolean updateTime(User user);
 }

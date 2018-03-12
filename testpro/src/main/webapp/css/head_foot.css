@@ -39,6 +39,14 @@ li{
     height: 50px;
     margin-top: 10px;
 }
+.register_title{
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    float: right;
+    color: #499afd;
+    font-size: 26px;
+}
 .navbar{
     width: 600px;
     height: 50px;
@@ -70,6 +78,7 @@ li{
 .login{
     margin: 20px auto;
     float: right;
+    font-size: 18px;
 }
 .btn1,.btn2{
     height: 30px;

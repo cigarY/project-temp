@@ -4,6 +4,7 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	String username = session.getAttribute("username").toString();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -37,7 +38,7 @@
                     </div>
 
                     <!--登录注册-->
-                    <div class="login">
+                    <div class="login" id="login">
                         <a href="<%=basePath%>login.jsp"><button class="btn1" type="button">登录</button></a>
                         <a href="<%=basePath%>register.jsp"><button class="btn2" type="button">注册</button></a>
                     </div>
@@ -49,4 +50,12 @@
 
         </div>
 </body>
+<script type="text/javascript">
+	var name = `<%=username%>`;
+	var login_show = document.getElementById("login");
+	if(null!=name){
+		login_show.innerHTML = "Hi~"+name;
+		login_show.style.color = "#499adf";
+	}
+</script>
 </html>
