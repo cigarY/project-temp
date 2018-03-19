@@ -13,7 +13,7 @@ public class User {
 
     public String email;
 
-    public Date logTime;
+    public String logTime;
     
     public User() {
 		super();
@@ -67,11 +67,11 @@ public class User {
         this.email = email == null ? null : email.trim();
     }
 
-    public Date getLogTime() {
+    public String getLogTime() {
         return logTime;
     }
 
-    public void setLogTime(Date logTime) {
+    public void setLogTime(String logTime) {
         this.logTime = logTime;
     }
 }

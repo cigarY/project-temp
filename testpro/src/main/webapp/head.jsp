@@ -4,7 +4,13 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
-	String username = session.getAttribute("username").toString();
+	String username = "";
+	try{
+		username = session.getAttribute("username").toString();
+	}catch(Exception e){
+		username = "none";
+	}
+		
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -53,7 +59,7 @@
 <script type="text/javascript">
 	var name = `<%=username%>`;
 	var login_show = document.getElementById("login");
-	if(null!=name){
+	if(null!=name&&name!="none"){
 		login_show.innerHTML = "Hi~"+name;
 		login_show.style.color = "#499adf";
 	}

@@ -58,7 +58,7 @@
                                     <h1 data-animation="animated zoomInRight">驾考理论模拟测试平台</h1>
                                     <p data-animation="animated fadeInLeft">题库的相似度90%，还原真实考场做题环境</p>
                                     <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">点击查看</a>
-                                    <a href="#" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">我要做题</a>
+                                    <a href="<%=basePath1%>exam.jsp" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">我要做题</a>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             <h1 data-animation="animated zoomInLeft">安全文明驾驶常识考试</h1>
                             <p data-animation="animated fadeInRight">大路考后的安全文明驾驶模拟考试</p>
                             <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">点击查看</a>
-                            <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">我要练题</a>
+                            <a href="<%=basePath%>exam.jsp" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">我要练题</a>
                         </div>
                     </div>
                     <!-- End of Slide -->
@@ -129,7 +129,7 @@
                     <!--内容-->
                     <div class="exam_content">
                         <div class="exam_1">
-                            <a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}&dealId=${1}" target="_blank"">
+                            <a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${1}&dealId=${1}" target="_blank"">
                                 <img src="<%=basePath%>imgs/lc_02.png">
                                 <p class="exam_num">科目一</p>
                                 <p class="exam_des">驾驶员理论考试</p>

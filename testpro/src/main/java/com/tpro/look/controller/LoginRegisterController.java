@@ -1,7 +1,7 @@
 package com.tpro.look.controller;
 
-import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -34,9 +34,9 @@ public class LoginRegisterController {
 				session.setAttribute("username", username);
 				session.setAttribute("password", password);
 				//获取登录时间
-				Date day=new Date(0);    
+				Date day=new Date();    
 				SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
-				/*user.setLogTime(df.format(day));*/
+				user.setLogTime(df.format(day));
 				userService.updateTime(user); 
 				return "/index";
 			}else {
