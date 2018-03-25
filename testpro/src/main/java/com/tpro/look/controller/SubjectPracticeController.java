@@ -49,7 +49,8 @@ public class SubjectPracticeController {
 				List<SubjectQ1> subjectQ1slist = subjectQ1Service.getHardTop100();
 				testNum = subjectQ1slist.size();
 				for (int i = 0; i < testNum; i++) {
-					subjectArr[i] = subjectQ1slist.get(i).getId();
+					SubjectQ1 subjectQ1 = subjectQ1slist.get(i);
+					subjectArr[i] = subjectQ1.getId();
 				}
 			} else {
 				testNum = subjectQ1Service.getPageCount();
@@ -62,7 +63,8 @@ public class SubjectPracticeController {
 				List<SubjectQ4> subjectQ4slist = subjectQ4Service.getHardTop100();
 				testNum = subjectQ4slist.size();
 				for (int i = 0; i < subjectQ4slist.size(); i++) {
-					subjectArr[i] = subjectQ4slist.get(i).getId();
+					SubjectQ4 subjectQ4 = subjectQ4slist.get(i);
+					subjectArr[i] = subjectQ4.getId();
 				}
 			} else {
 				testNum = subjectQ4Service.getPageCount();

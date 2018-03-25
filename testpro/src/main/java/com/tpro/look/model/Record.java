@@ -1,65 +1,108 @@
 package com.tpro.look.model;
 
-import java.util.Date;
-
 public class Record {
+
+	private Integer id;
+	
     private Integer uid;
 
     private Integer errornum;
 
     private Integer rightnum;
+    
+    private Integer subject;
 
-    private Date time;
+    private String test_time;
 
-    private String subject;
+    private String errorproject; 
 
-    private Integer id;
+	public Record() {
+		super();
+	}
 
-    public Integer getUid() {
-        return uid;
-    }
+	public Record(Integer id, Integer uid, Integer errornum, Integer rightnum, Integer subject, String test_time,
+			String errorproject) {
+		super();
+		this.id = id;
+		this.uid = uid;
+		this.errornum = errornum;
+		this.rightnum = rightnum;
+		this.subject = subject;
+		this.test_time = test_time;
+		this.errorproject = errorproject;
+	}
+	
+	public Record(Integer uid, Integer errornum, Integer rightnum, Integer subject, String test_time,
+			String errorproject) {
+		super();
+		this.uid = uid;
+		this.errornum = errornum;
+		this.rightnum = rightnum;
+		this.subject = subject;
+		this.test_time = test_time;
+		this.errorproject = errorproject;
+	}
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public Integer getErrornum() {
-        return errornum;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setErrornum(Integer errornum) {
-        this.errornum = errornum;
-    }
+	public Integer getUid() {
+		return uid;
+	}
 
-    public Integer getRightnum() {
-        return rightnum;
-    }
+	public void setUid(Integer uid) {
+		this.uid = uid;
+	}
 
-    public void setRightnum(Integer rightnum) {
-        this.rightnum = rightnum;
-    }
+	public Integer getErrornum() {
+		return errornum;
+	}
 
-    public Date getTime() {
-        return time;
-    }
+	public void setErrornum(Integer errornum) {
+		this.errornum = errornum;
+	}
 
-    public void setTime(Date time) {
-        this.time = time;
-    }
+	public Integer getRightnum() {
+		return rightnum;
+	}
 
-    public String getSubject() {
-        return subject;
-    }
+	public void setRightnum(Integer rightnum) {
+		this.rightnum = rightnum;
+	}
 
-    public void setSubject(String subject) {
-        this.subject = subject == null ? null : subject.trim();
-    }
+	public Integer getSubject() {
+		return subject;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public void setSubject(Integer subject) {
+		this.subject = subject;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public String getTest_time() {
+		return test_time;
+	}
+
+	public void setTest_time(String test_time) {
+		this.test_time = test_time;
+	}
+
+	public String getErrorproject() {
+		return errorproject;
+	}
+
+	public void setErrorproject(String errorproject) {
+		this.errorproject = errorproject;
+	}
+
+	@Override
+	public String toString() {
+		return "Record [id=" + id + ", uid=" + uid + ", errornum=" + errornum + ", rightnum=" + rightnum + ", subject="
+				+ subject + ", test_time=" + test_time + ", errorproject=" + errorproject + "]";
+	}
+    
 }

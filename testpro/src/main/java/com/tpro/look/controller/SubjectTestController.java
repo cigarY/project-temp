@@ -1,18 +1,23 @@
 package com.tpro.look.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.tpro.look.model.Record;
 import com.tpro.look.model.SubjectQ1;
 import com.tpro.look.model.SubjectQ4;
+import com.tpro.look.service.IRecordService;
 import com.tpro.look.service.ISubjectQ1Service;
 import com.tpro.look.service.ISubjectQ4Service;
 
@@ -24,6 +29,8 @@ public class SubjectTestController {
 	private ISubjectQ1Service subjectQ1Service;
 	@Autowired
 	private ISubjectQ4Service subjectQ4Service;
+	
+	private IRecordService recordService;
 
 	int testNum = 0;// 需要生成的总题数
 	int testchooseNum = 0;// 需要生成的单选题目数
@@ -46,6 +53,8 @@ public class SubjectTestController {
 	int score = 0;// 总得分
 	List<Integer> choselist = new ArrayList<>();// 存放提交的题目，避免重复提交
 	String isTrue = null;// 当前题目是否正确,T表示正确，F表示错误
+	List<Integer> errorlist = new ArrayList<>();//存放错误题目
+	int subjectId = 0;// 科目
 
 	/**
 	 * 根据科目号随机生成对应的题目，重定向到测试界面
@@ -58,6 +67,7 @@ public class SubjectTestController {
 	@RequestMapping("/getsubjecttest")
 	public String getSubjectTest(HttpServletRequest request, int subjectnum) {
 		index = 0;
+		subjectId = subjectnum;
 		r = random.nextInt(100) + 1;// 生成随机考号
 		if (subjectnum == 1) {			
 			testNum = 100;
@@ -132,6 +142,7 @@ public class SubjectTestController {
 					//统计错题数目，写入数据库用于难题练习
 					wrongnumber = subjectQ1.getWrongnumber()+1;
 					wrongid = subjectQ1.getId();
+					errorlist.add(tid);
 					subjectQ1Service.updateWrongNum(wrongnumber, wrongid);
 				}
 			}
@@ -151,6 +162,7 @@ public class SubjectTestController {
 					//统计错题数目，写入数据库用于难题练习
 					wrongnumber = subjectQ4.getWrongnumber()+1;
 					wrongid = subjectQ4.getId();
+					errorlist.add(tid);
 					subjectQ4Service.updateWrongNum(wrongnumber, wrongid);
 				}
 			}
@@ -169,7 +181,7 @@ public class SubjectTestController {
 	 * 用于答题信息区查询题目信息
 	 * @return
 	 */
-	@RequestMapping("getsubjectbyid")
+	@RequestMapping("/getsubjectbyid")
 	public String getSubjectById(HttpServletRequest request, int control_i) {
 		index = control_i;
 		if (testNum == 100) {
@@ -204,6 +216,22 @@ public class SubjectTestController {
 			score = rightNum * 2;
 		}
 		request.setAttribute("msg", "您的得分："+score);
+		
+		//将用户信息加入到成绩数据库
+		//获取登录时间
+		Date day=new Date();    
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		//从session中获取uid
+		HttpSession session = request.getSession();
+		String struid = session.getAttribute("uid").toString();
+		if(null == struid) {
+			struid = "";
+		}else {
+			int uid = Integer.parseInt(struid);
+			Record record = new Record(uid, errorNum, rightNum, subjectId, df.format(day), errorlist.toString());
+			recordService.insert(record);
+		}
 		
 		// 清空答题信息记录
 		index = 0;

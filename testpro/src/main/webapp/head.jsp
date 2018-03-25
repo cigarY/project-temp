@@ -39,7 +39,7 @@
                             <li><a href="<%=basePath%>exam.jsp" target="_blank">在线测试</a></li>
                             <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}" target="_blank">科目一</a></li>
                             <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}" target="_blank">科目四</a></li>
-                            <li><a href="#">个人中心</a></li>              
+                            <li><a href="<%=basePath%>personal/personalinfo">个人中心</a></li>              
                         </ul>
                     </div>
 
@@ -50,7 +50,7 @@
                     </div>
 
 
-                    <div class="clear">${user.username }</div>
+                    <div class="clear"></div>
                 </div>
             </div>
 

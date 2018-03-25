@@ -1,7 +1,5 @@
 package com.tpro.look.model;
 
-import java.util.Date;
-
 public class User {
 	public Integer uid;
 

@@ -33,6 +33,7 @@ public class LoginRegisterController {
 			if(password.equals(pwd)) {
 				session.setAttribute("username", username);
 				session.setAttribute("password", password);
+				session.setAttribute("uid", user.getUid());
 				//获取登录时间
 				Date day=new Date();    
 				SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 

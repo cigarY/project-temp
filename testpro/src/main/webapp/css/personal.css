@@ -1,0 +1,103 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style-type: none;
+}
+a{
+
+}
+.head{
+	height: 200px;
+	width: 100%;
+	background-color: #499afd;
+}
+.options{
+	width: 1120px;
+	height: 50px;
+	margin: 0px auto;
+}
+.option{
+	width: 500px;
+	height: 50px;
+	float: right;
+	line-height: 50px;
+	text-align: right;
+}
+.option>a{
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+}
+.msg{
+	width: 1120px;
+	height: 150px;
+	margin: 0px auto;
+}
+.img{
+	height: 110px;
+	width: 110px;
+	margin: 0px auto;
+	background-color: #909897;
+}
+.img>img{
+	height: inherit;
+	width: inherit;
+}
+.info{
+	height: 40px;
+	width: 500px;
+	margin: 0px auto;
+	line-height: 40px;
+	color: #ffffff;
+	text-align: center;
+}
+.info>span{
+	display: inline-block;
+	height: inherit;
+	width: 120px;
+}
+.subject_choose{
+	height: 100px;
+	width: 1120px;
+	margin: 0px auto;
+	font-size: 0px;
+}
+.c1,.c2{
+	height: 50px;
+	width: 150px;
+	display: inline-block;
+	cursor: pointer;
+	line-height: 50px;
+	text-align: center;	
+	border-bottom: none;
+	font-size: 16px;
+}
+.c2{
+	color: #ffffff;
+	background-color: #499afd;
+}
+.contains{
+	width: 1120px;
+	margin: 0px auto;
+}
+.sub_score{
+	height: 300px;
+	width: inherit;
+	margin: 40px auto;
+}
+.r_score,.e_score{
+	height: inherit;
+	width: 520px;
+	display: inline-block;
+}
+.e_score{
+	margin-left: 10px;
+	float: right;
+}
+.h_score{
+	height: 400px;
+	width: inherit;
+	margin: 50px auto;
+}
