@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>LOOK圈登录界面</title>
+	<title>LOOK圈——登录</title>
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/head_foot.css">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/login.css">
 </head>
