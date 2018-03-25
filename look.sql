@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-02-26 23:35:47
+Date: 2018-03-25 12:39:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -53,10 +53,10 @@ CREATE TABLE `examination_question1` (
 -- ----------------------------
 -- Records of examination_question1
 -- ----------------------------
-INSERT INTO `examination_question1` VALUES ('1', '1', '这个标志是何含义?', '4', '小型车车道', '小型车专用车道', '多乘员车辆专用车道', '机动车车道', '此为机动车车道,比多乘员车辆专用车道少俩人.', 'http://images.juheapi.com/jztk/c1c2subject1/1.jpg', '13');
-INSERT INTO `examination_question1` VALUES ('2', '2', '这个标志是何含义?', '1', '线形诱导标志', '合流诱导标志', '分流诱导标志', '转弯诱导标志', '线型诱导标线型诱导标志,用于引导车辆驾驶人改变行驶方向,促使安全运行.视需要设于易肇事之弯道路段,小半径匝道曲线或中央隔离设施及渠化设施的端部.线形诱导标的颜色规定为:指示性线形诱导标一般道路为蓝底白图案,高速公路为绿底白图案,用以提供一般性行驶指示;警告性线形诱导标为红底白图案,可使车辆驾驶人提高警觉,并准备防范应变之措施.', 'http://images.juheapi.com/jztk/c1c2subject1/2.jpg', '4');
-INSERT INTO `examination_question1` VALUES ('3', '3', '这个标志是何含义?', '1', '车道数变少', '合流处', '应急车道', '向左变道', '三车道变成二车道故车道数变少,选A.', 'http://images.juheapi.com/jztk/c1c2subject1/3.jpg', '3');
-INSERT INTO `examination_question1` VALUES ('4', '4', '这个标志是何含义?', '2', '禁止自行车通行车道', '非机动车车道', '自行车专用车道', '停放自行车路段', '此图为非机动车车道,别误以为自行车专用车道,没有自行车专用车道这一说.', 'http://images.juheapi.com/jztk/c1c2subject1/4.jpg', '2');
+INSERT INTO `examination_question1` VALUES ('1', '1', '这个标志是何含义?', '4', '小型车车道', '小型车专用车道', '多乘员车辆专用车道', '机动车车道', '此为机动车车道,比多乘员车辆专用车道少俩人.', 'http://images.juheapi.com/jztk/c1c2subject1/1.jpg', '21');
+INSERT INTO `examination_question1` VALUES ('2', '2', '这个标志是何含义?', '1', '线形诱导标志', '合流诱导标志', '分流诱导标志', '转弯诱导标志', '线型诱导标线型诱导标志,用于引导车辆驾驶人改变行驶方向,促使安全运行.视需要设于易肇事之弯道路段,小半径匝道曲线或中央隔离设施及渠化设施的端部.线形诱导标的颜色规定为:指示性线形诱导标一般道路为蓝底白图案,高速公路为绿底白图案,用以提供一般性行驶指示;警告性线形诱导标为红底白图案,可使车辆驾驶人提高警觉,并准备防范应变之措施.', 'http://images.juheapi.com/jztk/c1c2subject1/2.jpg', '6');
+INSERT INTO `examination_question1` VALUES ('3', '3', '这个标志是何含义?', '1', '车道数变少', '合流处', '应急车道', '向左变道', '三车道变成二车道故车道数变少,选A.', 'http://images.juheapi.com/jztk/c1c2subject1/3.jpg', '5');
+INSERT INTO `examination_question1` VALUES ('4', '4', '这个标志是何含义?', '2', '禁止自行车通行车道', '非机动车车道', '自行车专用车道', '停放自行车路段', '此图为非机动车车道,别误以为自行车专用车道,没有自行车专用车道这一说.', 'http://images.juheapi.com/jztk/c1c2subject1/4.jpg', '3');
 INSERT INTO `examination_question1` VALUES ('5', '5', '这个标志是何含义?', '3', '停车让行', '单行路', '会车先行', '对向先行', '表示会车先行,此标志设在车道以前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/5.jpg', '1');
 INSERT INTO `examination_question1` VALUES ('6', '6', '这个标志是何含义?', '4', '右转车道', '掉头车道', '左转车道', '直行车道', '表示只准一切车辆直行.此标志设在直行的路口以前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/6.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('7', '7', '这个标志是何含义?', '2', '减速慢行', '注意危险', '拥堵路段', '事故多发路段', '注意危险:用以促使车辆驾驶员谨慎慢行.', 'http://images.juheapi.com/jztk/c1c2subject1/7.jpg', '0');
@@ -175,7 +175,7 @@ INSERT INTO `examination_question1` VALUES ('119', '119', '这个标志是何含
 INSERT INTO `examination_question1` VALUES ('120', '120', '水淹路面影响行车安全,不易通行的原因是什么?', '2', '路面附着力增大', '无法观察到暗坑和凸起的路面', '能见度低,视野模糊', '日光反射阻挡视线', '因为水淹没了路面,所以看不清是暗坑和凸起的路面', '', '0');
 INSERT INTO `examination_question1` VALUES ('121', '121', '夜间行车,驾驶人视距变短,影响观察,同时注意力高度集中,易产生疲劳.', '1', '正确', '错误', '', '', '高度集中注意力,很费神的,久了就会疲倦.', '', '0');
 INSERT INTO `examination_question1` VALUES ('122', '122', '这个导向箭头是何含义?', '4', '指示前方可左转或掉头', '指示前方可直行或左转', '指示前方直行向左变道', '指示前方可直行或掉头', '直行或者掉头都可以', 'http://images.juheapi.com/jztk/c1c2subject1/122.jpg', '0');
-INSERT INTO `examination_question1` VALUES ('123', '123', '图中圈内两条黄色虚线间的区域是何含义?', '4', '营运客车专用车道', '大客车专用车道', '出租车专用车道', '公交专用车道', '黄色虚线中的车道里有写字,黄色虚线是想突出引动驾驶员注意的,知道选啥了没?看图就懂！', 'http://images.juheapi.com/jztk/c1c2subject1/123.jpg', '10');
+INSERT INTO `examination_question1` VALUES ('123', '123', '图中圈内两条黄色虚线间的区域是何含义?', '4', '营运客车专用车道', '大客车专用车道', '出租车专用车道', '公交专用车道', '黄色虚线中的车道里有写字,黄色虚线是想突出引动驾驶员注意的,知道选啥了没?看图就懂！', 'http://images.juheapi.com/jztk/c1c2subject1/123.jpg', '12');
 INSERT INTO `examination_question1` VALUES ('124', '124', '这个标志是何含义?', '4', '减速让行', '潮汐车道', '分离式道路', '双向交通', '双向交通:用以提醒车辆驾驶人注意会车.设在由双向分离行驶,因某种原因出现临时性或永久性的不分离双向行驶的路段,或由单向行驶进人双向行驶的路段以前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/124.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('125', '125', '这个标志是何含义?', '1', '人行横道', '学生通道', '注意行人', '儿童通道', '表示该处为专供行人横穿马路的通道.此标志设在人行横道的两侧.', 'http://images.juheapi.com/jztk/c1c2subject1/125.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('126', '126', '这个标志预告什么?', '4', '高速公路服务区预告', '高速公路避险处预告', '高速公路客车站预告', '高速公路停车场预告', '高速公路停车区和高速公路停车场的区别是停车区是有一个茶杯的,停车场只有一个P.', 'http://images.juheapi.com/jztk/c1c2subject1/126.jpg', '0');
@@ -193,7 +193,7 @@ INSERT INTO `examination_question1` VALUES ('137', '137', '这个标志是何含
 INSERT INTO `examination_question1` VALUES ('138', '138', '这个导向箭头是何含义?', '3', '指示向左变道', '指示前方直行', '指示前方掉头', '指示前方右转', '请记住了 so easy!!', 'http://images.juheapi.com/jztk/c1c2subject1/138.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('139', '139', '夜间道路环境对安全行车的主要影响是什么?', '3', '驾驶人体力下降', '驾驶人易产生冲动、幻觉', '能见度低、不利于观察道路交通情况', '路面复杂多变', '夜间行车视线差,在没有照明的路段,驾驶人视线普遍受到影响,不能清楚看到前方事物,或者不能看清和判断前方事物的距离,尤其是在会车的情况下,由于受对向车辆灯光的影响,会产生视觉的盲点,导致看不清或看不见前方事物,夜间特大道路交通事故明显高于白天.夜间行车由于不能见到道路两旁的景观,对驾驶员兴奋性刺激物小,因此最易产生驾驶疲劳,如稍有感觉就应振作精神或停车休息片刻.', '', '0');
 INSERT INTO `examination_question1` VALUES ('140', '140', '这个标志是何含义?', '3', '内部停车场', '专用停车场', '露天停车场', '室内停车场', '如果P字上边没有遮挡就是露天停车场.', 'http://images.juheapi.com/jztk/c1c2subject1/140.jpg', '0');
-INSERT INTO `examination_question1` VALUES ('141', '141', '这个标志是何含义?', '2', '直行车道', '只准直行', '单行路', '禁止直行', '只准直行:表示只准一切车辆直行.此标志设在直行的路口以前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/141.jpg', '0');
+INSERT INTO `examination_question1` VALUES ('141', '141', '这个标志是何含义?', '2', '直行车道', '只准直行', '单行路', '禁止直行', '只准直行:表示只准一切车辆直行.此标志设在直行的路口以前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/141.jpg', '1');
 INSERT INTO `examination_question1` VALUES ('142', '142', '这个标志是何含义?', '1', '驼峰桥', '路面高突', '路面低洼', '不平路面', '驼峰桥:用以提醒车辆驾驶人谨慎驾驶.设在拱度很大,影响视距的驼峰桥以前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/142.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('143', '143', '这个标志是何含义?', '3', '禁止在路口掉头', '禁止向左向右变道', '禁止向左向右转弯', '禁止车辆直行', '禁止向左向右转弯:表示前方路口禁止一切车辆向左向右转弯.此标志设在禁止向左向右转弯的路口前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/143.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('144', '144', '这个标志提示哪种车型禁止通行?', '2', '各种车辆', '小型客车', '中型客车', '小型货车', '一看图片就是小型客车.', 'http://images.juheapi.com/jztk/c1c2subject1/144.jpg', '0');
@@ -616,7 +616,7 @@ INSERT INTO `examination_question1` VALUES ('560', '560', '如图所示,A车具�
 INSERT INTO `examination_question1` VALUES ('561', '561', '安全气囊是一种什么装置?', '3', '防抱死制动系统', '电子制动力分配系统', '辅助驾乘人员保护系统', '驾驶人头颈保护系统', '安全气囊,设置在车内前方（正副驾驶位）,侧方（车内前排和后排）和车顶三个方向.装有安全气囊系统的容器外部都印有Supplemental Inflatable Restraint System,简称SRS)的字样,直译成中文为“辅助可充气约束系统”.旨在减轻乘员的伤害程度,当发生碰撞事故时,避免乘员发生二次碰撞,或车辆发生翻滚等危险情况下被抛离座位.', '', '0');
 INSERT INTO `examination_question1` VALUES ('562', '562', '如图所示,机动车在这种道路上行驶,在道路中间通行的原因是什么?', '3', '在道路中间通行速度快', '在道路中间通行视线好', '给两侧的非机动车和行人留有充足的通行空间', '防止车辆冲出路外', '图中是没有中心线的道路,在中间行驶是为了给两侧的非机动车和行人流出充足的通行空间.', 'http://images.juheapi.com/jztk/c1c2subject1/562.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('563', '563', '驾驶机动车变更车道为什么要提前开启转向灯?', '4', '提示前车让行', '提示行人让行', '开阔视野,便于观察路面情况', '提示其他车辆我方准备变更车道', '转向灯其实就相当于一个信号,传达自己车辆动向的信息.', '', '0');
-INSERT INTO `examination_question1` VALUES ('564', '564', '仪表显示当前冷却液的温度是90度.', '1', '正确', '错误', '', '', '这个没有问题.', 'http://images.juheapi.com/jztk/c1c2subject1/564.jpg', '1');
+INSERT INTO `examination_question1` VALUES ('564', '564', '仪表显示当前冷却液的温度是90度.', '1', '正确', '错误', '', '', '这个没有问题.', 'http://images.juheapi.com/jztk/c1c2subject1/564.jpg', '2');
 INSERT INTO `examination_question1` VALUES ('565', '565', '机动车驶近急弯、坡道顶端等影响安全视距的路段时,减速慢行并鸣喇叭示意是为了什么?', '2', '提示前车后方车辆准备超车', '提示对向交通参与者我方有来车', '避免行至坡道顶端车辆动力不足', '测试喇叭是否能正常使用', '视线受阻,彼此看不到,所以就要靠喇叭来提醒,路上的行人或者车辆,我方有来车需要注意安全！', '', '0');
 INSERT INTO `examination_question1` VALUES ('566', '566', '机动车仪表板上（如图所示）亮时,提醒发动机需要补充机油.', '2', '正确', '错误', '', '', '不是机油不足,是汽油不足了.', 'http://images.juheapi.com/jztk/c1c2subject1/566.jpeg', '0');
 INSERT INTO `examination_question1` VALUES ('567', '567', '驾驶人违反交通运输管理法规发生重大事故致人重伤、死亡,可能会受到什么刑罚?', '1', '处3年以下徒刑或者拘役', '处3年以上7年以下徒刑', '处5年以上徒刑', '处7年以上徒刑', '撞死,撞伤没逃逸的,3年以下！！撞伤,或直接撞死后逃逸的3?7年！！撞伤的,没死的,逃逸后又死了,7年上！！老实人,不跑的伤（3）心一下（以下）撞死人跑了的（在中间呢不就是3?7年）见死不救的就上去（7）吧！', '', '0');
@@ -772,7 +772,7 @@ INSERT INTO `examination_question1` VALUES ('716', '716', '同车道行驶的车
 INSERT INTO `examination_question1` VALUES ('717', '717', '夜间行车,需要超车时,变换远近光灯示意是为了提示前车.', '1', '正确', '错误', '', '', '在确保安全和不违规的情况下都可以超车.变换远近灯光是为了提醒前方车辆的注意,虽然只是一个动作,但对于保证安全来说却是很重要的.', '', '0');
 INSERT INTO `examination_question1` VALUES ('718', '718', '这个仪表是何含义?', '4', '压力表', '电流表', '水温表', '燃油表', '汽油不够了,看到那个加油站常见的机器没.', 'http://images.juheapi.com/jztk/c1c2subject1/718.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('719', '719', '牵引故障车时,牵引与被牵引的机动车,在行驶中都要开启危险报警闪光灯.', '1', '正确', '错误', '', '', '出现故障了,就要开启危险报警闪光灯,以提醒过往车辆及行人的注意,特别是后方行驶的车辆,保持应有的安全距离和必要的安全车速,避免紧急刹引起追尾.', '', '0');
-INSERT INTO `examination_question1` VALUES ('720', '720', '这个路面标记是什么标线?', '3', '禁驶区', '网状线', '中心圈', '导流线', '中心圈,设置在交叉路口中心的白色圆形或菱形区域,用以区分车辆大、小转弯,及交叉路口车辆左右转弯的指示,车辆不得压线行驶.机动车向左转弯时,必须紧靠中心圈小转弯.', 'http://images.juheapi.com/jztk/c1c2subject1/720.jpg', '1');
+INSERT INTO `examination_question1` VALUES ('720', '720', '这个路面标记是什么标线?', '3', '禁驶区', '网状线', '中心圈', '导流线', '中心圈,设置在交叉路口中心的白色圆形或菱形区域,用以区分车辆大、小转弯,及交叉路口车辆左右转弯的指示,车辆不得压线行驶.机动车向左转弯时,必须紧靠中心圈小转弯.', 'http://images.juheapi.com/jztk/c1c2subject1/720.jpg', '3');
 INSERT INTO `examination_question1` VALUES ('721', '721', '已注册登记的机动车达到国家规定的强制报废标准的,应当向登记地车辆管理所申请注销登记.', '1', '正确', '错误', '', '', '《中华人民共和国道路交通安全法》第二章第十四条规定:应当报废的机动车必须及时办理注销登记.达到报废标准的机动车不得上道路行驶.报废的大型客、货车及其他营运车辆应当在公安机关交通管理部门的监督下解体.', '', '0');
 INSERT INTO `examination_question1` VALUES ('722', '722', '安全头枕用于在发生追尾事故时保护驾驶人的头部不受伤害.', '2', '正确', '错误', '', '', '安全头枕是保护颈椎的.', '', '0');
 INSERT INTO `examination_question1` VALUES ('723', '723', '如图所示,在这种情况下遇右侧车辆变更车道,应减速保持间距,注意避让.', '1', '正确', '错误', '', '', '你懂的,安全文明第一.', 'http://images.juheapi.com/jztk/c1c2subject1/723.jpg', '0');
@@ -832,7 +832,7 @@ INSERT INTO `examination_question1` VALUES ('776', '776', '驾驶机动车向右
 INSERT INTO `examination_question1` VALUES ('777', '777', '如图所示,以下哪种情况可以超车?(图51a.51b. 51c. 51d)', '1', '51a', '51b', '51c', '51d', '如图所示,能够超车的必须满足两个条件:一是必须在虚线的一侧,而是对向没有来车.满足这个两个条件的就只有51a了.', 'http://images.juheapi.com/jztk/c1c2subject1/777.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('778', '778', '如图所示,机动车遇行人正在通过人行横道时,要停车让行,是因为行人享有优先通行权.', '1', '正确', '错误', '', '', '人行横道上,行人享有优先通过权,这叫强龙不压地头蛇！', 'http://images.juheapi.com/jztk/c1c2subject1/778.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('779', '779', '年龄在50周岁以上的机动车驾驶人,应当每年进行一次身体检查,并向公安机关交通管理部门申报身体条件情况.', '2', '正确', '错误', '', '', '根据《机动车驾驶证申领使用规定》第四十八条规定年龄在60周岁以上或者持有大型客车、牵引车、城市公交车、中型客车、大型货车、无轨电车、有轨电车准驾车型的机动车驾驶人,应当每年进行一次身体检查,在记分周期结束后十五日内,提交县级或者部队团级以上医疗机构出具的有关身体条件的证明.', '', '0');
-INSERT INTO `examination_question1` VALUES ('780', '780', '驾驶机动车发生交通事故未造成人身伤亡的,责任明确双方无争议时,应当如何处置?', '4', '保护好现场再协商', '不要移动车辆', '疏导其他车辆绕行', '撤离现场自行协商', '《中华人民共和国道路交通安全法》第七十条明确规定在道路上发生交通事故,未造成人身伤亡,当事人对事实及成因无争议的,可以即行撤离现场,恢复交通,自行协商处理损害赔偿事宜；不即行撤离现场的,应当迅速报告执勤的交通警察或者公安机关交通管理部门.', '', '1');
+INSERT INTO `examination_question1` VALUES ('780', '780', '驾驶机动车发生交通事故未造成人身伤亡的,责任明确双方无争议时,应当如何处置?', '4', '保护好现场再协商', '不要移动车辆', '疏导其他车辆绕行', '撤离现场自行协商', '《中华人民共和国道路交通安全法》第七十条明确规定在道路上发生交通事故,未造成人身伤亡,当事人对事实及成因无争议的,可以即行撤离现场,恢复交通,自行协商处理损害赔偿事宜；不即行撤离现场的,应当迅速报告执勤的交通警察或者公安机关交通管理部门.', '', '2');
 INSERT INTO `examination_question1` VALUES ('781', '781', '行驶过程中发现车门未关好,应及时关闭车门,否则车辆在转弯等激烈运动过程中会造成人员或货物被甩到车外.', '1', '正确', '错误', '', '', '行车过程中,车门要关紧,否则会增加行车风险.', '', '0');
 INSERT INTO `examination_question1` VALUES ('782', '782', '驾驶机动车超车时,可以鸣喇叭替代开启转向灯.', '2', '正确', '错误', '', '', '机动车超车时,应当提前开启左转向灯、变换使用远、近光灯.', '', '0');
 INSERT INTO `examination_question1` VALUES ('783', '783', '交通肇事致一人以上重伤,负事故全部或者主要责任,并具有下列哪种行为的,构成交通肇事罪?', '3', '未带驾驶证', '未报警', '无驾驶资格驾驶机动车辆的', '未抢救受伤人员', '可能构成交通壁事罪.例如,交通壁事致一人受伤(属于一般事故),负事故全部或者主要责任,并具有酒后、无证驾驶、严重超载等情形之一的,以交通肇事罪处罚.', '', '0');
@@ -1037,7 +1037,7 @@ INSERT INTO `examination_question1` VALUES ('981', '981', '如图所示,驾驶�
 INSERT INTO `examination_question1` VALUES ('982', '982', '机动车在高速公路上发生故障时,将车上人员迅速转移到右侧路肩上或者应急车道内,并且迅速报警.', '1', '正确', '错误', '', '', '一定要移到里边,放着车道上太危险.', '', '0');
 INSERT INTO `examination_question1` VALUES ('983', '983', '驾驶人有下列哪种违法行为一次记12分?', '2', '违反交通信号灯', '使用伪造机动车号牌', '拨打、接听手机的', '违反禁令标志指示', '使用伪造、变造的机动车号牌、行驶证、驾驶证、校车标牌或者使用其他机动车号牌、行驶证的一次记12分.', '', '0');
 INSERT INTO `examination_question1` VALUES ('984', '984', '道路交通事故中,驾驶人有饮酒、醉酒嫌疑时,要保护现场并立即报警.', '1', '正确', '错误', '', '', '就该对这些人给予教训,不仅拿自己的生命开玩笑,还拿别人的生命开玩笑,报警给予丫惩罚.', '', '0');
-INSERT INTO `examination_question1` VALUES ('985', '985', '驾驶机动车造成交通事故后逃逸,尚不构成犯罪的,由公安机关交通管理部门处二百元以上二千元以下罚款,可以并处15日以下拘留.', '1', '正确', '错误', '', '', '造成交通事故后逃逸,尚不构成犯罪的由公安机关交通管理部门处二百元以上二千元以下罚款,可以并处15日以下拘留.', '', '1');
+INSERT INTO `examination_question1` VALUES ('985', '985', '驾驶机动车造成交通事故后逃逸,尚不构成犯罪的,由公安机关交通管理部门处二百元以上二千元以下罚款,可以并处15日以下拘留.', '1', '正确', '错误', '', '', '造成交通事故后逃逸,尚不构成犯罪的由公安机关交通管理部门处二百元以上二千元以下罚款,可以并处15日以下拘留.', '', '2');
 INSERT INTO `examination_question1` VALUES ('986', '986', '驾驶机动车遇到这种信号灯,可在对面直行车前直接向左转弯.', '2', '正确', '错误', '', '', '左转让直行.', 'http://images.juheapi.com/jztk/c1c2subject1/986.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('987', '987', '机动车达到国家规定的强制报废标准的不能办理注册登记.', '1', '正确', '错误', '', '', '常识题', '', '0');
 INSERT INTO `examination_question1` VALUES ('988', '988', '驾驶机动车在高速公路上车辆发生故障时,若车辆可以移动至应急车道内,只需开启危险报警闪光灯,警告标志可根据交通流情况选择是否放置.', '2', '正确', '错误', '', '', '驾驶机动车在高速公路上车辆发生故障时,若车辆可以移动至应急车道内,应开启危险报警闪光灯,放置警告标志.', '', '0');
@@ -1135,7 +1135,7 @@ INSERT INTO `examination_question1` VALUES ('1079', '1079', '设有安全带装�
 INSERT INTO `examination_question1` VALUES ('1080', '1080', '行车中从其他道路汇入车流前,应注意观察侧后方车辆的动态.', '1', '正确', '错误', '', '', '这题正确的.', '', '0');
 INSERT INTO `examination_question1` VALUES ('1081', '1081', '夜间会车时,若对方车辆不关闭远光灯,可变换灯光提示对向车辆,同时减速靠右侧行驶或停车.', '1', '正确', '错误', '', '', '夜间安全驾驶知识中第三条就有:“夜间会车应当在距对方来车150米以外改用近光灯,若对方车辆不关闭远光灯,可连续变换灯光提示对向车辆.当遇对面来车仍不关闭远光灯是,应及时减速靠右侧行驶或停车让行.”', '', '0');
 INSERT INTO `examination_question1` VALUES ('1082', '1082', '驾驶机动车在道路上掉头时提前开启左转向灯.', '1', '正确', '错误', '', '', '这个没有问题.', '', '0');
-INSERT INTO `examination_question1` VALUES ('1083', '1083', '机动车仪表板上（如图所示）亮时,表示驻车制动器处于制动状态.', '1', '正确', '错误', '', '', '正确,驻车制动器俗称手刹.', 'http://images.juheapi.com/jztk/c1c2subject1/1083.jpeg', '4');
+INSERT INTO `examination_question1` VALUES ('1083', '1083', '机动车仪表板上（如图所示）亮时,表示驻车制动器处于制动状态.', '1', '正确', '错误', '', '', '正确,驻车制动器俗称手刹.', 'http://images.juheapi.com/jztk/c1c2subject1/1083.jpeg', '5');
 INSERT INTO `examination_question1` VALUES ('1084', '1084', '驾驶人发现轮胎漏气,将车辆驶离主车道时,不要采用紧急制动,以免造成翻车或后车采取制动不及时导致追尾事故.', '1', '正确', '错误', '', '', '连续轻踏制动,缓慢将车停下,更换轮胎.', '', '0');
 INSERT INTO `examination_question1` VALUES ('1085', '1085', '车辆行至泥泞或翻浆路段时,应停车观察,选择平整、坚实的路段缓慢通过.', '1', '正确', '错误', '', '', '常识题,注意选择比较坚硬的地方通行,不要选择泥泞地方.', '', '0');
 INSERT INTO `examination_question1` VALUES ('1086', '1086', '车辆下长坡时要减挡行驶,以充分利用发动机的制动作用.', '1', '正确', '错误', '', '', '变速箱高档位高速持续运转中,迅速降低变速箱的档位转速,使变速箱的低档位转速对车辆本身的惯性高速产生抑制,从而产生短时间内的所谓发动机制动(变速箱制动).', '', '0');
@@ -1215,11 +1215,11 @@ INSERT INTO `examination_question1` VALUES ('1159', '1159', '这个标志是何�
 INSERT INTO `examination_question1` VALUES ('1160', '1160', '这个标志的含义是警告前方道路有障碍物,车辆减速绕行.', '2', '正确', '错误', '', '', '向右急弯路:用以警告车辆驾驶人减速慢行.设置位置为曲线起点的外面,但不应进入相邻的圆曲线内.', 'http://images.juheapi.com/jztk/c1c2subject1/1160.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('1161', '1161', '这个标志的含义是警告前方道路易滑,注意慢行.', '2', '正确', '错误', '', '', '反向弯路:用以警告车辆驾驶人减速慢行.设置位置为两反向圆曲线起点的外面,但不应进入相邻的圆曲线内.', 'http://images.juheapi.com/jztk/c1c2subject1/1161.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('1162', '1162', '机动车登记证书、号牌、行驶证灭失、丢失或者损毁的,机动车所有人应当向居住地车辆管理所申请补领、换领.', '2', '正确', '错误', '', '', '应当向登记地车辆管理所申请补领、换领.', '', '0');
-INSERT INTO `examination_question1` VALUES ('1163', '1163', '这是什么交通标志?', '3', '易滑路段', '急转弯路', '反向弯路', '连续弯路', '反向弯路:用以警告车辆驾驶人减速慢行.设置位置为两反向圆曲线起点的外面,但不应进入相邻的圆曲线内.', 'http://images.juheapi.com/jztk/c1c2subject1/1163.jpg', '0');
+INSERT INTO `examination_question1` VALUES ('1163', '1163', '这是什么交通标志?', '3', '易滑路段', '急转弯路', '反向弯路', '连续弯路', '反向弯路:用以警告车辆驾驶人减速慢行.设置位置为两反向圆曲线起点的外面,但不应进入相邻的圆曲线内.', 'http://images.juheapi.com/jztk/c1c2subject1/1163.jpg', '1');
 INSERT INTO `examination_question1` VALUES ('1164', '1164', '这个标志的含义是提醒前方道路变为不分离双向行驶路段.', '1', '正确', '错误', '', '', '双向交通:用以提醒车辆驾驶人注意会车.设在由双向分离行驶,因某种原因出现临时性或永久性的不分离双向行驶的路段,或由单向行驶进人双向行驶的路段以前适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/1164.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('1165', '1165', '这种标志的作用是警告车辆驾驶人前方有危险,谨慎通行.', '1', '正确', '错误', '', '', '前方这么多状况,要谨慎驾驶.', 'http://images.juheapi.com/jztk/c1c2subject1/1165.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('1166', '1166', '这个标志的含义是警告前方有两个相邻的反向转弯道路.', '2', '正确', '错误', '', '', '连续弯路:用以警告车辆驾驶人减速慢行.设置位置为连续弯路起点的外面,当连续弯路总长度大于500m时,应重复设置.', 'http://images.juheapi.com/jztk/c1c2subject1/1166.jpg', '0');
-INSERT INTO `examination_question1` VALUES ('1167', '1167', '这个标志的含义是前方即将行驶至Y型交叉路口?', '2', '正确', '错误', '', '', '交叉路口:用以警告车辆驾驶人谨慎慢行,注意横向来车.设在平面交叉路口驶入路段的适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/1167.jpg', '1');
+INSERT INTO `examination_question1` VALUES ('1167', '1167', '这个标志的含义是前方即将行驶至Y型交叉路口?', '2', '正确', '错误', '', '', '交叉路口:用以警告车辆驾驶人谨慎慢行,注意横向来车.设在平面交叉路口驶入路段的适当位置.', 'http://images.juheapi.com/jztk/c1c2subject1/1167.jpg', '2');
 INSERT INTO `examination_question1` VALUES ('1168', '1168', '这是什么交通标志?', '3', '两侧变窄', '右侧变窄', '左侧变窄', '桥面变窄', '左侧变窄:用以警告车辆驾驶人注意前方车行道或路面狭窄情况,遇有来车应予减速避让.设在双车道路面宽度缩减为6 m以下的路段起点前方.', 'http://images.juheapi.com/jztk/c1c2subject1/1168.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('1169', '1169', '这个标志是何含义?', '2', '提醒车辆驾驶人前方道路沿水库、湖泊、河流', '提醒车辆驾驶人前方有向上的陡坡路段', '.提醒车辆驾驶人前方有两个及以上的连续上坡路段', '提醒车辆驾驶人前方有向下的陡坡路段', '上陡坡:用以提醒车辆驾驶人小心驾驶.', 'http://images.juheapi.com/jztk/c1c2subject1/1169.jpg', '0');
 INSERT INTO `examination_question1` VALUES ('1170', '1170', '这个标志的含义是提醒前方桥面宽度变窄.', '2', '正确', '错误', '', '', '两侧变窄:用以警告车辆驾驶人注意前方车行道或路面狭窄情况,遇有来车应予减速避让.设在双车道路面宽度缩减为6 m以下的路段起点前方.', 'http://images.juheapi.com/jztk/c1c2subject1/1170.jpg', '0');
@@ -1305,12 +1305,12 @@ CREATE TABLE `examination_question4` (
 -- ----------------------------
 -- Records of examination_question4
 -- ----------------------------
-INSERT INTO `examination_question4` VALUES ('1', '1', '驾驶机动车进入这个路口怎样使用灯光？', '3', '开启右转向灯', '开启危险报警闪光灯', '不用开启转向灯', '开启左转向灯', '由图可知，前方是向右环形路段，因此向右行驶时不需要开启转向灯，所以本题选C。', 'http://images.juheapi.com/jztk/subject4/1.jpg', '0');
+INSERT INTO `examination_question4` VALUES ('1', '1', '驾驶机动车进入这个路口怎样使用灯光？', '3', '开启右转向灯', '开启危险报警闪光灯', '不用开启转向灯', '开启左转向灯', '由图可知，前方是向右环形路段，因此向右行驶时不需要开启转向灯，所以本题选C。', 'http://images.juheapi.com/jztk/subject4/1.jpg', '1');
 INSERT INTO `examination_question4` VALUES ('2', '2', '在这个路口左转弯要靠路口中心点左侧转弯。', '1', '正确', '错误', '', '', '如图是中心圈，设在平面交叉路口的中心，用以区分车辆大、小转弯，及交叉路口车辆左右转弯的指示，车辆不得压线行驶。因此本题正确。', 'http://images.juheapi.com/jztk/subject4/2.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('3', '3', '右侧标志是何含义？', '2', '允许长时停放车辆', '可以临时停车', '允许长时停车等客', '不允许停放车辆', '禁止车辆长时停放：禁止车辆长时停放，临时停放不受限制。禁止车辆停放的时间、车种和范围可用辅助标志说明。', 'http://images.juheapi.com/jztk/subject4/3.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('4', '4', '右侧标志表示只能靠左侧道路行驶。', '1', '正确', '错误', '', '', '靠左侧道路行驶-表示只准一切车辆靠左侧道路行驶。此标志设在车辆必须靠左侧行驶的路口以前适当位置。', 'http://images.juheapi.com/jztk/subject4/4.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('5', '5', '在道路上跟车行驶时，跟车距离不是主要的，只须保持与前车相等的速度，即可防止发生追尾事故。', '2', '正确', '错误', '', '', '跟车距离很重要，不同的道路对跟车距离要求是不一样的。假设你跟前车的的速度相等，但是距离是1米，是不可能刹得住车的。', '', '0');
-INSERT INTO `examination_question4` VALUES ('6', '6', '驾驶机动车驶出这个环岛路口怎样使用灯光？', '4', '开启左转向灯', '开启报警闪光灯', '不用开转向灯', '开启右转向灯', '由图可知，前方有两条道可供行驶，而驾驶车辆若想要离开环形路口，就要靠右侧行驶转出，此时要开启右转向灯告知其他车辆你要离开了。因此本题选D。', 'http://images.juheapi.com/jztk/subject4/6.jpg', '0');
+INSERT INTO `examination_question4` VALUES ('6', '6', '驾驶机动车驶出这个环岛路口怎样使用灯光？', '4', '开启左转向灯', '开启报警闪光灯', '不用开转向灯', '开启右转向灯', '由图可知，前方有两条道可供行驶，而驾驶车辆若想要离开环形路口，就要靠右侧行驶转出，此时要开启右转向灯告知其他车辆你要离开了。因此本题选D。', 'http://images.juheapi.com/jztk/subject4/6.jpg', '1');
 INSERT INTO `examination_question4` VALUES ('7', '7', '在行驶中，驾驶人在注意与前车保持安全距离的同时，也要谨慎制动，防止被后车追尾。', '1', '正确', '错误', '', '', '在行驶过程中要留意与前后车的距离，因此若是贸然使用制动，很容易使后车来不及反应发生追尾，所以本题正确。', '', '0');
 INSERT INTO `examination_question4` VALUES ('8', '8', '右侧标志警告前方道路左侧变宽。', '2', '正确', '错误', '', '', '左侧变窄-用以警告车辆驾驶人注意前方车行道或路面狭窄情况，遇有来车应予减速避让。设在双车道路面宽度缩减为6 m以下的路段起点前方。', 'http://images.juheapi.com/jztk/subject4/8.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('9', '9', '立体交叉处这个标志提示什么？', '2', '向右转弯', '直行和左转弯', '直行和右转弯', '在桥下掉头', '立交直行和左转弯行驶-表示车辆在立交处可以直行和按图示路线左转弯行驶。此标志设在立交左转弯出口处适当位置。', 'http://images.juheapi.com/jztk/subject4/9.jpg', '0');
@@ -1359,7 +1359,7 @@ INSERT INTO `examination_question4` VALUES ('51', '51', '右侧这个标志提�
 INSERT INTO `examination_question4` VALUES ('52', '52', '在这种公交车站怎样预防公交车突然起步？', '3', '在公交车后停车', '迅速超越公交车', '减速，缓慢超越', '连续鸣喇叭提醒', '注意本题的情景：公交车可能突然起步。因此横向间距要加大，而且要减速慢行，超越时要特别留意公交车的动态，避免发生碰撞，因此本题选C。', 'http://images.juheapi.com/jztk/subject4/52.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('53', '53', '在这种条件的道路上怎样行驶才安全？', '3', '靠路左侧转大弯', '靠弯路中心转弯', '靠路右侧转小弯', '借对向车道转弯', '前方是向右急转弯路段，靠右转弯是小弯，靠左转弯是大弯，因此本题选C。', 'http://images.juheapi.com/jztk/subject4/53.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('54', '54', '右侧这个标志警告前方是无人看守的有多股铁路与道路相交铁路道口。', '2', '正确', '错误', '', '', '这是有人看守铁道路口。', 'http://images.juheapi.com/jztk/subject4/54.jpg', '0');
-INSERT INTO `examination_question4` VALUES ('55', '55', '驾驶机动车通过学校时要注意什么？', '13', '观察标志标线', '减速慢行', '不要鸣喇叭', '快速通过', '在有学校的路段一般都会设置提醒有学校或是禁止鸣喇叭的交通标志，因此在经过学校时不仅要观察交通标志，还要记住不得鸣喇叭。另外，由于学校周围会有学生走动，因此在途经时车速一定要慢，避免撞到人或其他。因此本题要选ABC。', '', '0');
+INSERT INTO `examination_question4` VALUES ('55', '55', '驾驶机动车通过学校时要注意什么？', '13', '观察标志标线', '减速慢行', '不要鸣喇叭', '快速通过', '在有学校的路段一般都会设置提醒有学校或是禁止鸣喇叭的交通标志，因此在经过学校时不仅要观察交通标志，还要记住不得鸣喇叭。另外，由于学校周围会有学生走动，因此在途经时车速一定要慢，避免撞到人或其他。因此本题要选ABC。', '', '1');
 INSERT INTO `examination_question4` VALUES ('56', '56', '如动画所示，驾驶人的行为是正确的。', '2', '正确', '错误', '', '', '动画中的车辆右转的车道不对，如果是右转应该在在最右侧的车道向右转！', 'http://images.juheapi.com/jztk/subject4/56.swf', '0');
 INSERT INTO `examination_question4` VALUES ('57', '57', '右侧这个标志提醒注意前方是傍山险路。', '1', '正确', '错误', '', '', '傍山线路-用以提醒车辆驾驶人小心驾驶。设在傍山险路路段以前适当位置。', 'http://images.juheapi.com/jztk/subject4/57.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('58', '58', '路两侧的标志提示前方道路线形变化。', '1', '正确', '错误', '', '', '驾驶人员在一条不熟悉的道路上行驶，不可能知道行驶前方存在有潜在的危险。警告标志的作用就是及时地提醒驾驶人员前方道路线形和道路状况的变化，在到达危险点以前有充分时间采取必要行动，确保行驶安全。', 'http://images.juheapi.com/jztk/subject4/58.jpg', '0');
@@ -1412,7 +1412,7 @@ INSERT INTO `examination_question4` VALUES ('104', '104', '右侧标志提醒前
 INSERT INTO `examination_question4` VALUES ('105', '105', '驾驶机动车在路口遇到这种情况的行人怎么办？', '1', '及时减速停车让行', '鸣喇叭示意其让道', '加速从行人前通过', '开前照灯示意其让道', '虽然横穿道路的行人算乱穿，但面对这样的情况驾驶员依旧要减速慢行，必要时停车避让，因此本题选A。', 'http://images.juheapi.com/jztk/subject4/105.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('106', '106', '前方标志告知向右100米为室内停车场。', '1', '正确', '错误', '', '', '你看那个P字上边还有个遮挡，说明是室内的，如果没有上边那个遮挡就是露天停车场。', 'http://images.juheapi.com/jztk/subject4/106.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('107', '107', '该车道路面导向箭头指示在前方路口仅可右转弯。', '2', '正确', '错误', '', '', '图中的标志表示可以直行或者右转弯。', 'http://images.juheapi.com/jztk/subject4/107.jpg', '0');
-INSERT INTO `examination_question4` VALUES ('108', '108', '机动车行驶至转弯路段时，易引发事故的驾驶行为有什么？', '13', '机动车占对向道行驶', '在弯道内急转转向盘', '在驶入弯道前不减速', '机动车靠路右侧行驶', '选项A容易与对向来车发生擦碰，选项BC容易造成侧滑，严重的话会侧翻，因此本题选ABC。', '', '0');
+INSERT INTO `examination_question4` VALUES ('108', '108', '机动车行驶至转弯路段时，易引发事故的驾驶行为有什么？', '13', '机动车占对向道行驶', '在弯道内急转转向盘', '在驶入弯道前不减速', '机动车靠路右侧行驶', '选项A容易与对向来车发生擦碰，选项BC容易造成侧滑，严重的话会侧翻，因此本题选ABC。', '', '1');
 INSERT INTO `examination_question4` VALUES ('109', '109', '驾驶机动车在这种信号灯亮的路口，可以右转弯。', '1', '正确', '错误', '', '', '没有问题，只要安全的情况下就可以右转，前边的红灯是管直行的。', 'http://images.juheapi.com/jztk/subject4/109.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('110', '110', '右侧标志提醒前方经常有牲畜横穿、出入。', '2', '正确', '错误', '', '', '注意野生动物-用以提醒车辆驾驶人注意慢行。设在经过野生动物保护区的公路上，经常有野生动物横穿、出入的地点前适当位置。', 'http://images.juheapi.com/jztk/subject4/110.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('111', '111', '前方标志指示路右侧是高速公路临时停车处。', '2', '正确', '错误', '', '', '图示为紧急停车道。', 'http://images.juheapi.com/jztk/subject4/111.jpg', '0');
@@ -1446,7 +1446,7 @@ INSERT INTO `examination_question4` VALUES ('138', '138', '右侧标志警示前
 INSERT INTO `examination_question4` VALUES ('139', '139', '机动车倒车时，后方道路条件较好的，应加速倒车，迅速完成操作。', '2', '正确', '错误', '', '', '《中华人民共和国道路交通安全法实施条例》第五十条  机动车倒车时，应当察明车后情况，确认安全后倒车。不得在铁路道口、交叉路口、单行路、桥梁、急弯、陡坡或者隧道中倒车。因此本题错误。另：施主别那么迅速啊， 安全第一！', '', '0');
 INSERT INTO `examination_question4` VALUES ('140', '140', '红色圆圈内标志表示左侧道路只供小型车行驶。', '2', '正确', '错误', '', '', '红色圆圈内标志是机动车行驶车道。', 'http://images.juheapi.com/jztk/subject4/140.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('141', '141', '右侧标志表示前方是分流路口。', '2', '正确', '错误', '', '', '图中是车道数增加标志。', 'http://images.juheapi.com/jztk/subject4/141.jpg', '1');
-INSERT INTO `examination_question4` VALUES ('142', '142', '石某驾驶低速载货机动车，运载4.05吨货物（核载1.2吨），行驶至宁津县境内314省道51公里加260米处，在越过道路中心线超越前方同向行驶的机动车时，与对向正常行驶的中型客车（乘载12人，核载11人）正面相撞，造成10人死亡、2人受伤。此事故中的违法行为是什么？', '13', '货车超载', '货车违法超车', '客车超员', '客车驾驶人疲劳驾驶', '易错题，超员超载都清楚，但是违规超车得留点心，意思是货车师傅在超车时发现对向有驶来的车时，应该立即停止超车。', '', '0');
+INSERT INTO `examination_question4` VALUES ('142', '142', '石某驾驶低速载货机动车，运载4.05吨货物（核载1.2吨），行驶至宁津县境内314省道51公里加260米处，在越过道路中心线超越前方同向行驶的机动车时，与对向正常行驶的中型客车（乘载12人，核载11人）正面相撞，造成10人死亡、2人受伤。此事故中的违法行为是什么？', '13', '货车超载', '货车违法超车', '客车超员', '客车驾驶人疲劳驾驶', '易错题，超员超载都清楚，但是违规超车得留点心，意思是货车师傅在超车时发现对向有驶来的车时，应该立即停止超车。', '', '1');
 INSERT INTO `examination_question4` VALUES ('143', '143', '夜间驾驶机动车在照明条件良好的路段可以不使用灯光。', '2', '正确', '错误', '', '', '用近光灯不会照得对方看不见路，同时为了安全起见，开启近光灯能够让相互间清晰可见。因此本题错误。', '', '0');
 INSERT INTO `examination_question4` VALUES ('144', '144', '安装防抱死制动装置（ABS）的机动车紧急制动时，可用力踏制动踏板。', '1', '正确', '错误', '', '', 'ABS技术的出现，就是大大地降低了侧滑，和原地掉头的现象，保证了行驶的安全。如果，你在使用带ABS的车辆，在刹车时的动作，类似不带ABS的车这样轻轻的踩下去，很可能会不能触发ABS系统，也就起不到ABS的作用了，所以，一般就是要求，刹车动作要果断，一脚就踩到底，保证ABS的正确执行。', '', '0');
 INSERT INTO `examination_question4` VALUES ('145', '145', '路面中心黄虚线指示在保证安全的情况下可以越线超车。', '1', '正确', '错误', '', '', '黄色虚线是中心线，可以跨越；黄色单实线就已经不能跨越了；黄色双实线是严格禁止压线或者跨越', 'http://images.juheapi.com/jztk/subject4/145.jpg', '0');
@@ -1489,7 +1489,7 @@ INSERT INTO `examination_question4` VALUES ('181', '181', '左侧标志提示前
 INSERT INTO `examination_question4` VALUES ('182', '182', '驾驶机动车遇到这种情况要迅速向左变更车道。', '2', '正确', '错误', '', '', '由图可知，左侧后方有来车，所以为了避免发生碰撞及影响其他车辆正常通行，因此就算要变更车道也应该等后车通过后再变更。正确的做法是，提前开启转向灯，确保左侧车道后方没有车辆临近时向左变更车道。因此本题错误。', 'http://images.juheapi.com/jztk/subject4/182.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('183', '183', '该车道路面导向箭头指示前方道路仅可左右转弯。', '1', '正确', '错误', '', '', '嗯，看路上的标志，是仅可以左转右转的意思。', 'http://images.juheapi.com/jztk/subject4/183.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('184', '184', '驾驶机动车遇到这样的情景怎样行驶？', '3', '连续鸣喇叭', '快速通过', '减速慢行', '从一侧绕行', '遇到这样的情况要减速慢行，必要时停车避让，以免孩子们突然跑动被撞伤，因此本题选C。', 'http://images.juheapi.com/jztk/subject4/184.jpg', '0');
-INSERT INTO `examination_question4` VALUES ('185', '185', '右侧标志警告前方道路是向左连续弯路。', '2', '正确', '错误', '', '', '向左急弯路-用以警告车辆驾驶人减速慢行。设置位置为曲线起点的外面，但不应进入相邻的圆曲线内。', 'http://images.juheapi.com/jztk/subject4/185.jpg', '0');
+INSERT INTO `examination_question4` VALUES ('185', '185', '右侧标志警告前方道路是向左连续弯路。', '2', '正确', '错误', '', '', '向左急弯路-用以警告车辆驾驶人减速慢行。设置位置为曲线起点的外面，但不应进入相邻的圆曲线内。', 'http://images.juheapi.com/jztk/subject4/185.jpg', '1');
 INSERT INTO `examination_question4` VALUES ('186', '186', '周某夜间驾驶大货车在没有路灯的城市道路上以90公里/小时的速度行驶，一直开启远光灯，在通过一窄路时，因加速抢道，导致对面驶来的一辆小客车撞上右侧护栏。周某的主要违法行为是什么？', '14', '超速行驶', '不按规定会车', '疲劳驾驶', '不按规定使用灯光', '第一，夜间没有路灯的情况下90公里/小时，这个肯定是是超速啊，高速上这个速度还可以，没有路灯就危险了。第二，通过窄路时，应该会车减速行驶。第三，应该交替使用近远光灯。', '', '0');
 INSERT INTO `examination_question4` VALUES ('187', '187', '右侧标志表示不允许长时鸣喇叭。', '2', '正确', '错误', '', '', '禁止鸣喇叭-表示禁止鸣喇叭。此标志设在需要禁止鸣喇叭的地方。禁止鸣喇叭的时间和范围可用辅助标志说明。', 'http://images.juheapi.com/jztk/subject4/187.jpg', '0');
 INSERT INTO `examination_question4` VALUES ('188', '188', '前方标志告知各个路口出口方向的信息。', '1', '正确', '错误', '', '', '前方标志告知各个路口出口方向的信息，此题正确。', 'http://images.juheapi.com/jztk/subject4/188.jpg', '0');
@@ -2405,20 +2405,37 @@ INSERT INTO `examination_question4` VALUES ('1094', '1094', '如图所示,驾驶
 -- ----------------------------
 DROP TABLE IF EXISTS `e_record`;
 CREATE TABLE `e_record` (
-  `sid` int(11) NOT NULL COMMENT '学员id',
+  `id` int(11) NOT NULL COMMENT '自增id',
+  `uid` int(11) DEFAULT NULL COMMENT '学员id',
   `errornum` int(11) DEFAULT NULL COMMENT '错题数',
   `rightnum` int(11) DEFAULT NULL COMMENT '正确题数',
-  `time` datetime DEFAULT NULL COMMENT '做题时间',
-  `subject` varchar(4) COLLATE utf8_bin DEFAULT NULL COMMENT '科目',
-  `id` int(11) DEFAULT NULL COMMENT '自增id',
-  PRIMARY KEY (`sid`)
+  `subject` int(4) DEFAULT NULL COMMENT '科目',
+  `test_time` date DEFAULT NULL COMMENT '测试时间',
+  `errorproject` varchar(50) COLLATE utf8_bin DEFAULT NULL COMMENT '记录错误的题目',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
 -- Records of e_record
 -- ----------------------------
-INSERT INTO `e_record` VALUES ('1', null, null, null, null, '1');
-INSERT INTO `e_record` VALUES ('2', null, null, null, null, '2');
+INSERT INTO `e_record` VALUES ('1', '1', '3', '97', '1', '2018-02-01', '1,4,5');
+INSERT INTO `e_record` VALUES ('2', '1', '2', '98', '1', '2018-02-09', '90,111');
+INSERT INTO `e_record` VALUES ('3', '2', '7', '43', '4', '2018-02-10', '5,6,8,1,11,33,2');
+INSERT INTO `e_record` VALUES ('4', '2', '4', '46', '4', '2018-02-11', '88,4,3,55');
+INSERT INTO `e_record` VALUES ('5', '1', '5', '95', '1', '2018-02-12', '3,2,5,66,34');
+INSERT INTO `e_record` VALUES ('6', '1', '11', '89', '1', '2018-02-13', '1,2,3,4,5,6,7,8,9,12,34');
+INSERT INTO `e_record` VALUES ('7', '1', '1', '99', '1', '2018-02-14', '99');
+INSERT INTO `e_record` VALUES ('8', '1', '9', '91', '1', '2018-02-19', '2,4,33,67,123,434,565,78,9');
+INSERT INTO `e_record` VALUES ('9', '1', '12', '88', '1', '2018-02-23', '21,23,25,44,56,77,88,9,12,123,456,765');
+INSERT INTO `e_record` VALUES ('10', '1', '3', '47', '4', '2018-02-24', '45,55,66');
+INSERT INTO `e_record` VALUES ('11', '1', '5', '45', '4', '2018-02-25', '123,445,332,34,5');
+INSERT INTO `e_record` VALUES ('12', '1', '5', '45', '4', '2018-02-26', '677,444,672,3,45');
+INSERT INTO `e_record` VALUES ('13', '1', '2', '48', '4', '2018-02-28', '2,3');
+INSERT INTO `e_record` VALUES ('14', '1', '6', '44', '4', '2018-03-01', '21,76,90,44,32,5');
+INSERT INTO `e_record` VALUES ('15', '1', '1', '49', '4', '2018-03-02', '447');
+INSERT INTO `e_record` VALUES ('16', '1', '7', '43', '4', '2018-03-03', '1,2,3,4,5,6,7');
+INSERT INTO `e_record` VALUES ('17', '1', '4', '96', '1', '2018-03-04', '4,3,2,25');
+INSERT INTO `e_record` VALUES ('18', '1', '8', '42', '4', '2018-03-05', '1111,2,3,4,8,77,66,90');
 
 -- ----------------------------
 -- Table structure for `u_msg`
@@ -2427,32 +2444,33 @@ DROP TABLE IF EXISTS `u_msg`;
 CREATE TABLE `u_msg` (
   `uid` int(11) NOT NULL AUTO_INCREMENT COMMENT '学员id',
   `username` varchar(10) COLLATE utf8_bin DEFAULT NULL COMMENT '学员姓名',
-  `password` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '密码',
+  `password` varchar(255) COLLATE utf8_bin NOT NULL COMMENT '密码',
   `age` int(11) DEFAULT NULL COMMENT '学员年龄',
   `sex` varchar(4) COLLATE utf8_bin DEFAULT NULL COMMENT '学员性别',
   `email` varchar(20) COLLATE utf8_bin DEFAULT NULL COMMENT '邮箱',
   `log_time` date DEFAULT NULL COMMENT '注册时间',
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
 -- Records of u_msg
 -- ----------------------------
-INSERT INTO `u_msg` VALUES ('1', '天逸云舒', null, '25', '女', 'WAB@sina.com', '2017-03-09');
-INSERT INTO `u_msg` VALUES ('2', '沉醉丶深海', null, '28', '女', '12345@qq.com', '2017-04-19');
-INSERT INTO `u_msg` VALUES ('3', '用户54455247', null, '34', '女', '455443@qq.com', '2017-02-26');
-INSERT INTO `u_msg` VALUES ('4', '一方甲', null, '27', '男', 'shjfhjsf12345@qq.com', '2017-01-17');
-INSERT INTO `u_msg` VALUES ('5', '不磨叽', null, '28', '男', '335412345@qq.com', '2017-02-25');
-INSERT INTO `u_msg` VALUES ('6', '夜色星光', null, '30', '男', '3424212345@qq.com', '2017-01-19');
-INSERT INTO `u_msg` VALUES ('7', '用户55881843', null, '32', '男', '211234@sina.com', '2017-02-11');
+INSERT INTO `u_msg` VALUES ('1', 'tom', '12345678', '25', '女', 'WAB@sina.com', '2018-03-25');
+INSERT INTO `u_msg` VALUES ('2', '沉醉丶深海', '34343', '28', '女', '12345@qq.com', '2017-04-19');
+INSERT INTO `u_msg` VALUES ('3', '用户54455247', '4354', '34', '女', '455443@qq.com', '2017-02-26');
+INSERT INTO `u_msg` VALUES ('4', '一方甲', '2323', '27', '男', 'shjfhjsf12345@qq.com', '2017-01-17');
+INSERT INTO `u_msg` VALUES ('5', '不磨叽', '2323', '28', '男', '335412345@qq.com', '2017-02-25');
+INSERT INTO `u_msg` VALUES ('6', '夜色星光', '2323', '30', '男', '3424212345@qq.com', '2017-01-19');
+INSERT INTO `u_msg` VALUES ('7', '用户55881843', '23232', '32', '男', '211234@sina.com', '2017-02-11');
 INSERT INTO `u_msg` VALUES ('8', '云朵', '123456', '22', '女', 'dsffdf@sina.com', '2017-01-24');
-INSERT INTO `u_msg` VALUES ('9', '李平', null, '25', '男', 'fsdfsdf@sina.com', '2017-02-24');
-INSERT INTO `u_msg` VALUES ('10', '自在人生', null, '28', '男', '34243234@163.com', '2017-02-16');
-INSERT INTO `u_msg` VALUES ('11', '赖利', null, '30', '女', '435fdsdf@163.com', '2017-03-09');
-INSERT INTO `u_msg` VALUES ('12', '用户61275184', null, '28', '女', 'xsdfsdf3@163.com', '2017-04-01');
+INSERT INTO `u_msg` VALUES ('9', '李平', '23232', '25', '男', 'fsdfsdf@sina.com', '2017-02-24');
+INSERT INTO `u_msg` VALUES ('10', '自在人生', '23232', '28', '男', '34243234@163.com', '2017-02-16');
+INSERT INTO `u_msg` VALUES ('11', '赖利', '2323', '30', '女', '435fdsdf@163.com', '2017-03-09');
+INSERT INTO `u_msg` VALUES ('12', '用户61275184', '123', '28', '女', 'xsdfsdf3@163.com', '2017-04-01');
 INSERT INTO `u_msg` VALUES ('13', 'user', '123456', '22', '女', '233eks@qq.com', '2017-05-05');
-INSERT INTO `u_msg` VALUES ('14', 'aa', '12345', '23', '男', 'sghdsf@qq.com', null);
-INSERT INTO `u_msg` VALUES ('15', 'ss', '111', '0', '男', 'sdsd@qq.com', null);
-INSERT INTO `u_msg` VALUES ('16', '111', '111', '0', '男', '111@qq.com', null);
-INSERT INTO `u_msg` VALUES ('17', 'sjsdf', '333', '0', '男', 'sadad@qq.com', null);
-INSERT INTO `u_msg` VALUES ('18', 'asdsa', '1111', '0', '女', 'asd@qq.com', null);
+INSERT INTO `u_msg` VALUES ('14', 'aa', '12345', '23', '男', 'sghdsf@qq.com', '2018-03-06');
+INSERT INTO `u_msg` VALUES ('15', 'ss', '111', '32', '男', 'sdsd@qq.com', '0000-00-00');
+INSERT INTO `u_msg` VALUES ('16', '111', 'ssss', '35', '男', '111@qq.com', '2018-03-19');
+INSERT INTO `u_msg` VALUES ('17', 'sjsdf', '333', '23', '男', 'sadad@qq.com', '2018-03-05');
+INSERT INTO `u_msg` VALUES ('18', 'asdsa', '1111', '45', '女', 'asd@qq.com', '2018-03-15');
+INSERT INTO `u_msg` VALUES ('19', 'zzz', 'zzz', '32', '男', 'zz@12.com', '2018-03-25');
