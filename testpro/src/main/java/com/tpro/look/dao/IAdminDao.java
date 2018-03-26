@@ -3,6 +3,9 @@ package com.tpro.look.dao;
 import com.tpro.look.model.Admin;
 
 public interface IAdminDao {
+	
+	Admin findByName(String name);
+	
     int deleteByPrimaryKey(Integer aid);
 
     int insert(Admin record);

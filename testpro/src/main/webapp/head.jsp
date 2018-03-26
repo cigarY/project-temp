@@ -35,11 +35,11 @@
                     <!--导航条-->
                     <div class="navbar">
                         <ul>
-                            <li><a href="<%=basePath%>index.jsp" style="color: #499afd">首页</a></li>
-                            <li><a href="<%=basePath%>exam.jsp" target="_blank">在线测试</a></li>
-                            <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}" target="_blank">科目一</a></li>
-                            <li><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}" target="_blank">科目四</a></li>
-                            <li><a href="<%=basePath%>personal/personalinfo">个人中心</a></li>              
+                            <li class="li1"><a href="<%=basePath%>index.jsp" style="color: #499afd">首页</a></li>
+                            <li class="li2"><a href="<%=basePath%>exam.jsp" target="_blank">在线测试</a></li>
+                            <li class="li3"><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}" target="_blank">科目一</a></li>
+                            <li class="li4"><a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${4}" target="_blank">科目四</a></li>
+                            <li class="li5"><a href="<%=basePath%>personal/personalinfo">个人中心</a></li>              
                         </ul>
                     </div>
 

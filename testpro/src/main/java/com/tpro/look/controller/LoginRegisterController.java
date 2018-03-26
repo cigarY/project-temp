@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.tpro.look.model.Admin;
 import com.tpro.look.model.User;
+import com.tpro.look.service.IAdminService;
 import com.tpro.look.service.IUserService;
 
 
@@ -22,7 +24,42 @@ public class LoginRegisterController {
 	
 	@Autowired
 	IUserService userService;
+	@Autowired
+	IAdminService adminService;
 	
+	/**
+	 * 管理员登录
+	 * @param request
+	 * @param adminname
+	 * @param adminpwd
+	 * @return
+	 */
+	@RequestMapping(value="/doadminlogin",method=RequestMethod.POST)
+	public String doAdminLogin(HttpServletRequest request,@RequestParam("adminname") String adminname,@RequestParam("adminpwd") String adminpwd) {
+		Admin admin = new Admin();
+		admin = adminService.findByName(adminname);
+		if(null!=admin) {
+			String pwd = admin.getAdminpwd(); 
+			if(adminpwd.equals(pwd)) {
+				request.setAttribute("adminname", adminname);
+				return "/admin";
+			}else {
+				request.setAttribute("msg", "用户名或密码错误！");
+				return "/adminlogin";
+			}		
+		}else{
+			request.setAttribute("msg", "用户名或密码错误！");
+			return "/adminlogin";
+		}
+	}
+	
+	/**
+	 * 用户登录
+	 * @param request
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	@RequestMapping(value="/dologin",method=RequestMethod.POST)
 	public String doUserLogin(HttpServletRequest request,@RequestParam("username") String username,@RequestParam("password") String password) {
 		HttpSession session = request.getSession();
@@ -50,6 +87,16 @@ public class LoginRegisterController {
 		}
 	}
 	
+	/**
+	 * 用户注册
+	 * @param request
+	 * @param username
+	 * @param password
+	 * @param email
+	 * @param sex
+	 * @param besurepwd
+	 * @return
+	 */
 	@RequestMapping(value="/doregister",method=RequestMethod.POST)
 	public String doRegister(HttpServletRequest request,
 			@RequestParam("username") String username,
