@@ -30,6 +30,8 @@ public class SubjectPracticeController {
 	int index = 0;// 数组下标
 	int[] subjectArr = null;// 生成题目的数组
 	int subjectId = 0;// 科目编号
+	
+	int dealNum = 0;
 
 	/**
 	 * 生成对应题目
@@ -43,9 +45,18 @@ public class SubjectPracticeController {
 	public String getSubjectPractice(HttpServletRequest request, int subjectnum, int dealId) {
 		index = 0;
 		subjectId = subjectnum;
+		dealNum = dealId;
 		if (subjectId == 1) {
+			if (dealId == 1) {
+				request.setAttribute("practicename", "科目一顺序练习");
+			}
+			if (dealId == 2) {
+				request.setAttribute("practicename", "科目一随机练习");
+			}
+			
 			// 难度
 			if (dealId == 5) {
+				request.setAttribute("practicename", "科目一难题攻克");
 				List<SubjectQ1> subjectQ1slist = subjectQ1Service.getHardTop100();
 				testNum = subjectQ1slist.size();
 				for (int i = 0; i < testNum; i++) {
@@ -59,7 +70,15 @@ public class SubjectPracticeController {
 			SubjectQ1 subjectQ1 = subjectQ1Service.findById(subjectArr[0]);
 			request.setAttribute("subject", subjectQ1);
 		} else if (subjectId == 4) {
+			if (dealId == 1) {
+				request.setAttribute("practicename", "科目四顺序练习");
+			}
+			if (dealId == 2) {
+				request.setAttribute("practicename", "科目四随机练习");
+			}
+			
 			if (dealId == 5) {
+				request.setAttribute("practicename", "科目四难题攻克");
 				List<SubjectQ4> subjectQ4slist = subjectQ4Service.getHardTop100();
 				testNum = subjectQ4slist.size();
 				for (int i = 0; i < subjectQ4slist.size(); i++) {
@@ -101,6 +120,15 @@ public class SubjectPracticeController {
 		}
 		int tid = subjectArr[index];
 		if (subjectId == 1) {
+			if (dealNum == 1) {
+				request.setAttribute("practicename", "科目一顺序练习");
+			}
+			if (dealNum == 2) {
+				request.setAttribute("practicename", "科目一随机练习");
+			}
+			if (dealNum == 5) {
+				request.setAttribute("practicename", "科目一难题攻克");
+			}
 			SubjectQ1 subjectQ1 = subjectQ1Service.findById(tid);
 			request.setAttribute("subject", subjectQ1);
 			// 用户提交的答案判断
@@ -117,6 +145,15 @@ public class SubjectPracticeController {
 			}
 
 		} else if (subjectId == 4) {
+			if (dealNum == 1) {
+				request.setAttribute("practicename", "科目四顺序练习");
+			}
+			if (dealNum == 2) {
+				request.setAttribute("practicename", "科目四随机练习");
+			}
+			if (dealNum == 5) {
+				request.setAttribute("practicename", "科目四难题攻克");
+			}
 			SubjectQ4 subjectQ4 = subjectQ4Service.findById(tid);
 			request.setAttribute("subject", subjectQ4);
 			// 用户提交的答案判断

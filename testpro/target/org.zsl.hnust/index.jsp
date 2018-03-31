@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%
+	String path1 = request.getContextPath();
+	String basePath1 = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path1 + "/";
+%>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -8,13 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOOK圈驾考模拟测试平台</title>
 
-    <link href="css/index.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="css/animate.min.css" rel="stylesheet" media="all">
+    <link href="<%=basePath1%>css/index.css" rel="stylesheet" type="text/css">
+    <link href="<%=basePath1%>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=basePath1%>css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="<%=basePath1%>css/animate.min.css" rel="stylesheet" media="all">
     <!-- Bootstrap bootstrap-touch-slider Slider Main Style Sheet -->
-    <link href="css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
-    <link href="css/img_show.css" rel="stylesheet" type="text/css">
+    <link href="<%=basePath1%>css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
+    <link href="<%=basePath1%>css/img_show.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!--首页-->
@@ -43,7 +48,7 @@
                     <div class="item active">
 
                         <!-- Slide Background -->
-                        <img src="images/b1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <img src="<%=basePath1%>images/b1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
                         <div class="bs-slider-overlay"></div>
 
                         <div class="container">
@@ -53,7 +58,7 @@
                                     <h1 data-animation="animated zoomInRight">驾考理论模拟测试平台</h1>
                                     <p data-animation="animated fadeInLeft">题库的相似度90%，还原真实考场做题环境</p>
                                     <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">点击查看</a>
-                                    <a href="#" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">我要做题</a>
+                                    <a href="<%=basePath1%>exam.jsp" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">我要做题</a>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +69,7 @@
                     <div class="item">
 
                         <!-- Slide Background -->
-                        <img src="images/b2.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <img src="<%=basePath1%>images/b2.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
                         <div class="bs-slider-overlay"></div>
                         <!-- Slide Text Layer -->
                         <div class="slide-text slide_style_center">
@@ -80,14 +85,14 @@
                     <div class="item">
 
                         <!-- Slide Background -->
-                        <img src="images/p3.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <img src="<%=basePath1%>images/p3.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
                         <div class="bs-slider-overlay"></div>
                         <!-- Slide Text Layer -->
                         <div class="slide-text slide_style_right">
                             <h1 data-animation="animated zoomInLeft">安全文明驾驶常识考试</h1>
                             <p data-animation="animated fadeInRight">大路考后的安全文明驾驶模拟考试</p>
                             <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">点击查看</a>
-                            <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">我要练题</a>
+                            <a href="<%=basePath%>exam.jsp" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">我要练题</a>
                         </div>
                     </div>
                     <!-- End of Slide -->
@@ -124,8 +129,8 @@
                     <!--内容-->
                     <div class="exam_content">
                         <div class="exam_1">
-                            <a href="<%=basePath%>subjecttest/getsubjecttest?subjectnum=${1}&dealId=${1}" target="_blank"">
-                                <img src="imgs/lc_02.png">
+                            <a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${1}&dealId=${1}" target="_blank"">
+                                <img src="<%=basePath%>imgs/lc_02.png">
                                 <p class="exam_num">科目一</p>
                                 <p class="exam_des">驾驶员理论考试</p>
                             </a>
@@ -147,7 +152,7 @@
                         
                         <div class="exam_4">
                             <a href="<%=basePath%>subjectpractice/getpractice?subjectnum=${4}&dealId=${1}" target="_blank">
-                                <img src="imgs/lc_05.png">
+                                <img src="<%=basePath%>imgs/lc_05.png">
                                 <p class="exam_num">科目四</p>
                                 <p class="exam_des">安全文明驾驶常识考试</p>
                             </a>
@@ -170,16 +175,16 @@
 
     </div>
 </body>
-<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.touchSwipe.min.js"></script>
-<script src="js/bootstrap-touch-slider.js"></script>
+<script src="<%=basePath1%>js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="<%=basePath1%>js/bootstrap.min.js"></script>
+<script src="<%=basePath1%>js/jquery.touchSwipe.min.js"></script>
+<script src="<%=basePath1%>js/bootstrap-touch-slider.js"></script>
 <script type="text/javascript">
     $('#bootstrap-touch-slider').bsTouchSlider();
 </script>
-<script src="js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.indexSlidePattern.js"></script>
-<script language="javascript">
+<script src="<%=basePath1%>js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<%=basePath1%>js/jquery.indexSlidePattern.js"></script>
+<script type="text/javascript">
     $(document).ready(function(e){
         var opt	=	{
             "speed"	:	"normal"		,	//变换速度,三速度可选 slow,normal,fast;

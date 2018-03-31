@@ -79,7 +79,7 @@ public class UserController {
 			model.addAttribute("users", user);
 			return "redirect:/user/getallusers";
 		} else {
-			return "/error";
+			return "/msg";
 		}
 	}
 

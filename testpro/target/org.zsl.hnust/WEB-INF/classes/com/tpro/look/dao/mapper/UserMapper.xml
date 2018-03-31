@@ -37,27 +37,20 @@
 		select count(*) from u_msg
 	</select>
 	<select id="findByName" resultType="User">
-		select
-		<include refid="Base_Column_List" />
+		select *
 		from u_msg
 		where username = #{name};
-	</select>
-	<select id="findNameAndPsd" parameterType="java.lang.String">
-		select
-		<include refid="Base_Column_List" />
-		from u_msg
-		where username = #{0} and password = #{1};
 	</select>
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from u_msg
 		where uid = #{uid,jdbcType=INTEGER}
 	</delete>
 	<insert id="insert" parameterType="com.tpro.look.model.User">
-		insert into u_msg (uid, username, password,
-		sex, email, log_time)
-		values (#{uid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR},
+		insert into u_msg (username, password,
+		sex, email)
+		values (#{username,jdbcType=VARCHAR},
 		#{password,jdbcType=VARCHAR},
-		#{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{logTime,jdbcType=DATE})
+		#{sex,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR})
 	</insert>
 
 	<update id="update" parameterType="com.tpro.look.model.User">
@@ -68,5 +61,10 @@
 		email = #{email,jdbcType=VARCHAR},
 		log_time = #{logTime,jdbcType=DATE}
 		where uid = #{uid,jdbcType=INTEGER}
+	</update>
+	<update id="updateTime" parameterType="com.tpro.look.model.User">
+		update u_msg
+		set log_time = #{logTime,jdbcType=DATE}
+		where username = #{username,jdbcType=VARCHAR}
 	</update>
 </mapper>

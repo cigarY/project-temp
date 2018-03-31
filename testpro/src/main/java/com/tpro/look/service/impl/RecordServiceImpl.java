@@ -32,5 +32,16 @@ public class RecordServiceImpl implements IRecordService{
 	public List<Record> findByIdAndSubject(Integer uid, Integer subject) {
 		return recordDao.findByIdAndSubject(uid, subject);
 	}
+
+	@Override
+	public List<String> findes1ByUid(Integer uid) {
+		return recordDao.findes1ByUid(uid);
+	}
+
+	@Override
+	public List<String> findes4ByUid(Integer uid) {
+		return recordDao.findes4ByUid(uid);
+	}
+
 	
 }

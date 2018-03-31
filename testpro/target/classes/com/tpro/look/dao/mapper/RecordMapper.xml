@@ -25,6 +25,17 @@
     <include refid="Base_Column_List" />
     from e_record
     where uid = #{0,jdbcType=INTEGER} and subject = #{1,jdbcType=INTEGER}
+    ORDER BY id DESC
+  </select>
+  <select id="findes1ByUid" parameterType="java.lang.Integer" resultType="java.lang.String">
+    select  errorproject
+    from e_record
+    where uid = #{uid,jdbcType=INTEGER} and subject = 1
+  </select>
+  <select id="findes4ByUid" parameterType="java.lang.Integer" resultType="java.lang.String">
+    select  errorproject
+    from e_record
+    where uid = #{uid,jdbcType=INTEGER} and subject = 4
   </select>
    
   <insert id="insert" parameterType="com.tpro.look.model.Record">

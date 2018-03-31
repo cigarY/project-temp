@@ -34,6 +34,7 @@ public class SubjectSpecialController {
 	int choosesum = 0;//单选题数目
 	int dchoosesum = 0;//多选题目数
 	int judgesum = 0;//判断题数
+	int cId = 0;//用户选择类型的id
 	
 	/**
 	 * 获取分类列表，科目一返回单选和判断题目数，科目四返回单选、多选、判断题目数
@@ -80,11 +81,14 @@ public class SubjectSpecialController {
 		index = 0;
 		List<SubjectQ1> subjectQ1list = new ArrayList<>();
 		List<SubjectQ4> subjectQ4list = new ArrayList<>();
+		cId = categoryId;
 		if(subjectId == 1) {
 			if(categoryId == 1) {
+				request.setAttribute("practicename", "科目一选择题练习");
 				testNum = choosesum;
 				subjectQ1list = subjectQ1Service.findListOnlyItem3();				
 			}else if (categoryId == 2) {
+				request.setAttribute("practicename", "科目一判断题练习");
 				testNum = judgesum;
 				subjectQ1list = subjectQ1Service.findListWithoutItem3();
 			}else {
@@ -96,12 +100,15 @@ public class SubjectSpecialController {
 			request.setAttribute("subject", subjectQ1);
 		}else if (subjectId == 4) {
 			if(categoryId == 1) {
+				request.setAttribute("practicename", "科目四选择题练习");
 				testNum = choosesum;
 				subjectQ4list = subjectQ4Service.findListChoose();
 			}else if (categoryId == 2) {
+				request.setAttribute("practicename", "科目四判断题练习");
 				testNum = judgesum;
 				subjectQ4list = subjectQ4Service.findListWithoutItem3();
 			}else if (categoryId == 3) {
+				request.setAttribute("practicename", "科目四多选题练习");
 				testNum = dchoosesum;
 				subjectQ4list = subjectQ4Service.findListDChoose();
 			}else {
@@ -139,6 +146,12 @@ public class SubjectSpecialController {
 		}
 		int tid = subjectArr[index];
 		if (subjectId == 1) {
+			if (cId == 1) {
+				request.setAttribute("practicename", "科目一选择题练习");
+			}
+			if (cId == 2) {
+				request.setAttribute("practicename", "科目一判断题练习");
+			}
 			SubjectQ1 subjectQ1 = subjectQ1Service.findById(tid);
 			request.setAttribute("subject", subjectQ1);
 			// 用户提交的答案判断
@@ -155,6 +168,16 @@ public class SubjectSpecialController {
 			}
 	
 		} else if (subjectId == 4) {
+			if (cId == 1) {
+				request.setAttribute("practicename", "科目四选择题练习");
+			}
+			if (cId == 2) {
+				request.setAttribute("practicename", "科目四判断题练习");
+			}
+			if (cId == 3) {
+				request.setAttribute("practicename", "科目四多选题练习");
+			}
+
 			SubjectQ4 subjectQ4 = subjectQ4Service.findById(tid);
 			request.setAttribute("subject", subjectQ4);
 			// 用户提交的答案判断

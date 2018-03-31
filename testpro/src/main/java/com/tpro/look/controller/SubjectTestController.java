@@ -29,7 +29,7 @@ public class SubjectTestController {
 	private ISubjectQ1Service subjectQ1Service;
 	@Autowired
 	private ISubjectQ4Service subjectQ4Service;
-	
+	@Autowired
 	private IRecordService recordService;
 
 	int testNum = 0;// 需要生成的总题数
@@ -51,10 +51,11 @@ public class SubjectTestController {
 	int rightNum = 0;// 正确题数
 	int countAnswer = 0;// 记录答题总数
 	int score = 0;// 总得分
-	List<Integer> choselist = new ArrayList<>();// 存放提交的题目，避免重复提交
 	String isTrue = null;// 当前题目是否正确,T表示正确，F表示错误
 	List<Integer> errorlist = new ArrayList<>();//存放错误题目
 	int subjectId = 0;// 科目
+	
+	List<Integer> choselist = new ArrayList<>();// 存放提交的题目，避免重复提交
 
 	/**
 	 * 根据科目号随机生成对应的题目，重定向到测试界面
@@ -216,18 +217,28 @@ public class SubjectTestController {
 			score = rightNum * 2;
 		}
 		request.setAttribute("msg", "您的得分："+score);
-		
-		//将用户信息加入到成绩数据库
-		//获取登录时间
-		Date day=new Date();    
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
+			
 		//从session中获取uid
 		HttpSession session = request.getSession();
-		String struid = session.getAttribute("uid").toString();
+		String struid = null;
+		try {
+			struid = session.getAttribute("uid").toString();
+		}catch (Exception e) {
+			struid = null;
+		}
 		if(null == struid) {
-			struid = "";
+			// 清空答题信息记录
+			index = 0;
+			rightNum = 0;
+			errorNum = 0;
+			countAnswer = 0;
+			choselist.clear();
+			return "/msg";
 		}else {
+			//将用户信息加入到成绩数据库
+			//获取登录时间
+			Date day=new Date();    
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			int uid = Integer.parseInt(struid);
 			Record record = new Record(uid, errorNum, rightNum, subjectId, df.format(day), errorlist.toString());
 			recordService.insert(record);

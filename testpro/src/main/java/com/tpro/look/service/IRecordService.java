@@ -9,5 +9,7 @@ public interface IRecordService {
 	List<Record> findById(Integer uid);
 	//根据uid和科目获取
 	List<Record> findByIdAndSubject(Integer uid,Integer subject);
-		
+	//获取错题集
+	List<String> findes1ByUid(Integer uid);
+	List<String> findes4ByUid(Integer uid);	
 }

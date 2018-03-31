@@ -11,7 +11,7 @@
 <base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/edit.css">
+<link rel="stylesheet" type="text/css" href="../css/edit.css">
 </head>
 <body>
 	<div class="edit_box">

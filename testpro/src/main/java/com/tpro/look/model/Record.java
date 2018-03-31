@@ -14,7 +14,7 @@ public class Record {
 
     private String test_time;
 
-    private String errorproject; 
+    private String errorsubject; 
 
 	public Record() {
 		super();
@@ -29,7 +29,7 @@ public class Record {
 		this.rightnum = rightnum;
 		this.subject = subject;
 		this.test_time = test_time;
-		this.errorproject = errorproject;
+		this.errorsubject = errorproject;
 	}
 	
 	public Record(Integer uid, Integer errornum, Integer rightnum, Integer subject, String test_time,
@@ -40,7 +40,7 @@ public class Record {
 		this.rightnum = rightnum;
 		this.subject = subject;
 		this.test_time = test_time;
-		this.errorproject = errorproject;
+		this.errorsubject = errorproject;
 	}
 
 	public Integer getId() {
@@ -92,17 +92,17 @@ public class Record {
 	}
 
 	public String getErrorproject() {
-		return errorproject;
+		return errorsubject;
 	}
 
 	public void setErrorproject(String errorproject) {
-		this.errorproject = errorproject;
+		this.errorsubject = errorproject;
 	}
 
 	@Override
 	public String toString() {
 		return "Record [id=" + id + ", uid=" + uid + ", errornum=" + errornum + ", rightnum=" + rightnum + ", subject="
-				+ subject + ", test_time=" + test_time + ", errorproject=" + errorproject + "]";
+				+ subject + ", test_time=" + test_time + ", errorproject=" + errorsubject + "]";
 	}
     
 }

@@ -1,3 +1,17 @@
+.list_nav{
+	width:1120px;
+	height:50px;
+	line-height:50px;
+	margin:30px auto;
+	font-size:20px;
+}
+.list_nav>span{
+	height:inherit;
+	font-size:20px;
+}
+.list_nav>span>a{
+	color:#499afd;
+}
 .contains{
 	width: 100%;
 }

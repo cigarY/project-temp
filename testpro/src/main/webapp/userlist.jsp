@@ -12,7 +12,7 @@
 <base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/subjectlist.css">
+<link rel="stylesheet" type="text/css" href="../css/subjectlist.css">
 </head>
 <body>
 	<center>

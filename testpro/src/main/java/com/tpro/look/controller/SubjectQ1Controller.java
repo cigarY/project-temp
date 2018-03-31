@@ -90,14 +90,14 @@ public class SubjectQ1Controller {
 			model.addAttribute("subject1", subjectQ1);
 			return "redirect:/subject1/getallsubjects";
 		} else {
-			return "/error";
+			return "/msg";
 		}
 	}
 
 	@RequestMapping("/getsubject")
 	public String getSubject(int id, Model model, HttpServletRequest request) {
-		request.setAttribute("subject1", subjectQ1Service.findById(id));
-		model.addAttribute("subject1", subjectQ1Service.findById(id));
+		request.setAttribute("subject", subjectQ1Service.findById(id));
+		model.addAttribute("subject", subjectQ1Service.findById(id));
 		return "/subjectedit";
 	}
 

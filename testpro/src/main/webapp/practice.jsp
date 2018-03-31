@@ -12,6 +12,10 @@
 
 		<!--头部-->
 		<%@include file="head.jsp"%>
+		
+		<div class="list_nav">
+			<span><a href="<%=basePath%>exam.jsp">测试练习</a></span>><span>${practicename }</span>
+		</div>
 
         <div class="contains">
         	<div class="contains_show">
