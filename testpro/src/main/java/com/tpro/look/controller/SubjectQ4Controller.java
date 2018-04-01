@@ -98,16 +98,16 @@ public class SubjectQ4Controller {
 
 	@RequestMapping("/getsubject")
 	public String getSubject(int id, Model model, HttpServletRequest request) {
-		request.setAttribute("subject4", subjectQ4Service.findById(id));
-		model.addAttribute("subject4", subjectQ4Service.findById(id));
+		request.setAttribute("subject", subjectQ4Service.findById(id));
+		model.addAttribute("subject", subjectQ4Service.findById(id));
 		return "/subjectedit2";
 	}
 
 	@RequestMapping("/delsubject")
 	public void delSubject(int id, HttpServletRequest request, HttpServletResponse response) {
-		String result = "{\"result\":\"msg\"}";
+		String result = "{\"result\":\"error\"}";
 		if (subjectQ4Service.delete(id)) {
-			result = "{\"result\":\"msg\"}";
+			result = "{\"result\":\"success\"}";
 		}
 		response.setContentType("application/json");
 		try {

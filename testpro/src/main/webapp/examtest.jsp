@@ -9,10 +9,20 @@
 <title>LOOK圈——全真模拟考试</title>
 <link rel="stylesheet" type="text/css" href="../css/head_foot.css">
 <link rel="stylesheet" type="text/css" href="../css/exam_test.css">
+
 </head>
 <body>		
 	<div class="exam_testpage">
-	
+	<%
+		int[] chosearr = (int[])request.getAttribute("chosearr");
+		String[] istruearr = (String[])request.getAttribute("istruearr");
+		int len = 0;
+		try{
+			len = chosearr.length;
+		}catch(Exception e){
+			len = 1;
+		}
+	%>
 	<!--头部-->
 	<%@include file="head.jsp"%>
 					
@@ -30,7 +40,7 @@
 							<fieldset class="candidate_info">
 								<legend>考生信息</legend>
 								<div class="photo">
-									<img src="">
+									<img src="<%=basePath%>imgs/login.jpg">
 								</div>
 								<div class="msg_text">
 									<p>考生姓名：</p>
@@ -82,7 +92,7 @@
 					<div class="test_information_left">
 						<fieldset class="time_less">
 							<legend>剩余时间</legend>
-							<span>12:00</span>
+							<span id="timer"></span>
 						</fieldset>
 					</div>
 					<div class="test_information_right">
@@ -121,9 +131,11 @@
 		<input type="hidden" name="idx_next" value="${index+1 }" id="li_next">
 	</div>
 </body>
+<script src="<%=basePath%>js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="<%=basePath%>js/jquery.cookie.js" type="text/javascript"></script>
 <script type="text/javascript">
-	
 	onload=function(){
+
 		var setItem = document.getElementById("getItem").value;
 		var isShow1 = document.getElementById("itemdisplay1"); 
 		var isShow2 = document.getElementById("itemdisplay2");
@@ -144,20 +156,60 @@
 		if(seturl == ""){
 			document.getElementById("s_img").style.display = "none";
 		}
-		
-		var isTrue = document.getElementById("li_show").value;
+
 		var which_li = document.getElementById("li_choose").value;
 		var which_next = document.getElementById("li_next").value;
 		var setColor = document.getElementById("c_li"+which_li);
-		if(isTrue == "T"){
-			setColor.style.background = "#499afd";
-		}else if(isTrue == "F"){
-			setColor.style.background = "#ff0000";
-		}else{
-			setColor.style.background = "#999999";
-		}
+
 		document.getElementById("c_li"+(which_next)).style.background = "#999999";
 	}
 	
+	var len = <%=len%>;
+	
+		for(var i=0;i<len;i++){
+			<%
+				for(int j=0;j<len;j++){		
+			%>
+			var tab = document.getElementById("c_li"+<%=chosearr[j]%>);
+			<%
+				if(istruearr[j] == "T"){
+			%>
+			tab.style.background = "#499afd";
+			<%
+				}
+			%>
+			<%
+				if(istruearr[j] == "F"){
+			%>
+				tab.style.background = "#ff0000";
+			<%
+				}
+				}
+			%>
+		}
+
+	
 </script>
+<script type="text/javascript">	
+    /* var maxtime = 60 * 45;  *///一个小时，按秒计算，自己调整! 
+    var maxtime = $.cookie('timer');
+    function CountDown() {
+       if (maxtime >= 0) {
+          minutes = Math.floor(maxtime / 60);
+          seconds = Math.floor(maxtime % 60);
+          msg = minutes + ":" + seconds;
+          document.all["timer"].innerHTML = msg;   
+          if (maxtime == 5 * 60)alert("还剩5分钟");
+             --maxtime;
+             $.cookie('timer', maxtime);
+          } else{
+             clearInterval(timer);
+             $.cookie('the_cookie', null);
+             alert("时间到，结束!");   
+          }
+       $.cookie('timer', maxtime);
+     }
+     timer = setInterval("CountDown()", 1000);                
+</script>
+
 </html>

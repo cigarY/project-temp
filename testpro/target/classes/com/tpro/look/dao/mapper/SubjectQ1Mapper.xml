@@ -31,7 +31,7 @@
 		select
 		<include refid="Base_Column_List" />
 		from examination_question1
-		where iid = #{iid,jdbcType=INTEGER}
+		where id = #{id,jdbcType=INTEGER}
 	</select>
 	<select id="findListByKeyWords" resultType="SubjectQ1">
 		select
@@ -66,17 +66,17 @@
 	<delete id="delete" parameterType="java.lang.Integer">
 		delete from
 		examination_question1
-		where iid = #{iid,jdbcType=INTEGER}
+		where id = #{id,jdbcType=INTEGER}
 	</delete>
 	
 	<insert id="insert" parameterType="com.tpro.look.model.SubjectQ1">
 		insert into
-		examination_question1 (iid, id, question,
+		examination_question1 (id, question,
 		answer, item1, item2,
 		item3,
 		item4, explains,
 		url, wrongnumber)
-		values (#{iid,jdbcType=INTEGER},
+		values (
 		#{id,jdbcType=INTEGER},
 		#{question,jdbcType=VARCHAR},
 		#{answer,jdbcType=VARCHAR}, #{item1,jdbcType=VARCHAR},
@@ -89,7 +89,7 @@
 
 	<update id="update" parameterType="com.tpro.look.model.SubjectQ1">
 		update examination_question1
-		set id = #{id,jdbcType=INTEGER},
+		set 
 		question =
 		#{question,jdbcType=VARCHAR},
 		answer = #{answer,jdbcType=VARCHAR},
@@ -100,8 +100,8 @@
 		explains = #{explains,jdbcType=VARCHAR},
 		url = #{url,jdbcType=VARCHAR},
 		wrongnumber = #{wrongnumber,jdbcType=INTEGER}
-		where iid =
-		#{iid,jdbcType=INTEGER}
+		where id =
+		#{id,jdbcType=INTEGER}
 	</update>
 	<update id="updateWrongNum" parameterType="java.lang.Integer">
 		update examination_question1

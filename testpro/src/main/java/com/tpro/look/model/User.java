@@ -16,6 +16,17 @@ public class User {
     public User() {
 		super();
 	}
+      
+	public User(Integer uid, String username, String password, String sex, String email, String logTime) {
+		super();
+		this.uid = uid;
+		this.username = username;
+		this.password = password;
+		this.sex = sex;
+		this.email = email;
+		this.logTime = logTime;
+	}
+
 
 	public User(String username, String password, String sex, String email) {
 		super();

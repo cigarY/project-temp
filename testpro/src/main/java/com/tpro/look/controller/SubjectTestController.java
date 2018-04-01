@@ -7,7 +7,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +59,9 @@ public class SubjectTestController {
 	int subjectId = 0;// 科目
 	
 	List<Integer> choselist = new ArrayList<>();// 存放提交的题目，避免重复提交
+	List<String> istruelist = new ArrayList<>();//存放用户提交答案判断
+	int[] chosearr = null;//提交题目数组
+	String[] istruearr = null;//答案判断数组
 
 	/**
 	 * 根据科目号随机生成对应的题目，重定向到测试界面
@@ -66,10 +72,14 @@ public class SubjectTestController {
 	 * @return
 	 */
 	@RequestMapping("/getsubjecttest")
-	public String getSubjectTest(HttpServletRequest request, int subjectnum) {
+	public String getSubjectTest(HttpServletRequest request,HttpServletResponse response, int subjectnum) {
 		index = 0;
 		subjectId = subjectnum;
 		r = random.nextInt(100) + 1;// 生成随机考号
+		chosearr = null;
+		istruearr = null;
+		choselist.clear();
+		istruelist.clear();
 		if (subjectnum == 1) {			
 			testNum = 100;
 			testjudgeNum = 40;
@@ -101,6 +111,8 @@ public class SubjectTestController {
 			request.setAttribute("msg", "不存在所选科目！");
 			return "/msg";
 		}
+		Cookie cookie = new Cookie("timer", "2700");   
+        response.addCookie(cookie);  
 		request.setAttribute("r", r);
 		request.setAttribute("index", index);
 		request.setAttribute("testNum", testNum);
@@ -124,8 +136,7 @@ public class SubjectTestController {
 			index = 0;
 		} else if(index >= testNum) {
 			index = testNum - 1;
-		} 
-		
+		} 		
 		int tid = testArr[index];
 		if (testNum == 100) {
 			SubjectQ1 subjectQ1 = subjectQ1Service.findById(tid);
@@ -137,9 +148,11 @@ public class SubjectTestController {
 				if (answer_i.equals(subjectQ1.getAnswer())) {
 					rightNum++;
 					isTrue = "T";
+					istruelist.add(isTrue);
 				} else {
 					errorNum++;
 					isTrue = "F";
+					istruelist.add(isTrue);
 					//统计错题数目，写入数据库用于难题练习
 					wrongnumber = subjectQ1.getWrongnumber()+1;
 					wrongid = subjectQ1.getId();
@@ -157,9 +170,11 @@ public class SubjectTestController {
 				if (answer_i.equals(subjectQ4.getAnswer())) {
 					rightNum++;
 					isTrue = "T";
+					istruelist.add(isTrue);
 				} else {
 					errorNum++;
 					isTrue = "F";
+					istruelist.add(isTrue);
 					//统计错题数目，写入数据库用于难题练习
 					wrongnumber = subjectQ4.getWrongnumber()+1;
 					wrongid = subjectQ4.getId();
@@ -171,6 +186,15 @@ public class SubjectTestController {
 			request.setAttribute("msg", "不存在所选科目！");
 			return "/msg";
 		}
+		int len = choselist.size();
+		chosearr = new int[len];
+		istruearr = new String[len];
+		for(int i=0;i<choselist.size();i++) {
+			chosearr[i] = choselist.get(i);
+			istruearr[i] = istruelist.get(i);
+		}
+		request.setAttribute("chosearr", chosearr);
+		request.setAttribute("istruearr", istruearr);
 		request.setAttribute("r", r);
 		request.setAttribute("index", index);
 		request.setAttribute("testNum", testNum);
@@ -196,6 +220,15 @@ public class SubjectTestController {
 			request.setAttribute("msg", "操作错误！");
 			return "/msg";
 		}
+		int len = choselist.size();
+		chosearr = new int[len];
+		istruearr = new String[len];
+		for(int i=0;i<choselist.size();i++) {
+			chosearr[i] = choselist.get(i);
+			istruearr[i] = istruelist.get(i);
+		}
+		request.setAttribute("chosearr", chosearr);
+		request.setAttribute("istruearr", istruearr);
 		request.setAttribute("r", r);
 		request.setAttribute("index", index);
 		request.setAttribute("testNum", testNum);
@@ -233,6 +266,7 @@ public class SubjectTestController {
 			errorNum = 0;
 			countAnswer = 0;
 			choselist.clear();
+			istruelist.clear();
 			return "/msg";
 		}else {
 			//将用户信息加入到成绩数据库
@@ -250,6 +284,7 @@ public class SubjectTestController {
 		errorNum = 0;
 		countAnswer = 0;
 		choselist.clear();
+		istruelist.clear();
 		return "/msg";
 	}
 
